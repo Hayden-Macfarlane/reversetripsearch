@@ -1,0 +1,1975 @@
+Year,citymarketid_1,citymarketid_2,city1,city2,airportid_1,airportid_2,airport_1,airport_2,fare
+2025,30140,30194,"Albuquerque, NM","Dallas/Fort Worth, TX",10140,11259,ABQ,DAL,208.09
+2025,30140,30194,"Albuquerque, NM","Dallas/Fort Worth, TX",10140,11298,ABQ,DFW,248.95
+2025,30140,30466,"Albuquerque, NM","Phoenix, AZ",10140,14107,ABQ,PHX,191.02
+2025,30140,30852,"Albuquerque, NM","Washington, DC (Metropolitan Area)",10140,10821,ABQ,BWI,299.34
+2025,30140,30852,"Albuquerque, NM","Washington, DC (Metropolitan Area)",10140,11278,ABQ,DCA,281.6
+2025,30140,30852,"Albuquerque, NM","Washington, DC (Metropolitan Area)",10140,12264,ABQ,IAD,311.46
+2025,30140,30977,"Albuquerque, NM","Chicago, IL",10140,13232,ABQ,MDW,251.49
+2025,30140,30977,"Albuquerque, NM","Chicago, IL",10140,13930,ABQ,ORD,287.42
+2025,30140,31453,"Albuquerque, NM","Houston, TX",10140,12191,ABQ,HOU,252.4
+2025,30140,31453,"Albuquerque, NM","Houston, TX",10140,12266,ABQ,IAH,318.26
+2025,30140,31703,"Albuquerque, NM","New York City, NY (Metropolitan Area)",10140,11618,ABQ,EWR,317.99
+2025,30140,31703,"Albuquerque, NM","New York City, NY (Metropolitan Area)",10140,12197,ABQ,HPN,308.36
+2025,30140,31703,"Albuquerque, NM","New York City, NY (Metropolitan Area)",10140,12391,ABQ,ISP,279.44
+2025,30140,31703,"Albuquerque, NM","New York City, NY (Metropolitan Area)",10140,12478,ABQ,JFK,217.94
+2025,30140,31703,"Albuquerque, NM","New York City, NY (Metropolitan Area)",10140,12953,ABQ,LGA,285.05
+2025,30140,32457,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",10140,13796,ABQ,OAK,239.25
+2025,30140,32457,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",10140,14771,ABQ,SFO,291.73
+2025,30140,32457,"Albuquerque, NM","San Francisco, CA (Metropolitan Area)",10140,14831,ABQ,SJC,230.91
+2025,30140,32575,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",10140,10800,ABQ,BUR,213.34
+2025,30140,32575,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",10140,12892,ABQ,LAX,212.34
+2025,30140,32575,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",10140,12954,ABQ,LGB,183.12
+2025,30140,32575,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",10140,13891,ABQ,ONT,234.25
+2025,30140,32575,"Albuquerque, NM","Los Angeles, CA (Metropolitan Area)",10140,14908,ABQ,SNA,248.53
+2025,30158,32467,"Atlantic City, NJ","Miami, FL (Metropolitan Area)",10158,11697,ACY,FLL,121.35
+2025,30158,32467,"Atlantic City, NJ","Miami, FL (Metropolitan Area)",10158,13303,ACY,MIA,211.75
+2025,30189,30194,"Colorado Springs, CO","Dallas/Fort Worth, TX",11109,11259,COS,DAL,201.79
+2025,30189,30194,"Colorado Springs, CO","Dallas/Fort Worth, TX",11109,11298,COS,DFW,241.79
+2025,30189,30466,"Colorado Springs, CO","Phoenix, AZ",11109,10466,COS,AZA,71.13
+2025,30189,30466,"Colorado Springs, CO","Phoenix, AZ",11109,14107,COS,PHX,192.61
+2025,30189,30852,"Colorado Springs, CO","Washington, DC (Metropolitan Area)",11109,10821,COS,BWI,279.4
+2025,30189,30852,"Colorado Springs, CO","Washington, DC (Metropolitan Area)",11109,11278,COS,DCA,318.79
+2025,30189,30852,"Colorado Springs, CO","Washington, DC (Metropolitan Area)",11109,12264,COS,IAD,310.94
+2025,30189,32575,"Colorado Springs, CO","Los Angeles, CA (Metropolitan Area)",11109,10800,COS,BUR,226.86
+2025,30189,32575,"Colorado Springs, CO","Los Angeles, CA (Metropolitan Area)",11109,12892,COS,LAX,254.54
+2025,30189,32575,"Colorado Springs, CO","Los Angeles, CA (Metropolitan Area)",11109,12954,COS,LGB,198.37
+2025,30189,32575,"Colorado Springs, CO","Los Angeles, CA (Metropolitan Area)",11109,13891,COS,ONT,224.89
+2025,30189,32575,"Colorado Springs, CO","Los Angeles, CA (Metropolitan Area)",11109,14908,COS,SNA,255.7
+2025,30194,30198,"Dallas/Fort Worth, TX","Pittsburgh, PA",11259,14122,DAL,PIT,252.52
+2025,30194,30198,"Dallas/Fort Worth, TX","Pittsburgh, PA",11298,14122,DFW,PIT,314.74
+2025,30194,30325,"Dallas/Fort Worth, TX","Denver, CO",11259,11292,DAL,DEN,164.31
+2025,30194,30325,"Dallas/Fort Worth, TX","Denver, CO",11298,11292,DFW,DEN,188.77
+2025,30194,30436,"Dallas/Fort Worth, TX","Tucson, AZ",11259,15376,DAL,TUS,230.84
+2025,30194,30436,"Dallas/Fort Worth, TX","Tucson, AZ",11298,15376,DFW,TUS,271.66
+2025,30194,30466,"Dallas/Fort Worth, TX","Phoenix, AZ",11259,14107,DAL,PHX,196.42
+2025,30194,30466,"Dallas/Fort Worth, TX","Phoenix, AZ",11298,14107,DFW,PHX,231.27
+2025,30194,30529,"Dallas/Fort Worth, TX","Hartford, CT",11259,10529,DAL,BDL,257.01
+2025,30194,30529,"Dallas/Fort Worth, TX","Hartford, CT",11298,10529,DFW,BDL,304.39
+2025,30194,30559,"Dallas/Fort Worth, TX","Seattle, WA",11259,14747,DAL,SEA,213.78
+2025,30194,30559,"Dallas/Fort Worth, TX","Seattle, WA",11298,14747,DFW,SEA,240.79
+2025,30194,30615,"Dallas/Fort Worth, TX","El Paso, TX",11259,11540,DAL,ELP,199.34
+2025,30194,30615,"Dallas/Fort Worth, TX","El Paso, TX",11298,11540,DFW,ELP,248.16
+2025,30194,30693,"Dallas/Fort Worth, TX","Nashville, TN",11259,10693,DAL,BNA,234.11
+2025,30194,30693,"Dallas/Fort Worth, TX","Nashville, TN",11298,10693,DFW,BNA,271.94
+2025,30194,30852,"Dallas/Fort Worth, TX","Washington, DC (Metropolitan Area)",11259,10821,DAL,BWI,215.46
+2025,30194,30852,"Dallas/Fort Worth, TX","Washington, DC (Metropolitan Area)",11259,11278,DAL,DCA,195.03
+2025,30194,30852,"Dallas/Fort Worth, TX","Washington, DC (Metropolitan Area)",11259,12264,DAL,IAD,275.64
+2025,30194,30852,"Dallas/Fort Worth, TX","Washington, DC (Metropolitan Area)",11298,10821,DFW,BWI,191.85
+2025,30194,30852,"Dallas/Fort Worth, TX","Washington, DC (Metropolitan Area)",11298,11278,DFW,DCA,296.68
+2025,30194,30852,"Dallas/Fort Worth, TX","Washington, DC (Metropolitan Area)",11298,12264,DFW,IAD,241.77
+2025,30194,31123,"Dallas/Fort Worth, TX","St. Louis, MO",11259,15016,DAL,STL,213.76
+2025,30194,31123,"Dallas/Fort Worth, TX","St. Louis, MO",11298,15016,DFW,STL,253.35
+2025,30194,31136,"Dallas/Fort Worth, TX","Jacksonville, FL",11259,12451,DAL,JAX,256.82
+2025,30194,31136,"Dallas/Fort Worth, TX","Jacksonville, FL",11298,12451,DFW,JAX,299.52
+2025,30194,31295,"Dallas/Fort Worth, TX","Detroit, MI",11259,11433,DAL,DTW,231.93
+2025,30194,31295,"Dallas/Fort Worth, TX","Detroit, MI",11298,11433,DFW,DTW,236.43
+2025,30194,31423,"Dallas/Fort Worth, TX","Des Moines, IA",11259,11423,DAL,DSM,216.44
+2025,30194,31423,"Dallas/Fort Worth, TX","Des Moines, IA",11298,11423,DFW,DSM,322.72
+2025,30194,31453,"Dallas/Fort Worth, TX","Houston, TX",11259,12191,DAL,HOU,202.68
+2025,30194,31453,"Dallas/Fort Worth, TX","Houston, TX",11298,12191,DFW,HOU,225.85
+2025,30194,31453,"Dallas/Fort Worth, TX","Houston, TX",11298,12266,DFW,IAH,223.84
+2025,30194,31454,"Dallas/Fort Worth, TX","Orlando, FL",11259,13204,DAL,MCO,215.13
+2025,30194,31454,"Dallas/Fort Worth, TX","Orlando, FL",11298,13204,DFW,MCO,209.62
+2025,30194,31481,"Dallas/Fort Worth, TX","Panama City, FL",11259,11481,DAL,ECP,224.72
+2025,30194,31481,"Dallas/Fort Worth, TX","Panama City, FL",11298,11481,DFW,ECP,243.76
+2025,30194,31504,"Dallas/Fort Worth, TX","Valparaiso, FL",11259,15624,DAL,VPS,249.53
+2025,30194,31504,"Dallas/Fort Worth, TX","Valparaiso, FL",11298,15624,DFW,VPS,254.87
+2025,30194,31638,"Dallas/Fort Worth, TX","Fresno, CA",11259,11638,DAL,FAT,254
+2025,30194,31638,"Dallas/Fort Worth, TX","Fresno, CA",11298,11638,DFW,FAT,293.37
+2025,30194,31650,"Dallas/Fort Worth, TX","Minneapolis/St. Paul, MN",11259,13487,DAL,MSP,238.7
+2025,30194,31650,"Dallas/Fort Worth, TX","Minneapolis/St. Paul, MN",11298,13487,DFW,MSP,234.84
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11259,11618,DAL,EWR,316.64
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11259,12197,DAL,HPN,382.23
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11259,12391,DAL,ISP,278.55
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11259,12478,DAL,JFK,477.89
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11259,12953,DAL,LGA,222.93
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11298,11618,DFW,EWR,257.53
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11298,12197,DFW,HPN,317.64
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11298,12391,DFW,ISP,143.75
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11298,12478,DFW,JFK,238.84
+2025,30194,31703,"Dallas/Fort Worth, TX","New York City, NY (Metropolitan Area)",11298,12953,DFW,LGA,262.1
+2025,30194,31714,"Dallas/Fort Worth, TX","Fort Myers, FL",11259,14635,DAL,RSW,253.35
+2025,30194,31714,"Dallas/Fort Worth, TX","Fort Myers, FL",11298,14635,DFW,RSW,303.2
+2025,30194,31871,"Dallas/Fort Worth, TX","Greenville/Spartanburg, SC",11259,11996,DAL,GSP,250.78
+2025,30194,31871,"Dallas/Fort Worth, TX","Greenville/Spartanburg, SC",11298,11996,DFW,GSP,309.22
+2025,30194,31884,"Dallas/Fort Worth, TX","Spokane, WA",11259,11884,DAL,GEG,261.07
+2025,30194,31884,"Dallas/Fort Worth, TX","Spokane, WA",11298,11884,DFW,GEG,291.47
+2025,30194,31986,"Dallas/Fort Worth, TX","Grand Rapids, MI",11259,11986,DAL,GRR,231.82
+2025,30194,31986,"Dallas/Fort Worth, TX","Grand Rapids, MI",11298,11986,DFW,GRR,266.05
+2025,30194,31995,"Dallas/Fort Worth, TX","Greensboro/High Point, NC",11259,11995,DAL,GSO,321.88
+2025,30194,31995,"Dallas/Fort Worth, TX","Greensboro/High Point, NC",11298,11995,DFW,GSO,314.84
+2025,30194,32211,"Dallas/Fort Worth, TX","Las Vegas, NV",11259,12889,DAL,LAS,204.33
+2025,30194,32211,"Dallas/Fort Worth, TX","Las Vegas, NV",11298,12889,DFW,LAS,212.45
+2025,30194,32337,"Dallas/Fort Worth, TX","Indianapolis, IN",11259,12339,DAL,IND,196.57
+2025,30194,32337,"Dallas/Fort Worth, TX","Indianapolis, IN",11298,12339,DFW,IND,236.53
+2025,30194,32457,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",11259,13796,DAL,OAK,204.74
+2025,30194,32457,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",11259,14771,DAL,SFO,228.82
+2025,30194,32457,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",11259,14831,DAL,SJC,209.97
+2025,30194,32457,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",11298,13796,DFW,OAK,182.44
+2025,30194,32457,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",11298,14771,DFW,SFO,257.65
+2025,30194,32457,"Dallas/Fort Worth, TX","San Francisco, CA (Metropolitan Area)",11298,14831,DFW,SJC,222.3
+2025,30194,32467,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",11259,11697,DAL,FLL,207.36
+2025,30194,32467,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",11259,13303,DAL,MIA,230.79
+2025,30194,32467,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",11298,11697,DFW,FLL,206.03
+2025,30194,32467,"Dallas/Fort Worth, TX","Miami, FL (Metropolitan Area)",11298,13303,DFW,MIA,254.45
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11259,10800,DAL,BUR,264.89
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11259,12892,DAL,LAX,183.58
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11259,12954,DAL,LGB,197.33
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11259,13891,DAL,ONT,224.52
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11259,14908,DAL,SNA,300.19
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11298,10800,DFW,BUR,338
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11298,12892,DFW,LAX,209.27
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11298,12954,DFW,LGB,352.91
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11298,13891,DFW,ONT,213.43
+2025,30194,32575,"Dallas/Fort Worth, TX","Los Angeles, CA (Metropolitan Area)",11298,14908,DFW,SNA,363.34
+2025,30194,32600,"Dallas/Fort Worth, TX","Little Rock, AR",11259,12992,DAL,LIT,186.22
+2025,30194,32600,"Dallas/Fort Worth, TX","Little Rock, AR",11298,12992,DFW,LIT,228.16
+2025,30194,32896,"Dallas/Fort Worth, TX","Lubbock, TX",11259,12896,DAL,LBB,199.86
+2025,30194,32896,"Dallas/Fort Worth, TX","Lubbock, TX",11298,12896,DFW,LBB,232.93
+2025,30194,33044,"Dallas/Fort Worth, TX","Louisville, KY",11259,14730,DAL,SDF,216.22
+2025,30194,33044,"Dallas/Fort Worth, TX","Louisville, KY",11298,14730,DFW,SDF,266.89
+2025,30194,33158,"Dallas/Fort Worth, TX","Midland/Odessa, TX",11259,13158,DAL,MAF,220.37
+2025,30194,33158,"Dallas/Fort Worth, TX","Midland/Odessa, TX",11298,13158,DFW,MAF,269.7
+2025,30194,33192,"Dallas/Fort Worth, TX","Sacramento, CA",11259,14893,DAL,SMF,264.92
+2025,30194,33192,"Dallas/Fort Worth, TX","Sacramento, CA",11298,14893,DFW,SMF,318.52
+2025,30194,33195,"Dallas/Fort Worth, TX","Tampa, FL (Metropolitan Area)",11259,15304,DAL,TPA,198.52
+2025,30194,33195,"Dallas/Fort Worth, TX","Tampa, FL (Metropolitan Area)",11298,15304,DFW,TPA,218.26
+2025,30194,33198,"Dallas/Fort Worth, TX","Kansas City, MO",11259,13198,DAL,MCI,201.62
+2025,30194,33198,"Dallas/Fort Worth, TX","Kansas City, MO",11298,13198,DFW,MCI,229.97
+2025,30194,33214,"Dallas/Fort Worth, TX","San Antonio, TX",11259,14683,DAL,SAT,211.92
+2025,30194,33214,"Dallas/Fort Worth, TX","San Antonio, TX",11298,14683,DFW,SAT,253.1
+2025,30194,33244,"Dallas/Fort Worth, TX","Memphis, TN",11259,13244,DAL,MEM,184.78
+2025,30194,33244,"Dallas/Fort Worth, TX","Memphis, TN",11298,13244,DFW,MEM,233.68
+2025,30194,33316,"Dallas/Fort Worth, TX","Omaha, NE",11259,13871,DAL,OMA,235.55
+2025,30194,33316,"Dallas/Fort Worth, TX","Omaha, NE",11298,13871,DFW,OMA,272.35
+2025,30194,33342,"Dallas/Fort Worth, TX","Milwaukee, WI",11259,13342,DAL,MKE,229.99
+2025,30194,33342,"Dallas/Fort Worth, TX","Milwaukee, WI",11298,13342,DFW,MKE,281.22
+2025,30194,33495,"Dallas/Fort Worth, TX","New Orleans, LA",11259,13495,DAL,MSY,169.16
+2025,30194,33495,"Dallas/Fort Worth, TX","New Orleans, LA",11298,13495,DFW,MSY,197.8
+2025,30194,33570,"Dallas/Fort Worth, TX","San Diego, CA",11259,14679,DAL,SAN,217.54
+2025,30194,33570,"Dallas/Fort Worth, TX","San Diego, CA",11298,14679,DFW,SAN,242.13
+2025,30194,33667,"Dallas/Fort Worth, TX","Norfolk, VA (Metropolitan Area)",11259,13931,DAL,ORF,254.01
+2025,30194,33667,"Dallas/Fort Worth, TX","Norfolk, VA (Metropolitan Area)",11298,13931,DFW,ORF,265.13
+2025,30194,33667,"Dallas/Fort Worth, TX","Norfolk, VA (Metropolitan Area)",11298,14098,DFW,PHF,380.79
+2025,30194,33728,"Dallas/Fort Worth, TX","Pensacola, FL",11259,14193,DAL,PNS,196.69
+2025,30194,33728,"Dallas/Fort Worth, TX","Pensacola, FL",11298,14193,DFW,PNS,208.38
+2025,30194,34027,"Dallas/Fort Worth, TX","West Palm Beach/Palm Beach, FL",11259,14027,DAL,PBI,278.17
+2025,30194,34027,"Dallas/Fort Worth, TX","West Palm Beach/Palm Beach, FL",11298,14027,DFW,PBI,338.65
+2025,30194,34057,"Dallas/Fort Worth, TX","Portland, OR",11259,14057,DAL,PDX,248.11
+2025,30194,34057,"Dallas/Fort Worth, TX","Portland, OR",11298,14057,DFW,PDX,241.83
+2025,30194,34100,"Dallas/Fort Worth, TX","Philadelphia, PA",11259,14100,DAL,PHL,221.44
+2025,30194,34100,"Dallas/Fort Worth, TX","Philadelphia, PA",11298,14100,DFW,PHL,292.16
+2025,30194,34492,"Dallas/Fort Worth, TX","Raleigh/Durham, NC",11259,14492,DAL,RDU,218.17
+2025,30194,34492,"Dallas/Fort Worth, TX","Raleigh/Durham, NC",11298,14492,DFW,RDU,250.51
+2025,30194,34524,"Dallas/Fort Worth, TX","Richmond, VA",11259,14524,DAL,RIC,259
+2025,30194,34524,"Dallas/Fort Worth, TX","Richmond, VA",11298,14524,DFW,RIC,297.02
+2025,30194,34570,"Dallas/Fort Worth, TX","Reno, NV",11259,14570,DAL,RNO,281.75
+2025,30194,34570,"Dallas/Fort Worth, TX","Reno, NV",11298,14570,DFW,RNO,313.94
+2025,30194,34614,"Dallas/Fort Worth, TX","Salt Lake City, UT",11259,14869,DAL,SLC,212.86
+2025,30194,34614,"Dallas/Fort Worth, TX","Salt Lake City, UT",11298,14869,DFW,SLC,236.07
+2025,30194,34653,"Dallas/Fort Worth, TX","Tulsa, OK",11259,15370,DAL,TUL,200.14
+2025,30194,34653,"Dallas/Fort Worth, TX","Tulsa, OK",11298,15370,DFW,TUL,247.95
+2025,30194,34685,"Dallas/Fort Worth, TX","Savannah, GA",11259,14685,DAL,SAV,243.57
+2025,30194,34685,"Dallas/Fort Worth, TX","Savannah, GA",11298,14685,DFW,SAV,284.78
+2025,30194,35412,"Dallas/Fort Worth, TX","Knoxville, TN",11259,15412,DAL,TYS,351.91
+2025,30194,35412,"Dallas/Fort Worth, TX","Knoxville, TN",11298,15412,DFW,TYS,311.63
+2025,30198,30852,"Pittsburgh, PA","Washington, DC (Metropolitan Area)",14122,10821,PIT,BWI,205.18
+2025,30198,30852,"Pittsburgh, PA","Washington, DC (Metropolitan Area)",14122,11278,PIT,DCA,198.04
+2025,30198,30852,"Pittsburgh, PA","Washington, DC (Metropolitan Area)",14122,12264,PIT,IAD,216.72
+2025,30198,32457,"Pittsburgh, PA","San Francisco, CA (Metropolitan Area)",14122,13796,PIT,OAK,252.18
+2025,30198,32457,"Pittsburgh, PA","San Francisco, CA (Metropolitan Area)",14122,14771,PIT,SFO,330.35
+2025,30198,32457,"Pittsburgh, PA","San Francisco, CA (Metropolitan Area)",14122,14831,PIT,SJC,274.17
+2025,30198,33195,"Pittsburgh, PA","Tampa, FL (Metropolitan Area)",14122,14112,PIT,PIE,84.3
+2025,30198,33195,"Pittsburgh, PA","Tampa, FL (Metropolitan Area)",14122,15304,PIT,TPA,180.83
+2025,30255,30852,"Huntsville, AL","Washington, DC (Metropolitan Area)",12217,10821,HSV,BWI,279.76
+2025,30255,30852,"Huntsville, AL","Washington, DC (Metropolitan Area)",12217,11278,HSV,DCA,281.21
+2025,30255,30852,"Huntsville, AL","Washington, DC (Metropolitan Area)",12217,12264,HSV,IAD,258.29
+2025,30257,30852,"Albany, NY","Washington, DC (Metropolitan Area)",10257,10821,ALB,BWI,201.78
+2025,30257,30852,"Albany, NY","Washington, DC (Metropolitan Area)",10257,11278,ALB,DCA,218.32
+2025,30257,30852,"Albany, NY","Washington, DC (Metropolitan Area)",10257,12264,ALB,IAD,233.01
+2025,30257,30977,"Albany, NY","Chicago, IL",10257,13232,ALB,MDW,218.07
+2025,30257,30977,"Albany, NY","Chicago, IL",10257,13930,ALB,ORD,259.05
+2025,30257,32467,"Albany, NY","Miami, FL (Metropolitan Area)",10257,11697,ALB,FLL,189.12
+2025,30257,32467,"Albany, NY","Miami, FL (Metropolitan Area)",10257,13303,ALB,MIA,283.05
+2025,30257,33195,"Albany, NY","Tampa, FL (Metropolitan Area)",10257,14112,ALB,PIE,124.82
+2025,30257,33195,"Albany, NY","Tampa, FL (Metropolitan Area)",10257,15304,ALB,TPA,256.02
+2025,30279,30194,"Amarillo, TX","Dallas/Fort Worth, TX",10279,11259,AMA,DAL,181.58
+2025,30279,30194,"Amarillo, TX","Dallas/Fort Worth, TX",10279,11298,AMA,DFW,231.21
+2025,30325,30466,"Denver, CO","Phoenix, AZ",11292,14107,DEN,PHX,166.98
+2025,30325,30852,"Denver, CO","Washington, DC (Metropolitan Area)",11292,10821,DEN,BWI,249.71
+2025,30325,30852,"Denver, CO","Washington, DC (Metropolitan Area)",11292,11278,DEN,DCA,227.68
+2025,30325,30852,"Denver, CO","Washington, DC (Metropolitan Area)",11292,12264,DEN,IAD,272.42
+2025,30325,31453,"Denver, CO","Houston, TX",11292,12191,DEN,HOU,194.38
+2025,30325,31453,"Denver, CO","Houston, TX",11292,12266,DEN,IAH,232.01
+2025,30325,31703,"Denver, CO","New York City, NY (Metropolitan Area)",11292,11618,DEN,EWR,312.44
+2025,30325,31703,"Denver, CO","New York City, NY (Metropolitan Area)",11292,12197,DEN,HPN,261.84
+2025,30325,31703,"Denver, CO","New York City, NY (Metropolitan Area)",11292,12391,DEN,ISP,275.58
+2025,30325,31703,"Denver, CO","New York City, NY (Metropolitan Area)",11292,12478,DEN,JFK,238.07
+2025,30325,31703,"Denver, CO","New York City, NY (Metropolitan Area)",11292,12953,DEN,LGA,279.45
+2025,30325,32457,"Denver, CO","San Francisco, CA (Metropolitan Area)",11292,13796,DEN,OAK,227.51
+2025,30325,32457,"Denver, CO","San Francisco, CA (Metropolitan Area)",11292,14771,DEN,SFO,220.11
+2025,30325,32457,"Denver, CO","San Francisco, CA (Metropolitan Area)",11292,14831,DEN,SJC,231.94
+2025,30325,32467,"Denver, CO","Miami, FL (Metropolitan Area)",11292,11697,DEN,FLL,299.88
+2025,30325,32467,"Denver, CO","Miami, FL (Metropolitan Area)",11292,13303,DEN,MIA,232.9
+2025,30325,32575,"Denver, CO","Los Angeles, CA (Metropolitan Area)",11292,10800,DEN,BUR,202.05
+2025,30325,32575,"Denver, CO","Los Angeles, CA (Metropolitan Area)",11292,12892,DEN,LAX,179.71
+2025,30325,32575,"Denver, CO","Los Angeles, CA (Metropolitan Area)",11292,12954,DEN,LGB,171.13
+2025,30325,32575,"Denver, CO","Los Angeles, CA (Metropolitan Area)",11292,13891,DEN,ONT,167.13
+2025,30325,32575,"Denver, CO","Los Angeles, CA (Metropolitan Area)",11292,14908,DEN,SNA,205.59
+2025,30325,33195,"Denver, CO","Tampa, FL (Metropolitan Area)",11292,15304,DEN,TPA,233.67
+2025,30325,33667,"Denver, CO","Norfolk, VA (Metropolitan Area)",11292,13931,DEN,ORF,292.92
+2025,30325,33667,"Denver, CO","Norfolk, VA (Metropolitan Area)",11292,14098,DEN,PHF,329.7
+2025,30397,30194,"Atlanta, GA (Metropolitan Area)","Dallas/Fort Worth, TX",10397,11259,ATL,DAL,203.56
+2025,30397,30194,"Atlanta, GA (Metropolitan Area)","Dallas/Fort Worth, TX",10397,11298,ATL,DFW,224.23
+2025,30397,30466,"Atlanta, GA (Metropolitan Area)","Phoenix, AZ",10397,14107,ATL,PHX,280.91
+2025,30397,30647,"Atlanta, GA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",10397,10874,ATL,CAK,280.76
+2025,30397,30647,"Atlanta, GA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",10397,11042,ATL,CLE,198.7
+2025,30397,30721,"Atlanta, GA (Metropolitan Area)","Boston, MA (Metropolitan Area)",10397,10721,ATL,BOS,241.86
+2025,30397,30721,"Atlanta, GA (Metropolitan Area)","Boston, MA (Metropolitan Area)",10397,13296,ATL,MHT,301.82
+2025,30397,30721,"Atlanta, GA (Metropolitan Area)","Boston, MA (Metropolitan Area)",10397,14307,ATL,PVD,309.37
+2025,30397,30852,"Atlanta, GA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10397,10821,ATL,BWI,171.94
+2025,30397,30852,"Atlanta, GA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10397,11278,ATL,DCA,209.03
+2025,30397,30852,"Atlanta, GA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10397,12264,ATL,IAD,188.95
+2025,30397,30977,"Atlanta, GA (Metropolitan Area)","Chicago, IL",10397,13232,ATL,MDW,170.63
+2025,30397,30977,"Atlanta, GA (Metropolitan Area)","Chicago, IL",10397,13930,ATL,ORD,208.27
+2025,30397,31066,"Atlanta, GA (Metropolitan Area)","Columbus, OH",10397,11066,ATL,CMH,204.95
+2025,30397,31453,"Atlanta, GA (Metropolitan Area)","Houston, TX",10397,12191,ATL,HOU,193.54
+2025,30397,31453,"Atlanta, GA (Metropolitan Area)","Houston, TX",10397,12266,ATL,IAH,187.15
+2025,30397,31703,"Atlanta, GA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10397,11618,ATL,EWR,198.73
+2025,30397,31703,"Atlanta, GA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10397,12197,ATL,HPN,261.3
+2025,30397,31703,"Atlanta, GA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10397,12391,ATL,ISP,241.86
+2025,30397,31703,"Atlanta, GA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10397,12478,ATL,JFK,193.14
+2025,30397,31703,"Atlanta, GA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10397,12953,ATL,LGA,234.25
+2025,30397,32457,"Atlanta, GA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10397,13796,ATL,OAK,250.53
+2025,30397,32457,"Atlanta, GA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10397,14771,ATL,SFO,337.11
+2025,30397,32457,"Atlanta, GA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10397,14831,ATL,SJC,397.64
+2025,30397,32467,"Atlanta, GA (Metropolitan Area)","Miami, FL (Metropolitan Area)",10397,11697,ATL,FLL,161.46
+2025,30397,32467,"Atlanta, GA (Metropolitan Area)","Miami, FL (Metropolitan Area)",10397,13303,ATL,MIA,191.93
+2025,30397,32575,"Atlanta, GA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10397,10800,ATL,BUR,386.6
+2025,30397,32575,"Atlanta, GA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10397,12892,ATL,LAX,292.95
+2025,30397,32575,"Atlanta, GA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10397,12954,ATL,LGB,245.62
+2025,30397,32575,"Atlanta, GA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10397,13891,ATL,ONT,360.61
+2025,30397,32575,"Atlanta, GA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10397,14908,ATL,SNA,442.06
+2025,30397,33195,"Atlanta, GA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",10397,15304,ATL,TPA,200.92
+2025,30397,33667,"Atlanta, GA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",10397,13931,ATL,ORF,238.92
+2025,30397,33667,"Atlanta, GA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",10397,14098,ATL,PHF,243.52
+2025,30423,30194,"Austin, TX","Dallas/Fort Worth, TX",10423,11259,AUS,DAL,226.16
+2025,30423,30194,"Austin, TX","Dallas/Fort Worth, TX",10423,11298,AUS,DFW,244.83
+2025,30423,30466,"Austin, TX","Phoenix, AZ",10423,14107,AUS,PHX,216.33
+2025,30423,30647,"Austin, TX","Cleveland, OH (Metropolitan Area)",10423,10874,AUS,CAK,274.65
+2025,30423,30647,"Austin, TX","Cleveland, OH (Metropolitan Area)",10423,11042,AUS,CLE,236.67
+2025,30423,30721,"Austin, TX","Boston, MA (Metropolitan Area)",10423,10721,AUS,BOS,292.41
+2025,30423,30721,"Austin, TX","Boston, MA (Metropolitan Area)",10423,13296,AUS,MHT,292.35
+2025,30423,30721,"Austin, TX","Boston, MA (Metropolitan Area)",10423,14307,AUS,PVD,263
+2025,30423,30852,"Austin, TX","Washington, DC (Metropolitan Area)",10423,10821,AUS,BWI,279.99
+2025,30423,30852,"Austin, TX","Washington, DC (Metropolitan Area)",10423,11278,AUS,DCA,325.57
+2025,30423,30852,"Austin, TX","Washington, DC (Metropolitan Area)",10423,12264,AUS,IAD,334.3
+2025,30423,30977,"Austin, TX","Chicago, IL",10423,13232,AUS,MDW,186.79
+2025,30423,30977,"Austin, TX","Chicago, IL",10423,13930,AUS,ORD,220.69
+2025,30423,31066,"Austin, TX","Columbus, OH",10423,11066,AUS,CMH,261.91
+2025,30423,31703,"Austin, TX","New York City, NY (Metropolitan Area)",10423,11618,AUS,EWR,278.34
+2025,30423,31703,"Austin, TX","New York City, NY (Metropolitan Area)",10423,12197,AUS,HPN,306.36
+2025,30423,31703,"Austin, TX","New York City, NY (Metropolitan Area)",10423,12391,AUS,ISP,292.5
+2025,30423,31703,"Austin, TX","New York City, NY (Metropolitan Area)",10423,12478,AUS,JFK,329.91
+2025,30423,31703,"Austin, TX","New York City, NY (Metropolitan Area)",10423,12953,AUS,LGA,271.9
+2025,30423,32457,"Austin, TX","San Francisco, CA (Metropolitan Area)",10423,13796,AUS,OAK,254.9
+2025,30423,32457,"Austin, TX","San Francisco, CA (Metropolitan Area)",10423,14771,AUS,SFO,302.43
+2025,30423,32457,"Austin, TX","San Francisco, CA (Metropolitan Area)",10423,14831,AUS,SJC,307.6
+2025,30423,32467,"Austin, TX","Miami, FL (Metropolitan Area)",10423,11697,AUS,FLL,194.42
+2025,30423,32467,"Austin, TX","Miami, FL (Metropolitan Area)",10423,13303,AUS,MIA,246.99
+2025,30423,32575,"Austin, TX","Los Angeles, CA (Metropolitan Area)",10423,10800,AUS,BUR,233.05
+2025,30423,32575,"Austin, TX","Los Angeles, CA (Metropolitan Area)",10423,12892,AUS,LAX,228.23
+2025,30423,32575,"Austin, TX","Los Angeles, CA (Metropolitan Area)",10423,12954,AUS,LGB,206.8
+2025,30423,32575,"Austin, TX","Los Angeles, CA (Metropolitan Area)",10423,13891,AUS,ONT,221.79
+2025,30423,32575,"Austin, TX","Los Angeles, CA (Metropolitan Area)",10423,14908,AUS,SNA,304.81
+2025,30423,33195,"Austin, TX","Tampa, FL (Metropolitan Area)",10423,15304,AUS,TPA,252.49
+2025,30431,31703,"Asheville, NC","New York City, NY (Metropolitan Area)",10431,11618,AVL,EWR,185.46
+2025,30431,31703,"Asheville, NC","New York City, NY (Metropolitan Area)",10431,12197,AVL,HPN,262.97
+2025,30431,31703,"Asheville, NC","New York City, NY (Metropolitan Area)",10431,12478,AVL,JFK,242.39
+2025,30431,31703,"Asheville, NC","New York City, NY (Metropolitan Area)",10431,12953,AVL,LGA,213.71
+2025,30431,32467,"Asheville, NC","Miami, FL (Metropolitan Area)",10431,11697,AVL,FLL,105.45
+2025,30431,32467,"Asheville, NC","Miami, FL (Metropolitan Area)",10431,13303,AVL,MIA,280.31
+2025,30436,30852,"Tucson, AZ","Washington, DC (Metropolitan Area)",15376,10821,TUS,BWI,290.76
+2025,30436,30852,"Tucson, AZ","Washington, DC (Metropolitan Area)",15376,11278,TUS,DCA,347.29
+2025,30436,30852,"Tucson, AZ","Washington, DC (Metropolitan Area)",15376,12264,TUS,IAD,357.4
+2025,30466,30198,"Phoenix, AZ","Pittsburgh, PA",14107,14122,PHX,PIT,278.69
+2025,30466,30559,"Phoenix, AZ","Seattle, WA",14107,14747,PHX,SEA,194.12
+2025,30466,30852,"Phoenix, AZ","Washington, DC (Metropolitan Area)",14107,10821,PHX,BWI,274.22
+2025,30466,30852,"Phoenix, AZ","Washington, DC (Metropolitan Area)",14107,11278,PHX,DCA,327.72
+2025,30466,30852,"Phoenix, AZ","Washington, DC (Metropolitan Area)",14107,12264,PHX,IAD,299.95
+2025,30466,31123,"Phoenix, AZ","St. Louis, MO",14107,15016,PHX,STL,268.54
+2025,30466,31775,"Phoenix, AZ","Sioux Falls, SD",10466,11775,AZA,FSD,99.38
+2025,30466,31775,"Phoenix, AZ","Sioux Falls, SD",14107,11775,PHX,FSD,284.55
+2025,30466,31884,"Phoenix, AZ","Spokane, WA",10466,11884,AZA,GEG,94.19
+2025,30466,31884,"Phoenix, AZ","Spokane, WA",14107,11884,PHX,GEG,248.55
+2025,30466,32457,"Phoenix, AZ","San Francisco, CA (Metropolitan Area)",14107,13796,PHX,OAK,161.47
+2025,30466,32457,"Phoenix, AZ","San Francisco, CA (Metropolitan Area)",14107,14771,PHX,SFO,157.08
+2025,30466,32457,"Phoenix, AZ","San Francisco, CA (Metropolitan Area)",14107,14831,PHX,SJC,215.48
+2025,30466,33192,"Phoenix, AZ","Sacramento, CA",14107,14893,PHX,SMF,216.28
+2025,30466,33195,"Phoenix, AZ","Tampa, FL (Metropolitan Area)",10466,15304,AZA,TPA,173
+2025,30466,33195,"Phoenix, AZ","Tampa, FL (Metropolitan Area)",14107,15304,PHX,TPA,306.89
+2025,30466,33214,"Phoenix, AZ","San Antonio, TX",14107,14683,PHX,SAT,252.51
+2025,30466,33570,"Phoenix, AZ","San Diego, CA",14107,14679,PHX,SAN,169.75
+2025,30466,34057,"Phoenix, AZ","Portland, OR",10466,14057,AZA,PDX,75.47
+2025,30466,34057,"Phoenix, AZ","Portland, OR",14107,14057,PHX,PDX,185.88
+2025,30466,34314,"Phoenix, AZ","Provo, UT",10466,14314,AZA,PVU,88.87
+2025,30466,34314,"Phoenix, AZ","Provo, UT",14107,14314,PHX,PVU,91.97
+2025,30466,34492,"Phoenix, AZ","Raleigh/Durham, NC",14107,14492,PHX,RDU,297.43
+2025,30466,34570,"Phoenix, AZ","Reno, NV",14107,14570,PHX,RNO,225.93
+2025,30466,34614,"Phoenix, AZ","Salt Lake City, UT",14107,14869,PHX,SLC,192.21
+2025,30466,34653,"Phoenix, AZ","Tulsa, OK",14107,15370,PHX,TUL,247.04
+2025,30529,30466,"Hartford, CT","Phoenix, AZ",10529,14107,BDL,PHX,276.09
+2025,30529,30852,"Hartford, CT","Washington, DC (Metropolitan Area)",10529,10821,BDL,BWI,207.56
+2025,30529,30852,"Hartford, CT","Washington, DC (Metropolitan Area)",10529,11278,BDL,DCA,201.75
+2025,30529,30852,"Hartford, CT","Washington, DC (Metropolitan Area)",10529,12264,BDL,IAD,209.26
+2025,30529,32457,"Hartford, CT","San Francisco, CA (Metropolitan Area)",10529,13796,BDL,OAK,305.69
+2025,30529,32457,"Hartford, CT","San Francisco, CA (Metropolitan Area)",10529,14771,BDL,SFO,359.03
+2025,30529,32457,"Hartford, CT","San Francisco, CA (Metropolitan Area)",10529,14831,BDL,SJC,344.43
+2025,30529,32467,"Hartford, CT","Miami, FL (Metropolitan Area)",10529,11697,BDL,FLL,163.12
+2025,30529,32467,"Hartford, CT","Miami, FL (Metropolitan Area)",10529,13303,BDL,MIA,221.62
+2025,30529,32575,"Hartford, CT","Los Angeles, CA (Metropolitan Area)",10529,10800,BDL,BUR,339.23
+2025,30529,32575,"Hartford, CT","Los Angeles, CA (Metropolitan Area)",10529,12892,BDL,LAX,294.77
+2025,30529,32575,"Hartford, CT","Los Angeles, CA (Metropolitan Area)",10529,12954,BDL,LGB,246.49
+2025,30529,32575,"Hartford, CT","Los Angeles, CA (Metropolitan Area)",10529,13891,BDL,ONT,325.23
+2025,30529,32575,"Hartford, CT","Los Angeles, CA (Metropolitan Area)",10529,14908,BDL,SNA,404.82
+2025,30529,33195,"Hartford, CT","Tampa, FL (Metropolitan Area)",10529,15304,BDL,TPA,184.15
+2025,30559,30852,"Seattle, WA","Washington, DC (Metropolitan Area)",14747,10821,SEA,BWI,313.24
+2025,30559,30852,"Seattle, WA","Washington, DC (Metropolitan Area)",14747,11278,SEA,DCA,350.27
+2025,30559,30852,"Seattle, WA","Washington, DC (Metropolitan Area)",14747,12264,SEA,IAD,315.06
+2025,30559,33195,"Seattle, WA","Tampa, FL (Metropolitan Area)",14747,15304,SEA,TPA,331.09
+2025,30599,30194,"Birmingham, AL","Dallas/Fort Worth, TX",10599,11259,BHM,DAL,221.27
+2025,30599,30194,"Birmingham, AL","Dallas/Fort Worth, TX",10599,11298,BHM,DFW,278.14
+2025,30599,30852,"Birmingham, AL","Washington, DC (Metropolitan Area)",10599,10821,BHM,BWI,232.77
+2025,30599,30852,"Birmingham, AL","Washington, DC (Metropolitan Area)",10599,11278,BHM,DCA,280.19
+2025,30599,30852,"Birmingham, AL","Washington, DC (Metropolitan Area)",10599,12264,BHM,IAD,319.26
+2025,30599,30977,"Birmingham, AL","Chicago, IL",10599,13232,BHM,MDW,214.42
+2025,30599,30977,"Birmingham, AL","Chicago, IL",10599,13930,BHM,ORD,282.42
+2025,30599,31453,"Birmingham, AL","Houston, TX",10599,12191,BHM,HOU,234.07
+2025,30599,31453,"Birmingham, AL","Houston, TX",10599,12266,BHM,IAH,280.97
+2025,30599,31703,"Birmingham, AL","New York City, NY (Metropolitan Area)",10599,11618,BHM,EWR,228.91
+2025,30599,31703,"Birmingham, AL","New York City, NY (Metropolitan Area)",10599,12197,BHM,HPN,325.68
+2025,30599,31703,"Birmingham, AL","New York City, NY (Metropolitan Area)",10599,12391,BHM,ISP,219.35
+2025,30599,31703,"Birmingham, AL","New York City, NY (Metropolitan Area)",10599,12478,BHM,JFK,374.39
+2025,30599,31703,"Birmingham, AL","New York City, NY (Metropolitan Area)",10599,12953,BHM,LGA,356.95
+2025,30599,32467,"Birmingham, AL","Miami, FL (Metropolitan Area)",10599,11697,BHM,FLL,168.62
+2025,30599,32467,"Birmingham, AL","Miami, FL (Metropolitan Area)",10599,13303,BHM,MIA,253.61
+2025,30599,32575,"Birmingham, AL","Los Angeles, CA (Metropolitan Area)",10599,10800,BHM,BUR,300.58
+2025,30599,32575,"Birmingham, AL","Los Angeles, CA (Metropolitan Area)",10599,12892,BHM,LAX,355.57
+2025,30599,32575,"Birmingham, AL","Los Angeles, CA (Metropolitan Area)",10599,12954,BHM,LGB,266.54
+2025,30599,32575,"Birmingham, AL","Los Angeles, CA (Metropolitan Area)",10599,13891,BHM,ONT,302.84
+2025,30599,32575,"Birmingham, AL","Los Angeles, CA (Metropolitan Area)",10599,14908,BHM,SNA,372.91
+2025,30615,30466,"El Paso, TX","Phoenix, AZ",11540,14107,ELP,PHX,198.71
+2025,30615,30852,"El Paso, TX","Washington, DC (Metropolitan Area)",11540,10821,ELP,BWI,305.2
+2025,30615,30852,"El Paso, TX","Washington, DC (Metropolitan Area)",11540,11278,ELP,DCA,290.67
+2025,30615,30852,"El Paso, TX","Washington, DC (Metropolitan Area)",11540,12264,ELP,IAD,369.02
+2025,30615,31453,"El Paso, TX","Houston, TX",11540,12191,ELP,HOU,216.94
+2025,30615,31453,"El Paso, TX","Houston, TX",11540,12266,ELP,IAH,257.27
+2025,30615,32575,"El Paso, TX","Los Angeles, CA (Metropolitan Area)",11540,10800,ELP,BUR,222.38
+2025,30615,32575,"El Paso, TX","Los Angeles, CA (Metropolitan Area)",11540,12892,ELP,LAX,225.61
+2025,30615,32575,"El Paso, TX","Los Angeles, CA (Metropolitan Area)",11540,12954,ELP,LGB,171.33
+2025,30615,32575,"El Paso, TX","Los Angeles, CA (Metropolitan Area)",11540,13891,ELP,ONT,215.23
+2025,30615,32575,"El Paso, TX","Los Angeles, CA (Metropolitan Area)",11540,14908,ELP,SNA,242.06
+2025,30647,30194,"Cleveland, OH (Metropolitan Area)","Dallas/Fort Worth, TX",10874,11298,CAK,DFW,294.93
+2025,30647,30194,"Cleveland, OH (Metropolitan Area)","Dallas/Fort Worth, TX",11042,11259,CLE,DAL,230.1
+2025,30647,30194,"Cleveland, OH (Metropolitan Area)","Dallas/Fort Worth, TX",11042,11298,CLE,DFW,257.28
+2025,30647,30325,"Cleveland, OH (Metropolitan Area)","Denver, CO",10874,11292,CAK,DEN,325.26
+2025,30647,30325,"Cleveland, OH (Metropolitan Area)","Denver, CO",11042,11292,CLE,DEN,215.58
+2025,30647,30466,"Cleveland, OH (Metropolitan Area)","Phoenix, AZ",10874,14107,CAK,PHX,411.67
+2025,30647,30466,"Cleveland, OH (Metropolitan Area)","Phoenix, AZ",11042,14107,CLE,PHX,228.36
+2025,30647,30559,"Cleveland, OH (Metropolitan Area)","Seattle, WA",10874,14747,CAK,SEA,405.7
+2025,30647,30559,"Cleveland, OH (Metropolitan Area)","Seattle, WA",11042,14747,CLE,SEA,286.6
+2025,30647,30693,"Cleveland, OH (Metropolitan Area)","Nashville, TN",10874,10693,CAK,BNA,174.21
+2025,30647,30693,"Cleveland, OH (Metropolitan Area)","Nashville, TN",11042,10693,CLE,BNA,217.4
+2025,30647,30852,"Cleveland, OH (Metropolitan Area)","Washington, DC (Metropolitan Area)",10874,11278,CAK,DCA,221.92
+2025,30647,30852,"Cleveland, OH (Metropolitan Area)","Washington, DC (Metropolitan Area)",11042,10821,CLE,BWI,204.24
+2025,30647,30852,"Cleveland, OH (Metropolitan Area)","Washington, DC (Metropolitan Area)",11042,11278,CLE,DCA,206.76
+2025,30647,30852,"Cleveland, OH (Metropolitan Area)","Washington, DC (Metropolitan Area)",11042,12264,CLE,IAD,221.77
+2025,30647,31123,"Cleveland, OH (Metropolitan Area)","St. Louis, MO",10874,15016,CAK,STL,257.6
+2025,30647,31123,"Cleveland, OH (Metropolitan Area)","St. Louis, MO",11042,15016,CLE,STL,214.96
+2025,30647,31453,"Cleveland, OH (Metropolitan Area)","Houston, TX",10874,12266,CAK,IAH,294.22
+2025,30647,31453,"Cleveland, OH (Metropolitan Area)","Houston, TX",11042,12191,CLE,HOU,215.98
+2025,30647,31453,"Cleveland, OH (Metropolitan Area)","Houston, TX",11042,12266,CLE,IAH,252.11
+2025,30647,31454,"Cleveland, OH (Metropolitan Area)","Orlando, FL",10874,13204,CAK,MCO,122.76
+2025,30647,31454,"Cleveland, OH (Metropolitan Area)","Orlando, FL",11042,13204,CLE,MCO,155.48
+2025,30647,31650,"Cleveland, OH (Metropolitan Area)","Minneapolis/St. Paul, MN",10874,13487,CAK,MSP,304.88
+2025,30647,31650,"Cleveland, OH (Metropolitan Area)","Minneapolis/St. Paul, MN",11042,13487,CLE,MSP,318.27
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",10874,11618,CAK,EWR,376.65
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",10874,12197,CAK,HPN,167.62
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",10874,12478,CAK,JFK,296.87
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",10874,12953,CAK,LGA,250.84
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",11042,11618,CLE,EWR,223.8
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",11042,12197,CLE,HPN,275.57
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",11042,12391,CLE,ISP,196.15
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",11042,12478,CLE,JFK,189.58
+2025,30647,31703,"Cleveland, OH (Metropolitan Area)","New York City, NY (Metropolitan Area)",11042,12953,CLE,LGA,189.92
+2025,30647,31714,"Cleveland, OH (Metropolitan Area)","Fort Myers, FL",10874,14635,CAK,RSW,105.63
+2025,30647,31714,"Cleveland, OH (Metropolitan Area)","Fort Myers, FL",11042,14635,CLE,RSW,162.53
+2025,30647,32211,"Cleveland, OH (Metropolitan Area)","Las Vegas, NV",10874,12889,CAK,LAS,173.5
+2025,30647,32211,"Cleveland, OH (Metropolitan Area)","Las Vegas, NV",11042,12889,CLE,LAS,220.28
+2025,30647,32457,"Cleveland, OH (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10874,14771,CAK,SFO,391.96
+2025,30647,32457,"Cleveland, OH (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10874,14831,CAK,SJC,507.45
+2025,30647,32457,"Cleveland, OH (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11042,13796,CLE,OAK,276.3
+2025,30647,32457,"Cleveland, OH (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11042,14771,CLE,SFO,307.75
+2025,30647,32457,"Cleveland, OH (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11042,14831,CLE,SJC,302.28
+2025,30647,32467,"Cleveland, OH (Metropolitan Area)","Miami, FL (Metropolitan Area)",10874,11697,CAK,FLL,152.93
+2025,30647,32467,"Cleveland, OH (Metropolitan Area)","Miami, FL (Metropolitan Area)",10874,13303,CAK,MIA,253.04
+2025,30647,32467,"Cleveland, OH (Metropolitan Area)","Miami, FL (Metropolitan Area)",11042,11697,CLE,FLL,179.73
+2025,30647,32467,"Cleveland, OH (Metropolitan Area)","Miami, FL (Metropolitan Area)",11042,13303,CLE,MIA,201.64
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10874,10800,CAK,BUR,302
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10874,12892,CAK,LAX,196.65
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10874,13891,CAK,ONT,469.86
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10874,14908,CAK,SNA,391.35
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",11042,10800,CLE,BUR,297.99
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",11042,12892,CLE,LAX,286.34
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",11042,12954,CLE,LGB,251.51
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",11042,13891,CLE,ONT,261.57
+2025,30647,32575,"Cleveland, OH (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",11042,14908,CLE,SNA,360.29
+2025,30647,33195,"Cleveland, OH (Metropolitan Area)","Tampa, FL (Metropolitan Area)",10874,14112,CAK,PIE,73.42
+2025,30647,33195,"Cleveland, OH (Metropolitan Area)","Tampa, FL (Metropolitan Area)",10874,15304,CAK,TPA,115.6
+2025,30647,33195,"Cleveland, OH (Metropolitan Area)","Tampa, FL (Metropolitan Area)",11042,15304,CLE,TPA,135.38
+2025,30647,33570,"Cleveland, OH (Metropolitan Area)","San Diego, CA",10874,14679,CAK,SAN,330.23
+2025,30647,33570,"Cleveland, OH (Metropolitan Area)","San Diego, CA",11042,14679,CLE,SAN,287.34
+2025,30647,34100,"Cleveland, OH (Metropolitan Area)","Philadelphia, PA",11042,14100,CLE,PHL,329.14
+2025,30647,34986,"Cleveland, OH (Metropolitan Area)","Sarasota/Bradenton, FL",10874,14986,CAK,SRQ,100.05
+2025,30647,34986,"Cleveland, OH (Metropolitan Area)","Sarasota/Bradenton, FL",11042,14986,CLE,SRQ,152.59
+2025,30693,30466,"Nashville, TN","Phoenix, AZ",10693,14107,BNA,PHX,284.54
+2025,30693,30852,"Nashville, TN","Washington, DC (Metropolitan Area)",10693,10821,BNA,BWI,236.69
+2025,30693,30852,"Nashville, TN","Washington, DC (Metropolitan Area)",10693,11278,BNA,DCA,205.22
+2025,30693,30852,"Nashville, TN","Washington, DC (Metropolitan Area)",10693,12264,BNA,IAD,214.4
+2025,30693,31703,"Nashville, TN","New York City, NY (Metropolitan Area)",10693,11618,BNA,EWR,191.1
+2025,30693,31703,"Nashville, TN","New York City, NY (Metropolitan Area)",10693,12197,BNA,HPN,217.79
+2025,30693,31703,"Nashville, TN","New York City, NY (Metropolitan Area)",10693,12391,BNA,ISP,248.13
+2025,30693,31703,"Nashville, TN","New York City, NY (Metropolitan Area)",10693,12478,BNA,JFK,188.81
+2025,30693,31703,"Nashville, TN","New York City, NY (Metropolitan Area)",10693,12953,BNA,LGA,212.09
+2025,30693,32457,"Nashville, TN","San Francisco, CA (Metropolitan Area)",10693,13796,BNA,OAK,301.15
+2025,30693,32457,"Nashville, TN","San Francisco, CA (Metropolitan Area)",10693,14771,BNA,SFO,364.27
+2025,30693,32457,"Nashville, TN","San Francisco, CA (Metropolitan Area)",10693,14831,BNA,SJC,295.06
+2025,30693,33195,"Nashville, TN","Tampa, FL (Metropolitan Area)",10693,12882,BNA,LAL,74.77
+2025,30693,33195,"Nashville, TN","Tampa, FL (Metropolitan Area)",10693,14112,BNA,PIE,77.74
+2025,30693,33195,"Nashville, TN","Tampa, FL (Metropolitan Area)",10693,15304,BNA,TPA,203.32
+2025,30713,30194,"Boise, ID","Dallas/Fort Worth, TX",10713,11259,BOI,DAL,241.79
+2025,30713,30194,"Boise, ID","Dallas/Fort Worth, TX",10713,11298,BOI,DFW,292.53
+2025,30713,30466,"Boise, ID","Phoenix, AZ",10713,10466,BOI,AZA,74.99
+2025,30713,30466,"Boise, ID","Phoenix, AZ",10713,14107,BOI,PHX,180.72
+2025,30713,30977,"Boise, ID","Chicago, IL",10713,13232,BOI,MDW,212.08
+2025,30713,30977,"Boise, ID","Chicago, IL",10713,13930,BOI,ORD,265.46
+2025,30713,32457,"Boise, ID","San Francisco, CA (Metropolitan Area)",10713,13796,BOI,OAK,165.77
+2025,30713,32457,"Boise, ID","San Francisco, CA (Metropolitan Area)",10713,14771,BOI,SFO,196.45
+2025,30713,32457,"Boise, ID","San Francisco, CA (Metropolitan Area)",10713,14831,BOI,SJC,176.59
+2025,30713,32575,"Boise, ID","Los Angeles, CA (Metropolitan Area)",10713,10800,BOI,BUR,151.09
+2025,30713,32575,"Boise, ID","Los Angeles, CA (Metropolitan Area)",10713,12892,BOI,LAX,196.26
+2025,30713,32575,"Boise, ID","Los Angeles, CA (Metropolitan Area)",10713,12954,BOI,LGB,195.18
+2025,30713,32575,"Boise, ID","Los Angeles, CA (Metropolitan Area)",10713,13891,BOI,ONT,222.54
+2025,30713,32575,"Boise, ID","Los Angeles, CA (Metropolitan Area)",10713,14908,BOI,SNA,192.08
+2025,30721,30194,"Boston, MA (Metropolitan Area)","Dallas/Fort Worth, TX",10721,11259,BOS,DAL,227.06
+2025,30721,30194,"Boston, MA (Metropolitan Area)","Dallas/Fort Worth, TX",10721,11298,BOS,DFW,255.27
+2025,30721,30194,"Boston, MA (Metropolitan Area)","Dallas/Fort Worth, TX",13296,11259,MHT,DAL,286.05
+2025,30721,30194,"Boston, MA (Metropolitan Area)","Dallas/Fort Worth, TX",13296,11298,MHT,DFW,352.71
+2025,30721,30194,"Boston, MA (Metropolitan Area)","Dallas/Fort Worth, TX",14307,11259,PVD,DAL,256.03
+2025,30721,30194,"Boston, MA (Metropolitan Area)","Dallas/Fort Worth, TX",14307,11298,PVD,DFW,332.85
+2025,30721,30198,"Boston, MA (Metropolitan Area)","Pittsburgh, PA",10721,14122,BOS,PIT,196.94
+2025,30721,30198,"Boston, MA (Metropolitan Area)","Pittsburgh, PA",13296,14122,MHT,PIT,238.34
+2025,30721,30198,"Boston, MA (Metropolitan Area)","Pittsburgh, PA",14307,14122,PVD,PIT,153.16
+2025,30721,30325,"Boston, MA (Metropolitan Area)","Denver, CO",10721,11292,BOS,DEN,244.2
+2025,30721,30325,"Boston, MA (Metropolitan Area)","Denver, CO",13296,11292,MHT,DEN,298.7
+2025,30721,30325,"Boston, MA (Metropolitan Area)","Denver, CO",14307,11292,PVD,DEN,273.18
+2025,30721,30466,"Boston, MA (Metropolitan Area)","Phoenix, AZ",10721,14107,BOS,PHX,296.46
+2025,30721,30466,"Boston, MA (Metropolitan Area)","Phoenix, AZ",13296,14107,MHT,PHX,318.3
+2025,30721,30466,"Boston, MA (Metropolitan Area)","Phoenix, AZ",14307,14107,PVD,PHX,290.33
+2025,30721,30559,"Boston, MA (Metropolitan Area)","Seattle, WA",10721,14747,BOS,SEA,293.97
+2025,30721,30559,"Boston, MA (Metropolitan Area)","Seattle, WA",13296,14747,MHT,SEA,367.76
+2025,30721,30559,"Boston, MA (Metropolitan Area)","Seattle, WA",14307,14747,PVD,SEA,351.84
+2025,30721,30647,"Boston, MA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",10721,10874,BOS,CAK,291.18
+2025,30721,30647,"Boston, MA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",10721,11042,BOS,CLE,226.54
+2025,30721,30647,"Boston, MA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",13296,10874,MHT,CAK,376.2
+2025,30721,30647,"Boston, MA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",13296,11042,MHT,CLE,271.15
+2025,30721,30647,"Boston, MA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",14307,10874,PVD,CAK,188.57
+2025,30721,30647,"Boston, MA (Metropolitan Area)","Cleveland, OH (Metropolitan Area)",14307,11042,PVD,CLE,258.07
+2025,30721,30693,"Boston, MA (Metropolitan Area)","Nashville, TN",10721,10693,BOS,BNA,194.96
+2025,30721,30693,"Boston, MA (Metropolitan Area)","Nashville, TN",13296,10693,MHT,BNA,264.81
+2025,30721,30693,"Boston, MA (Metropolitan Area)","Nashville, TN",14307,10693,PVD,BNA,257.4
+2025,30721,30792,"Boston, MA (Metropolitan Area)","Buffalo, NY",10721,10792,BOS,BUF,170.25
+2025,30721,30792,"Boston, MA (Metropolitan Area)","Buffalo, NY",13296,10792,MHT,BUF,258.61
+2025,30721,30792,"Boston, MA (Metropolitan Area)","Buffalo, NY",14307,10792,PVD,BUF,213.78
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10721,10821,BOS,BWI,168.02
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10721,11278,BOS,DCA,192.97
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10721,12264,BOS,IAD,197.84
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13296,10821,MHT,BWI,201.5
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13296,11278,MHT,DCA,240.83
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13296,12264,MHT,IAD,192.35
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14307,10821,PVD,BWI,210.15
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14307,11278,PVD,DCA,197.55
+2025,30721,30852,"Boston, MA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14307,12264,PVD,IAD,239.81
+2025,30721,30977,"Boston, MA (Metropolitan Area)","Chicago, IL",10721,13232,BOS,MDW,156.15
+2025,30721,30977,"Boston, MA (Metropolitan Area)","Chicago, IL",10721,13930,BOS,ORD,193.97
+2025,30721,30977,"Boston, MA (Metropolitan Area)","Chicago, IL",13296,13232,MHT,MDW,238.47
+2025,30721,30977,"Boston, MA (Metropolitan Area)","Chicago, IL",13296,13930,MHT,ORD,276.58
+2025,30721,30977,"Boston, MA (Metropolitan Area)","Chicago, IL",14307,13232,PVD,MDW,221.05
+2025,30721,30977,"Boston, MA (Metropolitan Area)","Chicago, IL",14307,13930,PVD,ORD,270.55
+2025,30721,30994,"Boston, MA (Metropolitan Area)","Charleston, SC",10721,10994,BOS,CHS,200.48
+2025,30721,30994,"Boston, MA (Metropolitan Area)","Charleston, SC",13296,10994,MHT,CHS,148.09
+2025,30721,30994,"Boston, MA (Metropolitan Area)","Charleston, SC",14307,10994,PVD,CHS,135
+2025,30721,31057,"Boston, MA (Metropolitan Area)","Charlotte, NC",10721,11057,BOS,CLT,246.58
+2025,30721,31057,"Boston, MA (Metropolitan Area)","Charlotte, NC",13296,11057,MHT,CLT,266.71
+2025,30721,31057,"Boston, MA (Metropolitan Area)","Charlotte, NC",14307,11057,PVD,CLT,271.42
+2025,30721,31066,"Boston, MA (Metropolitan Area)","Columbus, OH",10721,11066,BOS,CMH,262.77
+2025,30721,31066,"Boston, MA (Metropolitan Area)","Columbus, OH",13296,11066,MHT,CMH,251.75
+2025,30721,31066,"Boston, MA (Metropolitan Area)","Columbus, OH",14307,11066,PVD,CMH,253.57
+2025,30721,31123,"Boston, MA (Metropolitan Area)","St. Louis, MO",10721,15016,BOS,STL,296.28
+2025,30721,31123,"Boston, MA (Metropolitan Area)","St. Louis, MO",13296,15016,MHT,STL,275.62
+2025,30721,31123,"Boston, MA (Metropolitan Area)","St. Louis, MO",14307,15016,PVD,STL,286.69
+2025,30721,31135,"Boston, MA (Metropolitan Area)","Myrtle Beach, SC",10721,13577,BOS,MYR,134.82
+2025,30721,31135,"Boston, MA (Metropolitan Area)","Myrtle Beach, SC",13296,13577,MHT,MYR,134.72
+2025,30721,31135,"Boston, MA (Metropolitan Area)","Myrtle Beach, SC",14307,13577,PVD,MYR,121.54
+2025,30721,31136,"Boston, MA (Metropolitan Area)","Jacksonville, FL",10721,12451,BOS,JAX,225.16
+2025,30721,31136,"Boston, MA (Metropolitan Area)","Jacksonville, FL",13296,12451,MHT,JAX,267.38
+2025,30721,31136,"Boston, MA (Metropolitan Area)","Jacksonville, FL",14307,12451,PVD,JAX,160.72
+2025,30721,31295,"Boston, MA (Metropolitan Area)","Detroit, MI",10721,11433,BOS,DTW,223.81
+2025,30721,31295,"Boston, MA (Metropolitan Area)","Detroit, MI",13296,11433,MHT,DTW,256.8
+2025,30721,31295,"Boston, MA (Metropolitan Area)","Detroit, MI",14307,11433,PVD,DTW,331.86
+2025,30721,31453,"Boston, MA (Metropolitan Area)","Houston, TX",10721,12191,BOS,HOU,250.03
+2025,30721,31453,"Boston, MA (Metropolitan Area)","Houston, TX",10721,12266,BOS,IAH,275.79
+2025,30721,31453,"Boston, MA (Metropolitan Area)","Houston, TX",13296,12191,MHT,HOU,272.38
+2025,30721,31453,"Boston, MA (Metropolitan Area)","Houston, TX",13296,12266,MHT,IAH,373.17
+2025,30721,31453,"Boston, MA (Metropolitan Area)","Houston, TX",14307,12191,PVD,HOU,260.6
+2025,30721,31453,"Boston, MA (Metropolitan Area)","Houston, TX",14307,12266,PVD,IAH,326.57
+2025,30721,31454,"Boston, MA (Metropolitan Area)","Orlando, FL",10721,13204,BOS,MCO,213.82
+2025,30721,31454,"Boston, MA (Metropolitan Area)","Orlando, FL",13296,13204,MHT,MCO,181.11
+2025,30721,31454,"Boston, MA (Metropolitan Area)","Orlando, FL",14307,13204,PVD,MCO,177.83
+2025,30721,31650,"Boston, MA (Metropolitan Area)","Minneapolis/St. Paul, MN",10721,13487,BOS,MSP,303.47
+2025,30721,31650,"Boston, MA (Metropolitan Area)","Minneapolis/St. Paul, MN",13296,13487,MHT,MSP,271.72
+2025,30721,31650,"Boston, MA (Metropolitan Area)","Minneapolis/St. Paul, MN",14307,13487,PVD,MSP,259.43
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10721,11618,BOS,EWR,219.5
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10721,12197,BOS,HPN,317.02
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10721,12478,BOS,JFK,192.24
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10721,12953,BOS,LGA,252.98
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",13296,11618,MHT,EWR,111.9
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",13296,12478,MHT,JFK,120.31
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",14307,11618,PVD,EWR,184.9
+2025,30721,31703,"Boston, MA (Metropolitan Area)","New York City, NY (Metropolitan Area)",14307,12478,PVD,JFK,144.82
+2025,30721,31714,"Boston, MA (Metropolitan Area)","Fort Myers, FL",10721,14635,BOS,RSW,224.83
+2025,30721,31714,"Boston, MA (Metropolitan Area)","Fort Myers, FL",13296,14635,MHT,RSW,169.74
+2025,30721,31714,"Boston, MA (Metropolitan Area)","Fort Myers, FL",14307,14635,PVD,RSW,171.45
+2025,30721,32211,"Boston, MA (Metropolitan Area)","Las Vegas, NV",10721,12889,BOS,LAS,323.1
+2025,30721,32211,"Boston, MA (Metropolitan Area)","Las Vegas, NV",13296,12889,MHT,LAS,310.69
+2025,30721,32211,"Boston, MA (Metropolitan Area)","Las Vegas, NV",14307,12889,PVD,LAS,314.32
+2025,30721,32323,"Boston, MA (Metropolitan Area)","Wilmington, NC",10721,12323,BOS,ILM,170.78
+2025,30721,32323,"Boston, MA (Metropolitan Area)","Wilmington, NC",13296,12323,MHT,ILM,113.96
+2025,30721,32323,"Boston, MA (Metropolitan Area)","Wilmington, NC",14307,12323,PVD,ILM,143.83
+2025,30721,32337,"Boston, MA (Metropolitan Area)","Indianapolis, IN",10721,12339,BOS,IND,287.79
+2025,30721,32337,"Boston, MA (Metropolitan Area)","Indianapolis, IN",13296,12339,MHT,IND,260.19
+2025,30721,32337,"Boston, MA (Metropolitan Area)","Indianapolis, IN",14307,12339,PVD,IND,275.87
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10721,13796,BOS,OAK,332.52
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10721,14771,BOS,SFO,367.75
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10721,14831,BOS,SJC,258.05
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13296,13796,MHT,OAK,314.86
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13296,14771,MHT,SFO,420.23
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13296,14831,MHT,SJC,308.6
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",14307,13796,PVD,OAK,304.13
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",14307,14771,PVD,SFO,376.12
+2025,30721,32457,"Boston, MA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",14307,14831,PVD,SJC,290.59
+2025,30721,32467,"Boston, MA (Metropolitan Area)","Miami, FL (Metropolitan Area)",10721,11697,BOS,FLL,186.51
+2025,30721,32467,"Boston, MA (Metropolitan Area)","Miami, FL (Metropolitan Area)",10721,13303,BOS,MIA,210.11
+2025,30721,32467,"Boston, MA (Metropolitan Area)","Miami, FL (Metropolitan Area)",13296,11697,MHT,FLL,211.02
+2025,30721,32467,"Boston, MA (Metropolitan Area)","Miami, FL (Metropolitan Area)",13296,13303,MHT,MIA,273.32
+2025,30721,32467,"Boston, MA (Metropolitan Area)","Miami, FL (Metropolitan Area)",14307,11697,PVD,FLL,188.64
+2025,30721,32467,"Boston, MA (Metropolitan Area)","Miami, FL (Metropolitan Area)",14307,13303,PVD,MIA,244.24
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10721,10800,BOS,BUR,326.59
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10721,12892,BOS,LAX,363.31
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10721,12954,BOS,LGB,245.45
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10721,13891,BOS,ONT,303.35
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",10721,14908,BOS,SNA,327.83
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",13296,10800,MHT,BUR,353.64
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",13296,12892,MHT,LAX,337.68
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",13296,12954,MHT,LGB,245.31
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",13296,13891,MHT,ONT,269.36
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",13296,14908,MHT,SNA,316.17
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",14307,10800,PVD,BUR,286.55
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",14307,12892,PVD,LAX,272.5
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",14307,12954,PVD,LGB,243.67
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",14307,13891,PVD,ONT,322.02
+2025,30721,32575,"Boston, MA (Metropolitan Area)","Los Angeles, CA (Metropolitan Area)",14307,14908,PVD,SNA,374.41
+2025,30721,33044,"Boston, MA (Metropolitan Area)","Louisville, KY",10721,14730,BOS,SDF,268.76
+2025,30721,33044,"Boston, MA (Metropolitan Area)","Louisville, KY",13296,14730,MHT,SDF,257.86
+2025,30721,33044,"Boston, MA (Metropolitan Area)","Louisville, KY",14307,14730,PVD,SDF,283.73
+2025,30721,33105,"Boston, MA (Metropolitan Area)","Cincinnati, OH",10721,11193,BOS,CVG,295.99
+2025,30721,33105,"Boston, MA (Metropolitan Area)","Cincinnati, OH",13296,11193,MHT,CVG,251.94
+2025,30721,33105,"Boston, MA (Metropolitan Area)","Cincinnati, OH",14307,11193,PVD,CVG,178.45
+2025,30721,33192,"Boston, MA (Metropolitan Area)","Sacramento, CA",10721,14893,BOS,SMF,273.14
+2025,30721,33192,"Boston, MA (Metropolitan Area)","Sacramento, CA",13296,14893,MHT,SMF,329.25
+2025,30721,33192,"Boston, MA (Metropolitan Area)","Sacramento, CA",14307,14893,PVD,SMF,319.98
+2025,30721,33195,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",10721,15304,BOS,TPA,199.37
+2025,30721,33195,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",13296,12882,MHT,LAL,84.9
+2025,30721,33195,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",13296,15304,MHT,TPA,256.06
+2025,30721,33195,"Boston, MA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",14307,15304,PVD,TPA,158.01
+2025,30721,33198,"Boston, MA (Metropolitan Area)","Kansas City, MO",10721,13198,BOS,MCI,329.16
+2025,30721,33198,"Boston, MA (Metropolitan Area)","Kansas City, MO",13296,13198,MHT,MCI,267.95
+2025,30721,33198,"Boston, MA (Metropolitan Area)","Kansas City, MO",14307,13198,PVD,MCI,285.99
+2025,30721,33214,"Boston, MA (Metropolitan Area)","San Antonio, TX",10721,14683,BOS,SAT,278.38
+2025,30721,33214,"Boston, MA (Metropolitan Area)","San Antonio, TX",13296,14683,MHT,SAT,317.68
+2025,30721,33214,"Boston, MA (Metropolitan Area)","San Antonio, TX",14307,14683,PVD,SAT,276.27
+2025,30721,33244,"Boston, MA (Metropolitan Area)","Memphis, TN",10721,13244,BOS,MEM,297.82
+2025,30721,33244,"Boston, MA (Metropolitan Area)","Memphis, TN",13296,13244,MHT,MEM,294.78
+2025,30721,33244,"Boston, MA (Metropolitan Area)","Memphis, TN",14307,13244,PVD,MEM,269.84
+2025,30721,33342,"Boston, MA (Metropolitan Area)","Milwaukee, WI",10721,13342,BOS,MKE,239.79
+2025,30721,33342,"Boston, MA (Metropolitan Area)","Milwaukee, WI",13296,13342,MHT,MKE,234.53
+2025,30721,33342,"Boston, MA (Metropolitan Area)","Milwaukee, WI",14307,13342,PVD,MKE,241.65
+2025,30721,33495,"Boston, MA (Metropolitan Area)","New Orleans, LA",10721,13495,BOS,MSY,218.38
+2025,30721,33495,"Boston, MA (Metropolitan Area)","New Orleans, LA",13296,13495,MHT,MSY,289.14
+2025,30721,33495,"Boston, MA (Metropolitan Area)","New Orleans, LA",14307,13495,PVD,MSY,247.02
+2025,30721,33570,"Boston, MA (Metropolitan Area)","San Diego, CA",10721,14679,BOS,SAN,325.48
+2025,30721,33570,"Boston, MA (Metropolitan Area)","San Diego, CA",13296,14679,MHT,SAN,298.86
+2025,30721,33570,"Boston, MA (Metropolitan Area)","San Diego, CA",14307,14679,PVD,SAN,317.32
+2025,30721,33667,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",10721,13931,BOS,ORF,182.52
+2025,30721,33667,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",10721,14098,BOS,PHF,316.95
+2025,30721,33667,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",13296,13931,MHT,ORF,234.01
+2025,30721,33667,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",13296,14098,MHT,PHF,306.89
+2025,30721,33667,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",14307,13931,PVD,ORF,124.67
+2025,30721,33667,"Boston, MA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",14307,14098,PVD,PHF,349.08
+2025,30721,34027,"Boston, MA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",10721,14027,BOS,PBI,222.05
+2025,30721,34027,"Boston, MA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",13296,14027,MHT,PBI,268.61
+2025,30721,34027,"Boston, MA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",14307,14027,PVD,PBI,199.2
+2025,30721,34057,"Boston, MA (Metropolitan Area)","Portland, OR",10721,14057,BOS,PDX,295.49
+2025,30721,34057,"Boston, MA (Metropolitan Area)","Portland, OR",13296,14057,MHT,PDX,329.92
+2025,30721,34057,"Boston, MA (Metropolitan Area)","Portland, OR",14307,14057,PVD,PDX,329.09
+2025,30721,34100,"Boston, MA (Metropolitan Area)","Philadelphia, PA",10721,14100,BOS,PHL,197.51
+2025,30721,34100,"Boston, MA (Metropolitan Area)","Philadelphia, PA",13296,14100,MHT,PHL,307.83
+2025,30721,34100,"Boston, MA (Metropolitan Area)","Philadelphia, PA",14307,14100,PVD,PHL,370.97
+2025,30721,34492,"Boston, MA (Metropolitan Area)","Raleigh/Durham, NC",10721,14492,BOS,RDU,197.79
+2025,30721,34492,"Boston, MA (Metropolitan Area)","Raleigh/Durham, NC",13296,14492,MHT,RDU,138.39
+2025,30721,34492,"Boston, MA (Metropolitan Area)","Raleigh/Durham, NC",14307,14492,PVD,RDU,130.63
+2025,30721,34524,"Boston, MA (Metropolitan Area)","Richmond, VA",10721,14524,BOS,RIC,194.16
+2025,30721,34524,"Boston, MA (Metropolitan Area)","Richmond, VA",13296,14524,MHT,RIC,223.68
+2025,30721,34524,"Boston, MA (Metropolitan Area)","Richmond, VA",14307,14524,PVD,RIC,152.63
+2025,30721,34614,"Boston, MA (Metropolitan Area)","Salt Lake City, UT",10721,14869,BOS,SLC,357.64
+2025,30721,34614,"Boston, MA (Metropolitan Area)","Salt Lake City, UT",13296,14869,MHT,SLC,299.5
+2025,30721,34614,"Boston, MA (Metropolitan Area)","Salt Lake City, UT",14307,14869,PVD,SLC,313.77
+2025,30721,34685,"Boston, MA (Metropolitan Area)","Savannah, GA",10721,14685,BOS,SAV,215.92
+2025,30721,34685,"Boston, MA (Metropolitan Area)","Savannah, GA",13296,14685,MHT,SAV,252.79
+2025,30721,34685,"Boston, MA (Metropolitan Area)","Savannah, GA",14307,14685,PVD,SAV,180.82
+2025,30721,34986,"Boston, MA (Metropolitan Area)","Sarasota/Bradenton, FL",10721,14986,BOS,SRQ,218.14
+2025,30721,34986,"Boston, MA (Metropolitan Area)","Sarasota/Bradenton, FL",13296,14986,MHT,SRQ,235.22
+2025,30721,34986,"Boston, MA (Metropolitan Area)","Sarasota/Bradenton, FL",14307,14986,PVD,SRQ,159.33
+2025,30785,30852,"Burlington, VT","Washington, DC (Metropolitan Area)",10785,10821,BTV,BWI,310.89
+2025,30785,30852,"Burlington, VT","Washington, DC (Metropolitan Area)",10785,11278,BTV,DCA,219.42
+2025,30785,30852,"Burlington, VT","Washington, DC (Metropolitan Area)",10785,12264,BTV,IAD,227.15
+2025,30792,30194,"Buffalo, NY","Dallas/Fort Worth, TX",10792,11259,BUF,DAL,248.97
+2025,30792,30194,"Buffalo, NY","Dallas/Fort Worth, TX",10792,11298,BUF,DFW,268.36
+2025,30792,30466,"Buffalo, NY","Phoenix, AZ",10792,14107,BUF,PHX,273.14
+2025,30792,30852,"Buffalo, NY","Washington, DC (Metropolitan Area)",10792,10821,BUF,BWI,193.16
+2025,30792,30852,"Buffalo, NY","Washington, DC (Metropolitan Area)",10792,11278,BUF,DCA,184.47
+2025,30792,30852,"Buffalo, NY","Washington, DC (Metropolitan Area)",10792,12264,BUF,IAD,190.46
+2025,30792,30977,"Buffalo, NY","Chicago, IL",10792,13232,BUF,MDW,197.59
+2025,30792,30977,"Buffalo, NY","Chicago, IL",10792,13930,BUF,ORD,232.21
+2025,30792,31703,"Buffalo, NY","New York City, NY (Metropolitan Area)",10792,11618,BUF,EWR,169.31
+2025,30792,31703,"Buffalo, NY","New York City, NY (Metropolitan Area)",10792,12197,BUF,HPN,249.94
+2025,30792,31703,"Buffalo, NY","New York City, NY (Metropolitan Area)",10792,12391,BUF,ISP,193.35
+2025,30792,31703,"Buffalo, NY","New York City, NY (Metropolitan Area)",10792,12478,BUF,JFK,133.85
+2025,30792,31703,"Buffalo, NY","New York City, NY (Metropolitan Area)",10792,12953,BUF,LGA,155.84
+2025,30792,32467,"Buffalo, NY","Miami, FL (Metropolitan Area)",10792,11697,BUF,FLL,189.62
+2025,30792,32467,"Buffalo, NY","Miami, FL (Metropolitan Area)",10792,13303,BUF,MIA,191.42
+2025,30792,32575,"Buffalo, NY","Los Angeles, CA (Metropolitan Area)",10792,10800,BUF,BUR,287.09
+2025,30792,32575,"Buffalo, NY","Los Angeles, CA (Metropolitan Area)",10792,12892,BUF,LAX,226.95
+2025,30792,32575,"Buffalo, NY","Los Angeles, CA (Metropolitan Area)",10792,12954,BUF,LGB,211.79
+2025,30792,32575,"Buffalo, NY","Los Angeles, CA (Metropolitan Area)",10792,13891,BUF,ONT,292.23
+2025,30792,32575,"Buffalo, NY","Los Angeles, CA (Metropolitan Area)",10792,14908,BUF,SNA,425.82
+2025,30792,33195,"Buffalo, NY","Tampa, FL (Metropolitan Area)",10792,15304,BUF,TPA,184.16
+2025,30849,30977,"Bozeman, MT","Chicago, IL",10849,13232,BZN,MDW,247.68
+2025,30849,30977,"Bozeman, MT","Chicago, IL",10849,13930,BZN,ORD,249.06
+2025,30849,31703,"Bozeman, MT","New York City, NY (Metropolitan Area)",10849,11618,BZN,EWR,350.73
+2025,30849,31703,"Bozeman, MT","New York City, NY (Metropolitan Area)",10849,12197,BZN,HPN,511.93
+2025,30849,31703,"Bozeman, MT","New York City, NY (Metropolitan Area)",10849,12478,BZN,JFK,300.12
+2025,30849,31703,"Bozeman, MT","New York City, NY (Metropolitan Area)",10849,12953,BZN,LGA,346.74
+2025,30849,32457,"Bozeman, MT","San Francisco, CA (Metropolitan Area)",10849,13796,BZN,OAK,231.23
+2025,30849,32457,"Bozeman, MT","San Francisco, CA (Metropolitan Area)",10849,14771,BZN,SFO,265.52
+2025,30849,32457,"Bozeman, MT","San Francisco, CA (Metropolitan Area)",10849,14831,BZN,SJC,223.7
+2025,30849,32575,"Bozeman, MT","Los Angeles, CA (Metropolitan Area)",10849,10800,BZN,BUR,242.27
+2025,30849,32575,"Bozeman, MT","Los Angeles, CA (Metropolitan Area)",10849,12892,BZN,LAX,269.98
+2025,30849,32575,"Bozeman, MT","Los Angeles, CA (Metropolitan Area)",10849,12954,BZN,LGB,217.74
+2025,30849,32575,"Bozeman, MT","Los Angeles, CA (Metropolitan Area)",10849,13891,BZN,ONT,232.5
+2025,30849,32575,"Bozeman, MT","Los Angeles, CA (Metropolitan Area)",10849,14908,BZN,SNA,277.72
+2025,30852,34027,"Washington, DC (Metropolitan Area)","West Palm Beach/Palm Beach, FL",10821,14027,BWI,PBI,237.46
+2025,30852,34027,"Washington, DC (Metropolitan Area)","West Palm Beach/Palm Beach, FL",11278,14027,DCA,PBI,184.6
+2025,30852,34027,"Washington, DC (Metropolitan Area)","West Palm Beach/Palm Beach, FL",12264,14027,IAD,PBI,246.79
+2025,30868,30852,"Columbia, SC","Washington, DC (Metropolitan Area)",10868,10821,CAE,BWI,292.3
+2025,30868,30852,"Columbia, SC","Washington, DC (Metropolitan Area)",10868,11278,CAE,DCA,230.8
+2025,30868,30852,"Columbia, SC","Washington, DC (Metropolitan Area)",10868,12264,CAE,IAD,229.71
+2025,30868,31703,"Columbia, SC","New York City, NY (Metropolitan Area)",10868,11618,CAE,EWR,215.92
+2025,30868,31703,"Columbia, SC","New York City, NY (Metropolitan Area)",10868,12197,CAE,HPN,352.29
+2025,30868,31703,"Columbia, SC","New York City, NY (Metropolitan Area)",10868,12478,CAE,JFK,313.45
+2025,30868,31703,"Columbia, SC","New York City, NY (Metropolitan Area)",10868,12953,CAE,LGA,230.89
+2025,30977,30194,"Chicago, IL","Dallas/Fort Worth, TX",13232,11259,MDW,DAL,173.74
+2025,30977,30194,"Chicago, IL","Dallas/Fort Worth, TX",13232,11298,MDW,DFW,118.18
+2025,30977,30194,"Chicago, IL","Dallas/Fort Worth, TX",13930,11259,ORD,DAL,161.89
+2025,30977,30194,"Chicago, IL","Dallas/Fort Worth, TX",13930,11298,ORD,DFW,223.8
+2025,30977,30198,"Chicago, IL","Pittsburgh, PA",13232,14122,MDW,PIT,184.25
+2025,30977,30198,"Chicago, IL","Pittsburgh, PA",13930,14122,ORD,PIT,224.08
+2025,30977,30325,"Chicago, IL","Denver, CO",13232,11292,MDW,DEN,155.57
+2025,30977,30325,"Chicago, IL","Denver, CO",13930,11292,ORD,DEN,200.68
+2025,30977,30436,"Chicago, IL","Tucson, AZ",13232,15376,MDW,TUS,243.38
+2025,30977,30436,"Chicago, IL","Tucson, AZ",13930,15376,ORD,TUS,307.8
+2025,30977,30466,"Chicago, IL","Phoenix, AZ",13232,14107,MDW,PHX,198.53
+2025,30977,30466,"Chicago, IL","Phoenix, AZ",13930,14107,ORD,PHX,242.08
+2025,30977,30529,"Chicago, IL","Hartford, CT",13232,10529,MDW,BDL,232.11
+2025,30977,30529,"Chicago, IL","Hartford, CT",13930,10529,ORD,BDL,268.26
+2025,30977,30559,"Chicago, IL","Seattle, WA",13232,14747,MDW,SEA,232.19
+2025,30977,30559,"Chicago, IL","Seattle, WA",13930,14747,ORD,SEA,227.33
+2025,30977,30615,"Chicago, IL","El Paso, TX",13232,11540,MDW,ELP,217.83
+2025,30977,30615,"Chicago, IL","El Paso, TX",13930,11540,ORD,ELP,273.25
+2025,30977,30647,"Chicago, IL","Cleveland, OH (Metropolitan Area)",13232,11042,MDW,CLE,186.48
+2025,30977,30647,"Chicago, IL","Cleveland, OH (Metropolitan Area)",13930,10874,ORD,CAK,212.09
+2025,30977,30647,"Chicago, IL","Cleveland, OH (Metropolitan Area)",13930,11042,ORD,CLE,226.55
+2025,30977,30693,"Chicago, IL","Nashville, TN",13232,10693,MDW,BNA,167.88
+2025,30977,30693,"Chicago, IL","Nashville, TN",13930,10693,ORD,BNA,189.32
+2025,30977,30852,"Chicago, IL","Washington, DC (Metropolitan Area)",13232,10821,MDW,BWI,179.1
+2025,30977,30852,"Chicago, IL","Washington, DC (Metropolitan Area)",13232,11278,MDW,DCA,184.65
+2025,30977,30852,"Chicago, IL","Washington, DC (Metropolitan Area)",13232,12264,MDW,IAD,150.85
+2025,30977,30852,"Chicago, IL","Washington, DC (Metropolitan Area)",13930,10821,ORD,BWI,200.73
+2025,30977,30852,"Chicago, IL","Washington, DC (Metropolitan Area)",13930,11278,ORD,DCA,217.45
+2025,30977,30852,"Chicago, IL","Washington, DC (Metropolitan Area)",13930,12264,ORD,IAD,236.91
+2025,30977,31066,"Chicago, IL","Columbus, OH",13232,11066,MDW,CMH,199.24
+2025,30977,31066,"Chicago, IL","Columbus, OH",13930,11066,ORD,CMH,229.27
+2025,30977,31123,"Chicago, IL","St. Louis, MO",13232,15016,MDW,STL,212.08
+2025,30977,31123,"Chicago, IL","St. Louis, MO",13930,15016,ORD,STL,250.63
+2025,30977,31135,"Chicago, IL","Myrtle Beach, SC",13232,13577,MDW,MYR,193.76
+2025,30977,31135,"Chicago, IL","Myrtle Beach, SC",13930,13577,ORD,MYR,196.76
+2025,30977,31136,"Chicago, IL","Jacksonville, FL",13232,12451,MDW,JAX,219.23
+2025,30977,31136,"Chicago, IL","Jacksonville, FL",13930,12451,ORD,JAX,271.99
+2025,30977,31295,"Chicago, IL","Detroit, MI",13232,11433,MDW,DTW,187.97
+2025,30977,31295,"Chicago, IL","Detroit, MI",13930,11433,ORD,DTW,209.02
+2025,30977,31423,"Chicago, IL","Des Moines, IA",13232,11423,MDW,DSM,184.11
+2025,30977,31423,"Chicago, IL","Des Moines, IA",13930,11423,ORD,DSM,214.12
+2025,30977,31453,"Chicago, IL","Houston, TX",13232,12191,MDW,HOU,190.98
+2025,30977,31453,"Chicago, IL","Houston, TX",13232,12266,MDW,IAH,129.76
+2025,30977,31453,"Chicago, IL","Houston, TX",13930,12191,ORD,HOU,217.65
+2025,30977,31453,"Chicago, IL","Houston, TX",13930,12266,ORD,IAH,220.85
+2025,30977,31454,"Chicago, IL","Orlando, FL",13232,13204,MDW,MCO,186.18
+2025,30977,31454,"Chicago, IL","Orlando, FL",13930,13204,ORD,MCO,192.95
+2025,30977,31481,"Chicago, IL","Panama City, FL",13232,11481,MDW,ECP,192.67
+2025,30977,31481,"Chicago, IL","Panama City, FL",13930,11481,ORD,ECP,247.18
+2025,30977,31650,"Chicago, IL","Minneapolis/St. Paul, MN",13232,13487,MDW,MSP,177.93
+2025,30977,31650,"Chicago, IL","Minneapolis/St. Paul, MN",13930,13487,ORD,MSP,200.49
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13232,11618,MDW,EWR,238.17
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13232,12197,MDW,HPN,438.97
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13232,12391,MDW,ISP,243.78
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13232,12478,MDW,JFK,219.74
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13232,12953,MDW,LGA,176.35
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13930,11618,ORD,EWR,238.15
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13930,12197,ORD,HPN,342.01
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13930,12391,ORD,ISP,282.9
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13930,12478,ORD,JFK,202.74
+2025,30977,31703,"Chicago, IL","New York City, NY (Metropolitan Area)",13930,12953,ORD,LGA,220.1
+2025,30977,31714,"Chicago, IL","Fort Myers, FL",13232,14635,MDW,RSW,208.39
+2025,30977,31714,"Chicago, IL","Fort Myers, FL",13930,14635,ORD,RSW,230.85
+2025,30977,31834,"Chicago, IL","Fayetteville, AR",13232,15919,MDW,XNA,203.2
+2025,30977,31834,"Chicago, IL","Fayetteville, AR",13930,15919,ORD,XNA,245.39
+2025,30977,31871,"Chicago, IL","Greenville/Spartanburg, SC",13232,11996,MDW,GSP,258.32
+2025,30977,31871,"Chicago, IL","Greenville/Spartanburg, SC",13930,11996,ORD,GSP,235.59
+2025,30977,31995,"Chicago, IL","Greensboro/High Point, NC",13232,11995,MDW,GSO,235.15
+2025,30977,31995,"Chicago, IL","Greensboro/High Point, NC",13930,11995,ORD,GSO,231.5
+2025,30977,32070,"Chicago, IL","Harrisburg, PA",13232,13230,MDW,MDT,278.43
+2025,30977,32070,"Chicago, IL","Harrisburg, PA",13930,13230,ORD,MDT,261.46
+2025,30977,32211,"Chicago, IL","Las Vegas, NV",13232,12889,MDW,LAS,199.67
+2025,30977,32211,"Chicago, IL","Las Vegas, NV",13930,12889,ORD,LAS,226.86
+2025,30977,32337,"Chicago, IL","Indianapolis, IN",13930,12339,ORD,IND,209.18
+2025,30977,32457,"Chicago, IL","San Francisco, CA (Metropolitan Area)",13232,13796,MDW,OAK,230.93
+2025,30977,32457,"Chicago, IL","San Francisco, CA (Metropolitan Area)",13232,14771,MDW,SFO,223.53
+2025,30977,32457,"Chicago, IL","San Francisco, CA (Metropolitan Area)",13232,14831,MDW,SJC,267.64
+2025,30977,32457,"Chicago, IL","San Francisco, CA (Metropolitan Area)",13930,13796,ORD,OAK,220.04
+2025,30977,32457,"Chicago, IL","San Francisco, CA (Metropolitan Area)",13930,14771,ORD,SFO,274.91
+2025,30977,32457,"Chicago, IL","San Francisco, CA (Metropolitan Area)",13930,14831,ORD,SJC,318.58
+2025,30977,32467,"Chicago, IL","Miami, FL (Metropolitan Area)",13232,11697,MDW,FLL,198.4
+2025,30977,32467,"Chicago, IL","Miami, FL (Metropolitan Area)",13232,13303,MDW,MIA,188.19
+2025,30977,32467,"Chicago, IL","Miami, FL (Metropolitan Area)",13930,11697,ORD,FLL,196.02
+2025,30977,32467,"Chicago, IL","Miami, FL (Metropolitan Area)",13930,13303,ORD,MIA,233.46
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13232,10800,MDW,BUR,263.97
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13232,12892,MDW,LAX,208.72
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13232,12954,MDW,LGB,236.03
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13232,13891,MDW,ONT,264
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13232,14908,MDW,SNA,262.95
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13930,10800,ORD,BUR,257.29
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13930,12892,ORD,LAX,244.75
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13930,12954,ORD,LGB,260.53
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13930,13891,ORD,ONT,260.74
+2025,30977,32575,"Chicago, IL","Los Angeles, CA (Metropolitan Area)",13930,14908,ORD,SNA,300.29
+2025,30977,33044,"Chicago, IL","Louisville, KY",13232,14730,MDW,SDF,177.79
+2025,30977,33044,"Chicago, IL","Louisville, KY",13930,14730,ORD,SDF,233.13
+2025,30977,33105,"Chicago, IL","Cincinnati, OH",13232,11193,MDW,CVG,173.07
+2025,30977,33105,"Chicago, IL","Cincinnati, OH",13930,11193,ORD,CVG,224.8
+2025,30977,33192,"Chicago, IL","Sacramento, CA",13232,14893,MDW,SMF,292.03
+2025,30977,33192,"Chicago, IL","Sacramento, CA",13930,14893,ORD,SMF,330.61
+2025,30977,33195,"Chicago, IL","Tampa, FL (Metropolitan Area)",13232,15304,MDW,TPA,180.99
+2025,30977,33195,"Chicago, IL","Tampa, FL (Metropolitan Area)",13930,15304,ORD,TPA,195.18
+2025,30977,33198,"Chicago, IL","Kansas City, MO",13232,13198,MDW,MCI,210.1
+2025,30977,33198,"Chicago, IL","Kansas City, MO",13930,13198,ORD,MCI,240.52
+2025,30977,33214,"Chicago, IL","San Antonio, TX",13232,14683,MDW,SAT,238.51
+2025,30977,33214,"Chicago, IL","San Antonio, TX",13930,14683,ORD,SAT,272.01
+2025,30977,33244,"Chicago, IL","Memphis, TN",13232,13244,MDW,MEM,175.47
+2025,30977,33244,"Chicago, IL","Memphis, TN",13930,13244,ORD,MEM,237.33
+2025,30977,33316,"Chicago, IL","Omaha, NE",13232,13871,MDW,OMA,208.52
+2025,30977,33316,"Chicago, IL","Omaha, NE",13930,13871,ORD,OMA,239.46
+2025,30977,33495,"Chicago, IL","New Orleans, LA",13232,13495,MDW,MSY,186.94
+2025,30977,33495,"Chicago, IL","New Orleans, LA",13930,13495,ORD,MSY,204.2
+2025,30977,33570,"Chicago, IL","San Diego, CA",13232,14679,MDW,SAN,232.72
+2025,30977,33570,"Chicago, IL","San Diego, CA",13930,14679,ORD,SAN,280.56
+2025,30977,33667,"Chicago, IL","Norfolk, VA (Metropolitan Area)",13232,13931,MDW,ORF,215.54
+2025,30977,33667,"Chicago, IL","Norfolk, VA (Metropolitan Area)",13930,13931,ORD,ORF,245.54
+2025,30977,33667,"Chicago, IL","Norfolk, VA (Metropolitan Area)",13930,14098,ORD,PHF,282.1
+2025,30977,33728,"Chicago, IL","Pensacola, FL",13232,14193,MDW,PNS,177.93
+2025,30977,33728,"Chicago, IL","Pensacola, FL",13930,14193,ORD,PNS,223.86
+2025,30977,33851,"Chicago, IL","Oklahoma City, OK",13232,13851,MDW,OKC,209.72
+2025,30977,33851,"Chicago, IL","Oklahoma City, OK",13930,13851,ORD,OKC,268.06
+2025,30977,34027,"Chicago, IL","West Palm Beach/Palm Beach, FL",13232,14027,MDW,PBI,264.44
+2025,30977,34027,"Chicago, IL","West Palm Beach/Palm Beach, FL",13930,14027,ORD,PBI,257.68
+2025,30977,34057,"Chicago, IL","Portland, OR",13232,14057,MDW,PDX,234.46
+2025,30977,34057,"Chicago, IL","Portland, OR",13930,14057,ORD,PDX,244.54
+2025,30977,34100,"Chicago, IL","Philadelphia, PA",13232,14100,MDW,PHL,184.06
+2025,30977,34100,"Chicago, IL","Philadelphia, PA",13930,14100,ORD,PHL,233.13
+2025,30977,34262,"Chicago, IL","Palm Springs, CA",13232,14262,MDW,PSP,249.88
+2025,30977,34262,"Chicago, IL","Palm Springs, CA",13930,14262,ORD,PSP,318.85
+2025,30977,34321,"Chicago, IL","Portland, ME",13232,14321,MDW,PWM,215.84
+2025,30977,34321,"Chicago, IL","Portland, ME",13930,14321,ORD,PWM,240.03
+2025,30977,34492,"Chicago, IL","Raleigh/Durham, NC",13232,14492,MDW,RDU,185.65
+2025,30977,34492,"Chicago, IL","Raleigh/Durham, NC",13930,14492,ORD,RDU,221.73
+2025,30977,34524,"Chicago, IL","Richmond, VA",13232,14524,MDW,RIC,204.22
+2025,30977,34524,"Chicago, IL","Richmond, VA",13930,14524,ORD,RIC,259.55
+2025,30977,34576,"Chicago, IL","Rochester, NY",13232,14576,MDW,ROC,226.26
+2025,30977,34576,"Chicago, IL","Rochester, NY",13930,14576,ORD,ROC,243.11
+2025,30977,34614,"Chicago, IL","Salt Lake City, UT",13232,14869,MDW,SLC,260.16
+2025,30977,34614,"Chicago, IL","Salt Lake City, UT",13930,14869,ORD,SLC,306.1
+2025,30977,34653,"Chicago, IL","Tulsa, OK",13232,15370,MDW,TUL,207.8
+2025,30977,34653,"Chicago, IL","Tulsa, OK",13930,15370,ORD,TUL,252.76
+2025,30977,34685,"Chicago, IL","Savannah, GA",13232,14685,MDW,SAV,199.42
+2025,30977,34685,"Chicago, IL","Savannah, GA",13930,14685,ORD,SAV,273.42
+2025,30977,34986,"Chicago, IL","Sarasota/Bradenton, FL",13232,14986,MDW,SRQ,220.59
+2025,30977,34986,"Chicago, IL","Sarasota/Bradenton, FL",13930,14986,ORD,SRQ,273.59
+2025,30977,35096,"Chicago, IL","Syracuse, NY",13232,15096,MDW,SYR,256.28
+2025,30977,35096,"Chicago, IL","Syracuse, NY",13930,15096,ORD,SYR,250.24
+2025,30977,35412,"Chicago, IL","Knoxville, TN",13232,15412,MDW,TYS,180.88
+2025,30977,35412,"Chicago, IL","Knoxville, TN",13930,15412,ORD,TYS,220.32
+2025,30994,30194,"Charleston, SC","Dallas/Fort Worth, TX",10994,11259,CHS,DAL,246.84
+2025,30994,30194,"Charleston, SC","Dallas/Fort Worth, TX",10994,11298,CHS,DFW,292.06
+2025,30994,30647,"Charleston, SC","Cleveland, OH (Metropolitan Area)",10994,10874,CHS,CAK,106.09
+2025,30994,30647,"Charleston, SC","Cleveland, OH (Metropolitan Area)",10994,11042,CHS,CLE,265.51
+2025,30994,30852,"Charleston, SC","Washington, DC (Metropolitan Area)",10994,10821,CHS,BWI,204.57
+2025,30994,30852,"Charleston, SC","Washington, DC (Metropolitan Area)",10994,11278,CHS,DCA,214
+2025,30994,30852,"Charleston, SC","Washington, DC (Metropolitan Area)",10994,12264,CHS,IAD,220.06
+2025,30994,30977,"Charleston, SC","Chicago, IL",10994,13232,CHS,MDW,205.43
+2025,30994,30977,"Charleston, SC","Chicago, IL",10994,13930,CHS,ORD,266.78
+2025,30994,31453,"Charleston, SC","Houston, TX",10994,12191,CHS,HOU,244.32
+2025,30994,31453,"Charleston, SC","Houston, TX",10994,12266,CHS,IAH,312.69
+2025,30994,31703,"Charleston, SC","New York City, NY (Metropolitan Area)",10994,11618,CHS,EWR,196.48
+2025,30994,31703,"Charleston, SC","New York City, NY (Metropolitan Area)",10994,12197,CHS,HPN,153.29
+2025,30994,31703,"Charleston, SC","New York City, NY (Metropolitan Area)",10994,12391,CHS,ISP,121.15
+2025,30994,31703,"Charleston, SC","New York City, NY (Metropolitan Area)",10994,12478,CHS,JFK,216.79
+2025,30994,31703,"Charleston, SC","New York City, NY (Metropolitan Area)",10994,12953,CHS,LGA,255.49
+2025,30994,31703,"Charleston, SC","New York City, NY (Metropolitan Area)",10994,15070,CHS,SWF,106.04
+2025,30994,32467,"Charleston, SC","Miami, FL (Metropolitan Area)",10994,11697,CHS,FLL,131.83
+2025,30994,32467,"Charleston, SC","Miami, FL (Metropolitan Area)",10994,13303,CHS,MIA,213.36
+2025,30994,32575,"Charleston, SC","Los Angeles, CA (Metropolitan Area)",10994,10800,CHS,BUR,296.16
+2025,30994,32575,"Charleston, SC","Los Angeles, CA (Metropolitan Area)",10994,12892,CHS,LAX,289.88
+2025,30994,32575,"Charleston, SC","Los Angeles, CA (Metropolitan Area)",10994,12954,CHS,LGB,262.96
+2025,30994,32575,"Charleston, SC","Los Angeles, CA (Metropolitan Area)",10994,13891,CHS,ONT,317.99
+2025,30994,32575,"Charleston, SC","Los Angeles, CA (Metropolitan Area)",10994,14908,CHS,SNA,396.93
+2025,31003,30466,"Cedar Rapids/Iowa City, IA","Phoenix, AZ",11003,10466,CID,AZA,90.54
+2025,31003,30466,"Cedar Rapids/Iowa City, IA","Phoenix, AZ",11003,14107,CID,PHX,262.85
+2025,31057,30194,"Charlotte, NC","Dallas/Fort Worth, TX",11057,11259,CLT,DAL,217.87
+2025,31057,30194,"Charlotte, NC","Dallas/Fort Worth, TX",11057,11298,CLT,DFW,275.94
+2025,31057,30466,"Charlotte, NC","Phoenix, AZ",11057,14107,CLT,PHX,326.3
+2025,31057,30647,"Charlotte, NC","Cleveland, OH (Metropolitan Area)",11057,10874,CLT,CAK,285.78
+2025,31057,30647,"Charlotte, NC","Cleveland, OH (Metropolitan Area)",11057,11042,CLT,CLE,228.91
+2025,31057,30852,"Charlotte, NC","Washington, DC (Metropolitan Area)",11057,10821,CLT,BWI,176.05
+2025,31057,30852,"Charlotte, NC","Washington, DC (Metropolitan Area)",11057,11278,CLT,DCA,222.06
+2025,31057,30852,"Charlotte, NC","Washington, DC (Metropolitan Area)",11057,12264,CLT,IAD,213.17
+2025,31057,30977,"Charlotte, NC","Chicago, IL",11057,13232,CLT,MDW,174.4
+2025,31057,30977,"Charlotte, NC","Chicago, IL",11057,13930,CLT,ORD,219.2
+2025,31057,31453,"Charlotte, NC","Houston, TX",11057,12191,CLT,HOU,242.73
+2025,31057,31453,"Charlotte, NC","Houston, TX",11057,12266,CLT,IAH,232.38
+2025,31057,31703,"Charlotte, NC","New York City, NY (Metropolitan Area)",11057,11618,CLT,EWR,188.35
+2025,31057,31703,"Charlotte, NC","New York City, NY (Metropolitan Area)",11057,12197,CLT,HPN,314.16
+2025,31057,31703,"Charlotte, NC","New York City, NY (Metropolitan Area)",11057,12391,CLT,ISP,220.65
+2025,31057,31703,"Charlotte, NC","New York City, NY (Metropolitan Area)",11057,12478,CLT,JFK,192.47
+2025,31057,31703,"Charlotte, NC","New York City, NY (Metropolitan Area)",11057,12953,CLT,LGA,187.87
+2025,31057,32457,"Charlotte, NC","San Francisco, CA (Metropolitan Area)",11057,13796,CLT,OAK,256.58
+2025,31057,32457,"Charlotte, NC","San Francisco, CA (Metropolitan Area)",11057,14771,CLT,SFO,349.72
+2025,31057,32457,"Charlotte, NC","San Francisco, CA (Metropolitan Area)",11057,14831,CLT,SJC,313.99
+2025,31057,32467,"Charlotte, NC","Miami, FL (Metropolitan Area)",11057,11697,CLT,FLL,192.78
+2025,31057,32467,"Charlotte, NC","Miami, FL (Metropolitan Area)",11057,13303,CLT,MIA,253.53
+2025,31057,32575,"Charlotte, NC","Los Angeles, CA (Metropolitan Area)",11057,10800,CLT,BUR,301.99
+2025,31057,32575,"Charlotte, NC","Los Angeles, CA (Metropolitan Area)",11057,12892,CLT,LAX,299.73
+2025,31057,32575,"Charlotte, NC","Los Angeles, CA (Metropolitan Area)",11057,12954,CLT,LGB,230.88
+2025,31057,32575,"Charlotte, NC","Los Angeles, CA (Metropolitan Area)",11057,13891,CLT,ONT,305.47
+2025,31057,32575,"Charlotte, NC","Los Angeles, CA (Metropolitan Area)",11057,14908,CLT,SNA,357.42
+2025,31057,33195,"Charlotte, NC","Tampa, FL (Metropolitan Area)",11057,15304,CLT,TPA,238.04
+2025,31066,30194,"Columbus, OH","Dallas/Fort Worth, TX",11066,11259,CMH,DAL,251.6
+2025,31066,30194,"Columbus, OH","Dallas/Fort Worth, TX",11066,11298,CMH,DFW,298.39
+2025,31066,30325,"Columbus, OH","Denver, CO",11066,11292,CMH,DEN,262.32
+2025,31066,30466,"Columbus, OH","Phoenix, AZ",11066,14107,CMH,PHX,296.55
+2025,31066,30559,"Columbus, OH","Seattle, WA",11066,14747,CMH,SEA,266.12
+2025,31066,30852,"Columbus, OH","Washington, DC (Metropolitan Area)",11066,10821,CMH,BWI,196.57
+2025,31066,30852,"Columbus, OH","Washington, DC (Metropolitan Area)",11066,11278,CMH,DCA,194.41
+2025,31066,30852,"Columbus, OH","Washington, DC (Metropolitan Area)",11066,12264,CMH,IAD,217.12
+2025,31066,31453,"Columbus, OH","Houston, TX",11066,12191,CMH,HOU,262.4
+2025,31066,31453,"Columbus, OH","Houston, TX",11066,12266,CMH,IAH,314.61
+2025,31066,31454,"Columbus, OH","Orlando, FL",11066,13204,CMH,MCO,185.06
+2025,31066,31650,"Columbus, OH","Minneapolis/St. Paul, MN",11066,13487,CMH,MSP,264.69
+2025,31066,31703,"Columbus, OH","New York City, NY (Metropolitan Area)",11066,11618,CMH,EWR,240.27
+2025,31066,31703,"Columbus, OH","New York City, NY (Metropolitan Area)",11066,12197,CMH,HPN,245.33
+2025,31066,31703,"Columbus, OH","New York City, NY (Metropolitan Area)",11066,12391,CMH,ISP,229.03
+2025,31066,31703,"Columbus, OH","New York City, NY (Metropolitan Area)",11066,12478,CMH,JFK,188.06
+2025,31066,31703,"Columbus, OH","New York City, NY (Metropolitan Area)",11066,12953,CMH,LGA,189.79
+2025,31066,31714,"Columbus, OH","Fort Myers, FL",11066,14635,CMH,RSW,201.72
+2025,31066,32211,"Columbus, OH","Las Vegas, NV",11066,12889,CMH,LAS,252.19
+2025,31066,32457,"Columbus, OH","San Francisco, CA (Metropolitan Area)",11066,13796,CMH,OAK,254.07
+2025,31066,32457,"Columbus, OH","San Francisco, CA (Metropolitan Area)",11066,14771,CMH,SFO,324.61
+2025,31066,32457,"Columbus, OH","San Francisco, CA (Metropolitan Area)",11066,14831,CMH,SJC,300.99
+2025,31066,32467,"Columbus, OH","Miami, FL (Metropolitan Area)",11066,11697,CMH,FLL,148.64
+2025,31066,32467,"Columbus, OH","Miami, FL (Metropolitan Area)",11066,13303,CMH,MIA,254.66
+2025,31066,32467,"Columbus, OH","Miami, FL (Metropolitan Area)",12917,11697,LCK,FLL,78.1
+2025,31066,32575,"Columbus, OH","Los Angeles, CA (Metropolitan Area)",11066,10800,CMH,BUR,283.64
+2025,31066,32575,"Columbus, OH","Los Angeles, CA (Metropolitan Area)",11066,12892,CMH,LAX,248.46
+2025,31066,32575,"Columbus, OH","Los Angeles, CA (Metropolitan Area)",11066,12954,CMH,LGB,227.16
+2025,31066,32575,"Columbus, OH","Los Angeles, CA (Metropolitan Area)",11066,13891,CMH,ONT,297.11
+2025,31066,32575,"Columbus, OH","Los Angeles, CA (Metropolitan Area)",11066,14908,CMH,SNA,292.93
+2025,31066,33195,"Columbus, OH","Tampa, FL (Metropolitan Area)",11066,15304,CMH,TPA,205.63
+2025,31066,33195,"Columbus, OH","Tampa, FL (Metropolitan Area)",12917,14112,LCK,PIE,81.31
+2025,31066,34100,"Columbus, OH","Philadelphia, PA",11066,14100,CMH,PHL,330.53
+2025,31066,34986,"Columbus, OH","Sarasota/Bradenton, FL",11066,14986,CMH,SRQ,219.1
+2025,31066,34986,"Columbus, OH","Sarasota/Bradenton, FL",12917,14986,LCK,SRQ,78.59
+2025,31123,30852,"St. Louis, MO","Washington, DC (Metropolitan Area)",15016,10821,STL,BWI,232.08
+2025,31123,30852,"St. Louis, MO","Washington, DC (Metropolitan Area)",15016,11278,STL,DCA,205.04
+2025,31123,30852,"St. Louis, MO","Washington, DC (Metropolitan Area)",15016,12264,STL,IAD,326.22
+2025,31123,33195,"St. Louis, MO","Tampa, FL (Metropolitan Area)",15016,15304,STL,TPA,245.92
+2025,31135,30852,"Myrtle Beach, SC","Washington, DC (Metropolitan Area)",13577,10821,MYR,BWI,190.71
+2025,31135,30852,"Myrtle Beach, SC","Washington, DC (Metropolitan Area)",13577,11278,MYR,DCA,209.95
+2025,31135,30852,"Myrtle Beach, SC","Washington, DC (Metropolitan Area)",13577,12264,MYR,IAD,301.02
+2025,31135,31703,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",13577,11618,MYR,EWR,162.17
+2025,31135,31703,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",13577,12197,MYR,HPN,120.69
+2025,31135,31703,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",13577,12391,MYR,ISP,129.88
+2025,31135,31703,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",13577,12478,MYR,JFK,249.06
+2025,31135,31703,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",13577,12953,MYR,LGA,170.45
+2025,31135,31703,"Myrtle Beach, SC","New York City, NY (Metropolitan Area)",13577,15070,MYR,SWF,98.15
+2025,31136,30466,"Jacksonville, FL","Phoenix, AZ",12451,14107,JAX,PHX,296.15
+2025,31136,30852,"Jacksonville, FL","Washington, DC (Metropolitan Area)",12451,10821,JAX,BWI,236.06
+2025,31136,30852,"Jacksonville, FL","Washington, DC (Metropolitan Area)",12451,11278,JAX,DCA,214.22
+2025,31136,30852,"Jacksonville, FL","Washington, DC (Metropolitan Area)",12451,12264,JAX,IAD,217.52
+2025,31136,31703,"Jacksonville, FL","New York City, NY (Metropolitan Area)",12451,11618,JAX,EWR,229.33
+2025,31136,31703,"Jacksonville, FL","New York City, NY (Metropolitan Area)",12451,12197,JAX,HPN,198.24
+2025,31136,31703,"Jacksonville, FL","New York City, NY (Metropolitan Area)",12451,12391,JAX,ISP,247.1
+2025,31136,31703,"Jacksonville, FL","New York City, NY (Metropolitan Area)",12451,12478,JAX,JFK,208.34
+2025,31136,31703,"Jacksonville, FL","New York City, NY (Metropolitan Area)",12451,12953,JAX,LGA,270.99
+2025,31136,32467,"Jacksonville, FL","Miami, FL (Metropolitan Area)",12451,11697,JAX,FLL,158.77
+2025,31136,32467,"Jacksonville, FL","Miami, FL (Metropolitan Area)",12451,13303,JAX,MIA,256
+2025,31136,32575,"Jacksonville, FL","Los Angeles, CA (Metropolitan Area)",12451,10800,JAX,BUR,314.11
+2025,31136,32575,"Jacksonville, FL","Los Angeles, CA (Metropolitan Area)",12451,12892,JAX,LAX,312.28
+2025,31136,32575,"Jacksonville, FL","Los Angeles, CA (Metropolitan Area)",12451,12954,JAX,LGB,284.56
+2025,31136,32575,"Jacksonville, FL","Los Angeles, CA (Metropolitan Area)",12451,13891,JAX,ONT,322.73
+2025,31136,32575,"Jacksonville, FL","Los Angeles, CA (Metropolitan Area)",12451,14908,JAX,SNA,371.39
+2025,31136,33667,"Jacksonville, FL","Norfolk, VA (Metropolitan Area)",12451,13931,JAX,ORF,153.86
+2025,31136,33667,"Jacksonville, FL","Norfolk, VA (Metropolitan Area)",12451,14098,JAX,PHF,356.17
+2025,31267,30852,"Dayton, OH","Washington, DC (Metropolitan Area)",11267,10821,DAY,BWI,262.59
+2025,31267,30852,"Dayton, OH","Washington, DC (Metropolitan Area)",11267,11278,DAY,DCA,226.71
+2025,31267,30852,"Dayton, OH","Washington, DC (Metropolitan Area)",11267,12264,DAY,IAD,223.84
+2025,31295,30466,"Detroit, MI","Phoenix, AZ",11433,14107,DTW,PHX,261.13
+2025,31295,30852,"Detroit, MI","Washington, DC (Metropolitan Area)",11433,10821,DTW,BWI,183.74
+2025,31295,30852,"Detroit, MI","Washington, DC (Metropolitan Area)",11433,11278,DTW,DCA,221.7
+2025,31295,30852,"Detroit, MI","Washington, DC (Metropolitan Area)",11433,12264,DTW,IAD,215.11
+2025,31295,31453,"Detroit, MI","Houston, TX",11433,12191,DTW,HOU,237.62
+2025,31295,31453,"Detroit, MI","Houston, TX",11433,12266,DTW,IAH,211.9
+2025,31295,31703,"Detroit, MI","New York City, NY (Metropolitan Area)",11433,11618,DTW,EWR,201.14
+2025,31295,31703,"Detroit, MI","New York City, NY (Metropolitan Area)",11433,12197,DTW,HPN,272.2
+2025,31295,31703,"Detroit, MI","New York City, NY (Metropolitan Area)",11433,12391,DTW,ISP,271.05
+2025,31295,31703,"Detroit, MI","New York City, NY (Metropolitan Area)",11433,12478,DTW,JFK,226.68
+2025,31295,31703,"Detroit, MI","New York City, NY (Metropolitan Area)",11433,12953,DTW,LGA,205.62
+2025,31295,32457,"Detroit, MI","San Francisco, CA (Metropolitan Area)",11433,13796,DTW,OAK,276.04
+2025,31295,32457,"Detroit, MI","San Francisco, CA (Metropolitan Area)",11433,14771,DTW,SFO,372.08
+2025,31295,32457,"Detroit, MI","San Francisco, CA (Metropolitan Area)",11433,14831,DTW,SJC,300.27
+2025,31295,32467,"Detroit, MI","Miami, FL (Metropolitan Area)",11433,11697,DTW,FLL,185.86
+2025,31295,32467,"Detroit, MI","Miami, FL (Metropolitan Area)",11433,13303,DTW,MIA,211.68
+2025,31295,32575,"Detroit, MI","Los Angeles, CA (Metropolitan Area)",11433,10800,DTW,BUR,298.51
+2025,31295,32575,"Detroit, MI","Los Angeles, CA (Metropolitan Area)",11433,12892,DTW,LAX,301.57
+2025,31295,32575,"Detroit, MI","Los Angeles, CA (Metropolitan Area)",11433,12954,DTW,LGB,306
+2025,31295,32575,"Detroit, MI","Los Angeles, CA (Metropolitan Area)",11433,13891,DTW,ONT,337.98
+2025,31295,32575,"Detroit, MI","Los Angeles, CA (Metropolitan Area)",11433,14908,DTW,SNA,428.17
+2025,31295,33195,"Detroit, MI","Tampa, FL (Metropolitan Area)",11433,15304,DTW,TPA,189.76
+2025,31423,30466,"Des Moines, IA","Phoenix, AZ",11423,10466,DSM,AZA,90.11
+2025,31423,30466,"Des Moines, IA","Phoenix, AZ",11423,14107,DSM,PHX,233.38
+2025,31423,30852,"Des Moines, IA","Washington, DC (Metropolitan Area)",11423,10821,DSM,BWI,269.84
+2025,31423,30852,"Des Moines, IA","Washington, DC (Metropolitan Area)",11423,11278,DSM,DCA,274.46
+2025,31423,30852,"Des Moines, IA","Washington, DC (Metropolitan Area)",11423,12264,DSM,IAD,323.84
+2025,31423,31703,"Des Moines, IA","New York City, NY (Metropolitan Area)",11423,11618,DSM,EWR,232.83
+2025,31423,31703,"Des Moines, IA","New York City, NY (Metropolitan Area)",11423,12197,DSM,HPN,377.44
+2025,31423,31703,"Des Moines, IA","New York City, NY (Metropolitan Area)",11423,12478,DSM,JFK,321.31
+2025,31423,31703,"Des Moines, IA","New York City, NY (Metropolitan Area)",11423,12953,DSM,LGA,260.45
+2025,31423,32575,"Des Moines, IA","Los Angeles, CA (Metropolitan Area)",11423,10800,DSM,BUR,282.4
+2025,31423,32575,"Des Moines, IA","Los Angeles, CA (Metropolitan Area)",11423,12892,DSM,LAX,272.93
+2025,31423,32575,"Des Moines, IA","Los Angeles, CA (Metropolitan Area)",11423,12954,DSM,LGB,214.28
+2025,31423,32575,"Des Moines, IA","Los Angeles, CA (Metropolitan Area)",11423,13891,DSM,ONT,309.96
+2025,31423,32575,"Des Moines, IA","Los Angeles, CA (Metropolitan Area)",11423,14908,DSM,SNA,179.13
+2025,31453,30198,"Houston, TX","Pittsburgh, PA",12191,14122,HOU,PIT,255.82
+2025,31453,30198,"Houston, TX","Pittsburgh, PA",12266,14122,IAH,PIT,340.77
+2025,31453,30466,"Houston, TX","Phoenix, AZ",12191,14107,HOU,PHX,193.84
+2025,31453,30466,"Houston, TX","Phoenix, AZ",12266,14107,IAH,PHX,226.59
+2025,31453,30559,"Houston, TX","Seattle, WA",12191,14747,HOU,SEA,292.45
+2025,31453,30559,"Houston, TX","Seattle, WA",12266,14747,IAH,SEA,299.45
+2025,31453,30693,"Houston, TX","Nashville, TN",12191,10693,HOU,BNA,222.45
+2025,31453,30693,"Houston, TX","Nashville, TN",12266,10693,IAH,BNA,245.84
+2025,31453,30852,"Houston, TX","Washington, DC (Metropolitan Area)",12191,10821,HOU,BWI,222.35
+2025,31453,30852,"Houston, TX","Washington, DC (Metropolitan Area)",12191,11278,HOU,DCA,229.31
+2025,31453,30852,"Houston, TX","Washington, DC (Metropolitan Area)",12191,12264,HOU,IAD,334.42
+2025,31453,30852,"Houston, TX","Washington, DC (Metropolitan Area)",12266,10821,IAH,BWI,189.51
+2025,31453,30852,"Houston, TX","Washington, DC (Metropolitan Area)",12266,11278,IAH,DCA,292.61
+2025,31453,30852,"Houston, TX","Washington, DC (Metropolitan Area)",12266,12264,IAH,IAD,298.83
+2025,31453,31123,"Houston, TX","St. Louis, MO",12191,15016,HOU,STL,220.64
+2025,31453,31123,"Houston, TX","St. Louis, MO",12266,15016,IAH,STL,281.21
+2025,31453,31136,"Houston, TX","Jacksonville, FL",12191,12451,HOU,JAX,234.32
+2025,31453,31136,"Houston, TX","Jacksonville, FL",12266,12451,IAH,JAX,302.82
+2025,31453,31454,"Houston, TX","Orlando, FL",12191,13204,HOU,MCO,207.78
+2025,31453,31454,"Houston, TX","Orlando, FL",12266,13204,IAH,MCO,188.06
+2025,31453,31481,"Houston, TX","Panama City, FL",12191,11481,HOU,ECP,212.58
+2025,31453,31481,"Houston, TX","Panama City, FL",12266,11481,IAH,ECP,249.9
+2025,31453,31650,"Houston, TX","Minneapolis/St. Paul, MN",12191,13487,HOU,MSP,173.53
+2025,31453,31650,"Houston, TX","Minneapolis/St. Paul, MN",12266,13487,IAH,MSP,259.23
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12191,11618,HOU,EWR,295.27
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12191,12197,HOU,HPN,408.93
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12191,12391,HOU,ISP,289.65
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12191,12478,HOU,JFK,255.07
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12191,12953,HOU,LGA,211.35
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12266,11618,IAH,EWR,264.35
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12266,12197,IAH,HPN,348.81
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12266,12391,IAH,ISP,161.29
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12266,12478,IAH,JFK,210.77
+2025,31453,31703,"Houston, TX","New York City, NY (Metropolitan Area)",12266,12953,IAH,LGA,255.09
+2025,31453,32211,"Houston, TX","Las Vegas, NV",12191,12889,HOU,LAS,211.27
+2025,31453,32211,"Houston, TX","Las Vegas, NV",12266,12889,IAH,LAS,222.17
+2025,31453,32337,"Houston, TX","Indianapolis, IN",12191,12339,HOU,IND,249.69
+2025,31453,32337,"Houston, TX","Indianapolis, IN",12266,12339,IAH,IND,291.16
+2025,31453,32457,"Houston, TX","San Francisco, CA (Metropolitan Area)",12191,13796,HOU,OAK,284.94
+2025,31453,32457,"Houston, TX","San Francisco, CA (Metropolitan Area)",12191,14771,HOU,SFO,282.41
+2025,31453,32457,"Houston, TX","San Francisco, CA (Metropolitan Area)",12191,14831,HOU,SJC,283.58
+2025,31453,32457,"Houston, TX","San Francisco, CA (Metropolitan Area)",12266,13796,IAH,OAK,200.47
+2025,31453,32457,"Houston, TX","San Francisco, CA (Metropolitan Area)",12266,14771,IAH,SFO,351.81
+2025,31453,32457,"Houston, TX","San Francisco, CA (Metropolitan Area)",12266,14831,IAH,SJC,297.22
+2025,31453,32467,"Houston, TX","Miami, FL (Metropolitan Area)",12191,11697,HOU,FLL,194.07
+2025,31453,32467,"Houston, TX","Miami, FL (Metropolitan Area)",12191,13303,HOU,MIA,206
+2025,31453,32467,"Houston, TX","Miami, FL (Metropolitan Area)",12266,11697,IAH,FLL,177.86
+2025,31453,32467,"Houston, TX","Miami, FL (Metropolitan Area)",12266,13303,IAH,MIA,192.02
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12191,10800,HOU,BUR,255.75
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12191,12892,HOU,LAX,185.19
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12191,12954,HOU,LGB,200.25
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12191,13891,HOU,ONT,228.98
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12191,14908,HOU,SNA,298.02
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12266,10800,IAH,BUR,322.21
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12266,12892,IAH,LAX,200.05
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12266,12954,IAH,LGB,282.88
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12266,13891,IAH,ONT,193.52
+2025,31453,32575,"Houston, TX","Los Angeles, CA (Metropolitan Area)",12266,14908,IAH,SNA,310.29
+2025,31453,32600,"Houston, TX","Little Rock, AR",12191,12992,HOU,LIT,178.54
+2025,31453,32600,"Houston, TX","Little Rock, AR",12266,12992,IAH,LIT,223.85
+2025,31453,32896,"Houston, TX","Lubbock, TX",12191,12896,HOU,LBB,210.19
+2025,31453,32896,"Houston, TX","Lubbock, TX",12266,12896,IAH,LBB,238.18
+2025,31453,33044,"Houston, TX","Louisville, KY",12191,14730,HOU,SDF,242.75
+2025,31453,33044,"Houston, TX","Louisville, KY",12266,14730,IAH,SDF,310.41
+2025,31453,33158,"Houston, TX","Midland/Odessa, TX",12191,13158,HOU,MAF,229.08
+2025,31453,33158,"Houston, TX","Midland/Odessa, TX",12266,13158,IAH,MAF,338.86
+2025,31453,33192,"Houston, TX","Sacramento, CA",12191,14893,HOU,SMF,297.73
+2025,31453,33192,"Houston, TX","Sacramento, CA",12266,14893,IAH,SMF,331.73
+2025,31453,33195,"Houston, TX","Tampa, FL (Metropolitan Area)",12191,15304,HOU,TPA,195.25
+2025,31453,33195,"Houston, TX","Tampa, FL (Metropolitan Area)",12266,15304,IAH,TPA,199.56
+2025,31453,33198,"Houston, TX","Kansas City, MO",12191,13198,HOU,MCI,231.21
+2025,31453,33198,"Houston, TX","Kansas City, MO",12266,13198,IAH,MCI,288.68
+2025,31453,33244,"Houston, TX","Memphis, TN",12191,13244,HOU,MEM,171.61
+2025,31453,33244,"Houston, TX","Memphis, TN",12266,13244,IAH,MEM,233.68
+2025,31453,33316,"Houston, TX","Omaha, NE",12191,13871,HOU,OMA,242.89
+2025,31453,33316,"Houston, TX","Omaha, NE",12266,13871,IAH,OMA,318.17
+2025,31453,33342,"Houston, TX","Milwaukee, WI",12191,13342,HOU,MKE,217.15
+2025,31453,33342,"Houston, TX","Milwaukee, WI",12266,13342,IAH,MKE,278.96
+2025,31453,33495,"Houston, TX","New Orleans, LA",12191,13495,HOU,MSY,181.88
+2025,31453,33495,"Houston, TX","New Orleans, LA",12266,13495,IAH,MSY,206.16
+2025,31453,33570,"Houston, TX","San Diego, CA",12191,14679,HOU,SAN,277.02
+2025,31453,33570,"Houston, TX","San Diego, CA",12266,14679,IAH,SAN,309.98
+2025,31453,33667,"Houston, TX","Norfolk, VA (Metropolitan Area)",12191,13931,HOU,ORF,268
+2025,31453,33667,"Houston, TX","Norfolk, VA (Metropolitan Area)",12266,13931,IAH,ORF,292.05
+2025,31453,33667,"Houston, TX","Norfolk, VA (Metropolitan Area)",12266,14098,IAH,PHF,285.43
+2025,31453,33728,"Houston, TX","Pensacola, FL",12191,14193,HOU,PNS,196.24
+2025,31453,33728,"Houston, TX","Pensacola, FL",12266,14193,IAH,PNS,236.06
+2025,31453,33851,"Houston, TX","Oklahoma City, OK",12191,13851,HOU,OKC,205.42
+2025,31453,33851,"Houston, TX","Oklahoma City, OK",12266,13851,IAH,OKC,254.99
+2025,31453,34057,"Houston, TX","Portland, OR",12191,14057,HOU,PDX,254.56
+2025,31453,34057,"Houston, TX","Portland, OR",12266,14057,IAH,PDX,276.48
+2025,31453,34100,"Houston, TX","Philadelphia, PA",12191,14100,HOU,PHL,227.56
+2025,31453,34100,"Houston, TX","Philadelphia, PA",12266,14100,IAH,PHL,263.84
+2025,31453,34492,"Houston, TX","Raleigh/Durham, NC",12191,14492,HOU,RDU,264.23
+2025,31453,34492,"Houston, TX","Raleigh/Durham, NC",12266,14492,IAH,RDU,297.26
+2025,31453,34524,"Houston, TX","Richmond, VA",12191,14524,HOU,RIC,259.35
+2025,31453,34524,"Houston, TX","Richmond, VA",12266,14524,IAH,RIC,283.76
+2025,31453,34614,"Houston, TX","Salt Lake City, UT",12191,14869,HOU,SLC,272.59
+2025,31453,34614,"Houston, TX","Salt Lake City, UT",12266,14869,IAH,SLC,316.02
+2025,31453,34653,"Houston, TX","Tulsa, OK",12191,15370,HOU,TUL,199.99
+2025,31453,34653,"Houston, TX","Tulsa, OK",12266,15370,IAH,TUL,247.39
+2025,31453,34685,"Houston, TX","Savannah, GA",12191,14685,HOU,SAV,228.48
+2025,31453,34685,"Houston, TX","Savannah, GA",12266,14685,IAH,SAV,291.92
+2025,31453,35412,"Houston, TX","Knoxville, TN",12191,15412,HOU,TYS,193.41
+2025,31453,35412,"Houston, TX","Knoxville, TN",12266,15412,IAH,TYS,275.27
+2025,31454,30466,"Orlando, FL","Phoenix, AZ",13204,14107,MCO,PHX,275.11
+2025,31454,30852,"Orlando, FL","Washington, DC (Metropolitan Area)",13204,10821,MCO,BWI,182.45
+2025,31454,30852,"Orlando, FL","Washington, DC (Metropolitan Area)",13204,11278,MCO,DCA,168.75
+2025,31454,30852,"Orlando, FL","Washington, DC (Metropolitan Area)",13204,12264,MCO,IAD,187.14
+2025,31454,32457,"Orlando, FL","San Francisco, CA (Metropolitan Area)",13204,13796,MCO,OAK,293.91
+2025,31454,32457,"Orlando, FL","San Francisco, CA (Metropolitan Area)",13204,14771,MCO,SFO,306.26
+2025,31454,32457,"Orlando, FL","San Francisco, CA (Metropolitan Area)",13204,14831,MCO,SJC,279.26
+2025,31504,30852,"Valparaiso, FL","Washington, DC (Metropolitan Area)",15624,10821,VPS,BWI,270.56
+2025,31504,30852,"Valparaiso, FL","Washington, DC (Metropolitan Area)",15624,11278,VPS,DCA,273.82
+2025,31504,30852,"Valparaiso, FL","Washington, DC (Metropolitan Area)",15624,12264,VPS,IAD,250.81
+2025,31603,30466,"Eugene, OR","Phoenix, AZ",11603,10466,EUG,AZA,77.81
+2025,31603,30466,"Eugene, OR","Phoenix, AZ",11603,14107,EUG,PHX,214.35
+2025,31603,32457,"Eugene, OR","San Francisco, CA (Metropolitan Area)",11603,13796,EUG,OAK,179.45
+2025,31603,32457,"Eugene, OR","San Francisco, CA (Metropolitan Area)",11603,14771,EUG,SFO,211.02
+2025,31603,32457,"Eugene, OR","San Francisco, CA (Metropolitan Area)",11603,14831,EUG,SJC,194.94
+2025,31603,32575,"Eugene, OR","Los Angeles, CA (Metropolitan Area)",11603,10800,EUG,BUR,136.77
+2025,31603,32575,"Eugene, OR","Los Angeles, CA (Metropolitan Area)",11603,12892,EUG,LAX,206.08
+2025,31603,32575,"Eugene, OR","Los Angeles, CA (Metropolitan Area)",11603,12954,EUG,LGB,184.16
+2025,31603,32575,"Eugene, OR","Los Angeles, CA (Metropolitan Area)",11603,13891,EUG,ONT,238.13
+2025,31603,32575,"Eugene, OR","Los Angeles, CA (Metropolitan Area)",11603,14908,EUG,SNA,189.29
+2025,31624,31703,"Key West, FL","New York City, NY (Metropolitan Area)",11624,11618,EYW,EWR,322.04
+2025,31624,31703,"Key West, FL","New York City, NY (Metropolitan Area)",11624,12197,EYW,HPN,364.72
+2025,31624,31703,"Key West, FL","New York City, NY (Metropolitan Area)",11624,12391,EYW,ISP,154
+2025,31624,31703,"Key West, FL","New York City, NY (Metropolitan Area)",11624,12478,EYW,JFK,319.57
+2025,31624,31703,"Key West, FL","New York City, NY (Metropolitan Area)",11624,12953,EYW,LGA,320.62
+2025,31624,31703,"Key West, FL","New York City, NY (Metropolitan Area)",11624,15070,EYW,SWF,124
+2025,31637,30466,"Fargo, ND","Phoenix, AZ",11637,10466,FAR,AZA,105.6
+2025,31637,30466,"Fargo, ND","Phoenix, AZ",11637,14107,FAR,PHX,350.97
+2025,31638,30466,"Fresno, CA","Phoenix, AZ",11638,14107,FAT,PHX,228.99
+2025,31650,30466,"Minneapolis/St. Paul, MN","Phoenix, AZ",13487,10466,MSP,AZA,125.26
+2025,31650,30466,"Minneapolis/St. Paul, MN","Phoenix, AZ",13487,14107,MSP,PHX,209.72
+2025,31650,30852,"Minneapolis/St. Paul, MN","Washington, DC (Metropolitan Area)",13487,10821,MSP,BWI,192.65
+2025,31650,30852,"Minneapolis/St. Paul, MN","Washington, DC (Metropolitan Area)",13487,11278,MSP,DCA,255.35
+2025,31650,30852,"Minneapolis/St. Paul, MN","Washington, DC (Metropolitan Area)",13487,12264,MSP,IAD,197.8
+2025,31650,31703,"Minneapolis/St. Paul, MN","New York City, NY (Metropolitan Area)",13487,11618,MSP,EWR,235.35
+2025,31650,31703,"Minneapolis/St. Paul, MN","New York City, NY (Metropolitan Area)",13487,12197,MSP,HPN,315.74
+2025,31650,31703,"Minneapolis/St. Paul, MN","New York City, NY (Metropolitan Area)",13487,12391,MSP,ISP,251.06
+2025,31650,31703,"Minneapolis/St. Paul, MN","New York City, NY (Metropolitan Area)",13487,12478,MSP,JFK,215.28
+2025,31650,31703,"Minneapolis/St. Paul, MN","New York City, NY (Metropolitan Area)",13487,12953,MSP,LGA,315.09
+2025,31650,32457,"Minneapolis/St. Paul, MN","San Francisco, CA (Metropolitan Area)",13487,13796,MSP,OAK,188.37
+2025,31650,32457,"Minneapolis/St. Paul, MN","San Francisco, CA (Metropolitan Area)",13487,14771,MSP,SFO,251.53
+2025,31650,32457,"Minneapolis/St. Paul, MN","San Francisco, CA (Metropolitan Area)",13487,14831,MSP,SJC,368.5
+2025,31650,33195,"Minneapolis/St. Paul, MN","Tampa, FL (Metropolitan Area)",13487,14112,MSP,PIE,137.07
+2025,31650,33195,"Minneapolis/St. Paul, MN","Tampa, FL (Metropolitan Area)",13487,15304,MSP,TPA,198.36
+2025,31703,30198,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",11618,14122,EWR,PIT,177.21
+2025,31703,30198,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",12197,14122,HPN,PIT,197.61
+2025,31703,30198,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",12391,14122,ISP,PIT,204.45
+2025,31703,30198,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",12478,14122,JFK,PIT,152.08
+2025,31703,30198,"New York City, NY (Metropolitan Area)","Pittsburgh, PA",12953,14122,LGA,PIT,172.27
+2025,31703,30436,"New York City, NY (Metropolitan Area)","Tucson, AZ",11618,15376,EWR,TUS,382.12
+2025,31703,30436,"New York City, NY (Metropolitan Area)","Tucson, AZ",12197,15376,HPN,TUS,366.56
+2025,31703,30436,"New York City, NY (Metropolitan Area)","Tucson, AZ",12391,15376,ISP,TUS,358.73
+2025,31703,30436,"New York City, NY (Metropolitan Area)","Tucson, AZ",12478,15376,JFK,TUS,386.83
+2025,31703,30436,"New York City, NY (Metropolitan Area)","Tucson, AZ",12953,15376,LGA,TUS,345.35
+2025,31703,30466,"New York City, NY (Metropolitan Area)","Phoenix, AZ",11618,10466,EWR,AZA,171
+2025,31703,30466,"New York City, NY (Metropolitan Area)","Phoenix, AZ",11618,14107,EWR,PHX,321.85
+2025,31703,30466,"New York City, NY (Metropolitan Area)","Phoenix, AZ",12197,14107,HPN,PHX,335.47
+2025,31703,30466,"New York City, NY (Metropolitan Area)","Phoenix, AZ",12391,14107,ISP,PHX,292.74
+2025,31703,30466,"New York City, NY (Metropolitan Area)","Phoenix, AZ",12478,14107,JFK,PHX,330.75
+2025,31703,30466,"New York City, NY (Metropolitan Area)","Phoenix, AZ",12953,14107,LGA,PHX,288.64
+2025,31703,30559,"New York City, NY (Metropolitan Area)","Seattle, WA",11618,14747,EWR,SEA,324.83
+2025,31703,30559,"New York City, NY (Metropolitan Area)","Seattle, WA",12197,14747,HPN,SEA,386.99
+2025,31703,30559,"New York City, NY (Metropolitan Area)","Seattle, WA",12391,14747,ISP,SEA,379.25
+2025,31703,30559,"New York City, NY (Metropolitan Area)","Seattle, WA",12478,14747,JFK,SEA,352.22
+2025,31703,30559,"New York City, NY (Metropolitan Area)","Seattle, WA",12953,14747,LGA,SEA,334.99
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",11618,11278,EWR,DCA,208.25
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",11618,12264,EWR,IAD,206.22
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",12197,11278,HPN,DCA,357.79
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",12391,10821,ISP,BWI,220.76
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",12478,11278,JFK,DCA,177.29
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",12478,12264,JFK,IAD,176.75
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",12953,10821,LGA,BWI,325.55
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",12953,11278,LGA,DCA,216.43
+2025,31703,30852,"New York City, NY (Metropolitan Area)","Washington, DC (Metropolitan Area)",12953,12264,LGA,IAD,217.21
+2025,31703,31123,"New York City, NY (Metropolitan Area)","St. Louis, MO",11618,15016,EWR,STL,257.02
+2025,31703,31123,"New York City, NY (Metropolitan Area)","St. Louis, MO",12197,15016,HPN,STL,266.71
+2025,31703,31123,"New York City, NY (Metropolitan Area)","St. Louis, MO",12391,15016,ISP,STL,234.88
+2025,31703,31123,"New York City, NY (Metropolitan Area)","St. Louis, MO",12478,15016,JFK,STL,248.41
+2025,31703,31123,"New York City, NY (Metropolitan Area)","St. Louis, MO",12953,15016,LGA,STL,205.09
+2025,31703,31454,"New York City, NY (Metropolitan Area)","Orlando, FL",11618,13204,EWR,MCO,195.31
+2025,31703,31454,"New York City, NY (Metropolitan Area)","Orlando, FL",12197,13204,HPN,MCO,206.01
+2025,31703,31454,"New York City, NY (Metropolitan Area)","Orlando, FL",12391,13204,ISP,MCO,153.99
+2025,31703,31454,"New York City, NY (Metropolitan Area)","Orlando, FL",12478,13204,JFK,MCO,186.13
+2025,31703,31454,"New York City, NY (Metropolitan Area)","Orlando, FL",12953,13204,LGA,MCO,183.22
+2025,31703,31454,"New York City, NY (Metropolitan Area)","Orlando, FL",15070,13204,SWF,MCO,119.95
+2025,31703,32323,"New York City, NY (Metropolitan Area)","Wilmington, NC",11618,12323,EWR,ILM,264.9
+2025,31703,32323,"New York City, NY (Metropolitan Area)","Wilmington, NC",12197,12323,HPN,ILM,261.06
+2025,31703,32323,"New York City, NY (Metropolitan Area)","Wilmington, NC",12391,12323,ISP,ILM,90.61
+2025,31703,32323,"New York City, NY (Metropolitan Area)","Wilmington, NC",12478,12323,JFK,ILM,229.34
+2025,31703,32323,"New York City, NY (Metropolitan Area)","Wilmington, NC",12953,12323,LGA,ILM,196.92
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11618,13796,EWR,OAK,255.52
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11618,14771,EWR,SFO,484.14
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11618,14831,EWR,SJC,296.05
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12197,14771,HPN,SFO,423.69
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12197,14831,HPN,SJC,375.5
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12391,13796,ISP,OAK,276.01
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12391,14771,ISP,SFO,192.21
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12391,14831,ISP,SJC,363.6
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12478,13796,JFK,OAK,419.86
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12478,14771,JFK,SFO,440.42
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12478,14831,JFK,SJC,358.25
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12953,13796,LGA,OAK,297.69
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12953,14771,LGA,SFO,374.82
+2025,31703,32457,"New York City, NY (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12953,14831,LGA,SJC,290.46
+2025,31703,33192,"New York City, NY (Metropolitan Area)","Sacramento, CA",11618,14893,EWR,SMF,334.86
+2025,31703,33192,"New York City, NY (Metropolitan Area)","Sacramento, CA",12197,14893,HPN,SMF,358.41
+2025,31703,33192,"New York City, NY (Metropolitan Area)","Sacramento, CA",12391,14893,ISP,SMF,297.63
+2025,31703,33192,"New York City, NY (Metropolitan Area)","Sacramento, CA",12478,14893,JFK,SMF,259.42
+2025,31703,33192,"New York City, NY (Metropolitan Area)","Sacramento, CA",12953,14893,LGA,SMF,305.18
+2025,31703,33195,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",11618,15304,EWR,TPA,199.97
+2025,31703,33195,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",12197,15304,HPN,TPA,203.09
+2025,31703,33195,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",12391,12882,ISP,LAL,68.27
+2025,31703,33195,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",12391,15304,ISP,TPA,158.04
+2025,31703,33195,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",12478,15304,JFK,TPA,168.93
+2025,31703,33195,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",12953,15304,LGA,TPA,188.61
+2025,31703,33195,"New York City, NY (Metropolitan Area)","Tampa, FL (Metropolitan Area)",15070,14112,SWF,PIE,105.27
+2025,31703,33214,"New York City, NY (Metropolitan Area)","San Antonio, TX",11618,14683,EWR,SAT,314.71
+2025,31703,33214,"New York City, NY (Metropolitan Area)","San Antonio, TX",12197,14683,HPN,SAT,303.51
+2025,31703,33214,"New York City, NY (Metropolitan Area)","San Antonio, TX",12391,14683,ISP,SAT,292.33
+2025,31703,33214,"New York City, NY (Metropolitan Area)","San Antonio, TX",12478,14683,JFK,SAT,321.35
+2025,31703,33214,"New York City, NY (Metropolitan Area)","San Antonio, TX",12953,14683,LGA,SAT,281.8
+2025,31703,33316,"New York City, NY (Metropolitan Area)","Omaha, NE",11618,13871,EWR,OMA,333.65
+2025,31703,33316,"New York City, NY (Metropolitan Area)","Omaha, NE",12197,13871,HPN,OMA,381.47
+2025,31703,33316,"New York City, NY (Metropolitan Area)","Omaha, NE",12391,13871,ISP,OMA,317.67
+2025,31703,33316,"New York City, NY (Metropolitan Area)","Omaha, NE",12478,13871,JFK,OMA,312.84
+2025,31703,33316,"New York City, NY (Metropolitan Area)","Omaha, NE",12953,13871,LGA,OMA,299.77
+2025,31703,33570,"New York City, NY (Metropolitan Area)","San Diego, CA",11618,14679,EWR,SAN,345.21
+2025,31703,33570,"New York City, NY (Metropolitan Area)","San Diego, CA",12197,14679,HPN,SAN,336.73
+2025,31703,33570,"New York City, NY (Metropolitan Area)","San Diego, CA",12391,14679,ISP,SAN,318.77
+2025,31703,33570,"New York City, NY (Metropolitan Area)","San Diego, CA",12478,14679,JFK,SAN,334.11
+2025,31703,33570,"New York City, NY (Metropolitan Area)","San Diego, CA",12953,14679,LGA,SAN,309.18
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",11618,13931,EWR,ORF,216.31
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12197,13931,HPN,ORF,203.44
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12197,14098,HPN,PHF,338
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12391,13931,ISP,ORF,121.04
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12478,13931,JFK,ORF,184.99
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12478,14098,JFK,PHF,365
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12953,13931,LGA,ORF,177.75
+2025,31703,33667,"New York City, NY (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12953,14098,LGA,PHF,344.17
+2025,31703,33728,"New York City, NY (Metropolitan Area)","Pensacola, FL",11618,14193,EWR,PNS,271.35
+2025,31703,33728,"New York City, NY (Metropolitan Area)","Pensacola, FL",12197,14193,HPN,PNS,295.1
+2025,31703,33728,"New York City, NY (Metropolitan Area)","Pensacola, FL",12391,14193,ISP,PNS,234
+2025,31703,33728,"New York City, NY (Metropolitan Area)","Pensacola, FL",12478,14193,JFK,PNS,295.17
+2025,31703,33728,"New York City, NY (Metropolitan Area)","Pensacola, FL",12953,14193,LGA,PNS,302.96
+2025,31703,33851,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",11618,13851,EWR,OKC,340.95
+2025,31703,33851,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",12197,13851,HPN,OKC,355.73
+2025,31703,33851,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",12391,13851,ISP,OKC,397.14
+2025,31703,33851,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",12478,13851,JFK,OKC,368.77
+2025,31703,33851,"New York City, NY (Metropolitan Area)","Oklahoma City, OK",12953,13851,LGA,OKC,296.33
+2025,31703,34027,"New York City, NY (Metropolitan Area)","West Palm Beach/Palm Beach, FL",11618,14027,EWR,PBI,225.31
+2025,31703,34027,"New York City, NY (Metropolitan Area)","West Palm Beach/Palm Beach, FL",12197,14027,HPN,PBI,241.37
+2025,31703,34027,"New York City, NY (Metropolitan Area)","West Palm Beach/Palm Beach, FL",12391,14027,ISP,PBI,187.37
+2025,31703,34027,"New York City, NY (Metropolitan Area)","West Palm Beach/Palm Beach, FL",12478,14027,JFK,PBI,202.29
+2025,31703,34027,"New York City, NY (Metropolitan Area)","West Palm Beach/Palm Beach, FL",12953,14027,LGA,PBI,239.74
+2025,31703,34057,"New York City, NY (Metropolitan Area)","Portland, OR",11618,14057,EWR,PDX,321.58
+2025,31703,34057,"New York City, NY (Metropolitan Area)","Portland, OR",12197,14057,HPN,PDX,338.06
+2025,31703,34057,"New York City, NY (Metropolitan Area)","Portland, OR",12391,14057,ISP,PDX,343.84
+2025,31703,34057,"New York City, NY (Metropolitan Area)","Portland, OR",12478,14057,JFK,PDX,333.49
+2025,31703,34057,"New York City, NY (Metropolitan Area)","Portland, OR",12953,14057,LGA,PDX,341.66
+2025,31703,34262,"New York City, NY (Metropolitan Area)","Palm Springs, CA",11618,14262,EWR,PSP,398.95
+2025,31703,34262,"New York City, NY (Metropolitan Area)","Palm Springs, CA",12197,14262,HPN,PSP,405.73
+2025,31703,34262,"New York City, NY (Metropolitan Area)","Palm Springs, CA",12391,14262,ISP,PSP,343
+2025,31703,34262,"New York City, NY (Metropolitan Area)","Palm Springs, CA",12478,14262,JFK,PSP,474.64
+2025,31703,34262,"New York City, NY (Metropolitan Area)","Palm Springs, CA",12953,14262,LGA,PSP,396.82
+2025,31703,34321,"New York City, NY (Metropolitan Area)","Portland, ME",11618,14321,EWR,PWM,192.8
+2025,31703,34321,"New York City, NY (Metropolitan Area)","Portland, ME",12197,14321,HPN,PWM,459.6
+2025,31703,34321,"New York City, NY (Metropolitan Area)","Portland, ME",12391,14321,ISP,PWM,212.58
+2025,31703,34321,"New York City, NY (Metropolitan Area)","Portland, ME",12478,14321,JFK,PWM,145.03
+2025,31703,34321,"New York City, NY (Metropolitan Area)","Portland, ME",12953,14321,LGA,PWM,208.93
+2025,31703,34492,"New York City, NY (Metropolitan Area)","Raleigh/Durham, NC",11618,14492,EWR,RDU,165.97
+2025,31703,34492,"New York City, NY (Metropolitan Area)","Raleigh/Durham, NC",12197,14492,HPN,RDU,131.35
+2025,31703,34492,"New York City, NY (Metropolitan Area)","Raleigh/Durham, NC",12391,14492,ISP,RDU,133.08
+2025,31703,34492,"New York City, NY (Metropolitan Area)","Raleigh/Durham, NC",12478,14492,JFK,RDU,152.2
+2025,31703,34492,"New York City, NY (Metropolitan Area)","Raleigh/Durham, NC",12953,14492,LGA,RDU,177.5
+2025,31703,34524,"New York City, NY (Metropolitan Area)","Richmond, VA",11618,14524,EWR,RIC,243.73
+2025,31703,34524,"New York City, NY (Metropolitan Area)","Richmond, VA",12391,14524,ISP,RIC,92.89
+2025,31703,34524,"New York City, NY (Metropolitan Area)","Richmond, VA",12478,14524,JFK,RIC,204.43
+2025,31703,34524,"New York City, NY (Metropolitan Area)","Richmond, VA",12953,14524,LGA,RIC,194.21
+2025,31703,34570,"New York City, NY (Metropolitan Area)","Reno, NV",11618,14570,EWR,RNO,384.8
+2025,31703,34570,"New York City, NY (Metropolitan Area)","Reno, NV",12197,14570,HPN,RNO,392
+2025,31703,34570,"New York City, NY (Metropolitan Area)","Reno, NV",12391,14570,ISP,RNO,408
+2025,31703,34570,"New York City, NY (Metropolitan Area)","Reno, NV",12478,14570,JFK,RNO,291.79
+2025,31703,34570,"New York City, NY (Metropolitan Area)","Reno, NV",12953,14570,LGA,RNO,327.41
+2025,31703,34576,"New York City, NY (Metropolitan Area)","Rochester, NY",11618,14576,EWR,ROC,178.6
+2025,31703,34576,"New York City, NY (Metropolitan Area)","Rochester, NY",12197,14576,HPN,ROC,252
+2025,31703,34576,"New York City, NY (Metropolitan Area)","Rochester, NY",12391,14576,ISP,ROC,212.42
+2025,31703,34576,"New York City, NY (Metropolitan Area)","Rochester, NY",12478,14576,JFK,ROC,159.96
+2025,31703,34576,"New York City, NY (Metropolitan Area)","Rochester, NY",12953,14576,LGA,ROC,213.41
+2025,31703,34614,"New York City, NY (Metropolitan Area)","Salt Lake City, UT",11618,14869,EWR,SLC,311.01
+2025,31703,34614,"New York City, NY (Metropolitan Area)","Salt Lake City, UT",12197,14869,HPN,SLC,379.47
+2025,31703,34614,"New York City, NY (Metropolitan Area)","Salt Lake City, UT",12391,14869,ISP,SLC,302.15
+2025,31703,34614,"New York City, NY (Metropolitan Area)","Salt Lake City, UT",12478,14869,JFK,SLC,381.02
+2025,31703,34614,"New York City, NY (Metropolitan Area)","Salt Lake City, UT",12953,14869,LGA,SLC,314.87
+2025,31703,34653,"New York City, NY (Metropolitan Area)","Tulsa, OK",11618,15370,EWR,TUL,289.31
+2025,31703,34653,"New York City, NY (Metropolitan Area)","Tulsa, OK",12197,15370,HPN,TUL,287.03
+2025,31703,34653,"New York City, NY (Metropolitan Area)","Tulsa, OK",12391,15370,ISP,TUL,457
+2025,31703,34653,"New York City, NY (Metropolitan Area)","Tulsa, OK",12478,15370,JFK,TUL,288.51
+2025,31703,34653,"New York City, NY (Metropolitan Area)","Tulsa, OK",12953,15370,LGA,TUL,258.81
+2025,31703,34685,"New York City, NY (Metropolitan Area)","Savannah, GA",11618,14685,EWR,SAV,220.98
+2025,31703,34685,"New York City, NY (Metropolitan Area)","Savannah, GA",12197,14685,HPN,SAV,214.87
+2025,31703,34685,"New York City, NY (Metropolitan Area)","Savannah, GA",12391,14685,ISP,SAV,224.09
+2025,31703,34685,"New York City, NY (Metropolitan Area)","Savannah, GA",12478,14685,JFK,SAV,202.21
+2025,31703,34685,"New York City, NY (Metropolitan Area)","Savannah, GA",12953,14685,LGA,SAV,247.47
+2025,31703,34986,"New York City, NY (Metropolitan Area)","Sarasota/Bradenton, FL",11618,14986,EWR,SRQ,229.49
+2025,31703,34986,"New York City, NY (Metropolitan Area)","Sarasota/Bradenton, FL",12197,14986,HPN,SRQ,158.32
+2025,31703,34986,"New York City, NY (Metropolitan Area)","Sarasota/Bradenton, FL",12391,14986,ISP,SRQ,201.84
+2025,31703,34986,"New York City, NY (Metropolitan Area)","Sarasota/Bradenton, FL",12478,14986,JFK,SRQ,191.14
+2025,31703,34986,"New York City, NY (Metropolitan Area)","Sarasota/Bradenton, FL",12953,14986,LGA,SRQ,256.89
+2025,31703,35096,"New York City, NY (Metropolitan Area)","Syracuse, NY",11618,15096,EWR,SYR,185
+2025,31703,35096,"New York City, NY (Metropolitan Area)","Syracuse, NY",12478,15096,JFK,SYR,162.99
+2025,31703,35096,"New York City, NY (Metropolitan Area)","Syracuse, NY",12953,15096,LGA,SYR,219.85
+2025,31703,35628,"New York City, NY (Metropolitan Area)","Vero Beach, FL",12197,15628,HPN,VRB,145.61
+2025,31703,35628,"New York City, NY (Metropolitan Area)","Vero Beach, FL",12391,15628,ISP,VRB,118.72
+2025,31703,35628,"New York City, NY (Metropolitan Area)","Vero Beach, FL",15070,15628,SWF,VRB,108.38
+2025,31714,30852,"Fort Myers, FL","Washington, DC (Metropolitan Area)",14635,10821,RSW,BWI,228.6
+2025,31714,30852,"Fort Myers, FL","Washington, DC (Metropolitan Area)",14635,11278,RSW,DCA,239.75
+2025,31714,30852,"Fort Myers, FL","Washington, DC (Metropolitan Area)",14635,12264,RSW,IAD,239.01
+2025,31714,31453,"Fort Myers, FL","Houston, TX",14635,12191,RSW,HOU,199.37
+2025,31714,31453,"Fort Myers, FL","Houston, TX",14635,12266,RSW,IAH,234.93
+2025,31714,31703,"Fort Myers, FL","New York City, NY (Metropolitan Area)",14635,11618,RSW,EWR,229.36
+2025,31714,31703,"Fort Myers, FL","New York City, NY (Metropolitan Area)",14635,12197,RSW,HPN,210.56
+2025,31714,31703,"Fort Myers, FL","New York City, NY (Metropolitan Area)",14635,12391,RSW,ISP,151.46
+2025,31714,31703,"Fort Myers, FL","New York City, NY (Metropolitan Area)",14635,12478,RSW,JFK,202.39
+2025,31714,31703,"Fort Myers, FL","New York City, NY (Metropolitan Area)",14635,12953,RSW,LGA,256.69
+2025,31714,32575,"Fort Myers, FL","Los Angeles, CA (Metropolitan Area)",14635,10800,RSW,BUR,289.16
+2025,31714,32575,"Fort Myers, FL","Los Angeles, CA (Metropolitan Area)",14635,12892,RSW,LAX,347.2
+2025,31714,32575,"Fort Myers, FL","Los Angeles, CA (Metropolitan Area)",14635,12954,RSW,LGB,239.87
+2025,31714,32575,"Fort Myers, FL","Los Angeles, CA (Metropolitan Area)",14635,13891,RSW,ONT,333.78
+2025,31714,32575,"Fort Myers, FL","Los Angeles, CA (Metropolitan Area)",14635,14908,RSW,SNA,471.95
+2025,31834,31703,"Fayetteville, AR","New York City, NY (Metropolitan Area)",15919,11618,XNA,EWR,346.3
+2025,31834,31703,"Fayetteville, AR","New York City, NY (Metropolitan Area)",15919,12197,XNA,HPN,338.03
+2025,31834,31703,"Fayetteville, AR","New York City, NY (Metropolitan Area)",15919,12478,XNA,JFK,297.8
+2025,31834,31703,"Fayetteville, AR","New York City, NY (Metropolitan Area)",15919,12953,XNA,LGA,288.96
+2025,31834,32575,"Fayetteville, AR","Los Angeles, CA (Metropolitan Area)",15919,10800,XNA,BUR,312.18
+2025,31834,32575,"Fayetteville, AR","Los Angeles, CA (Metropolitan Area)",15919,12892,XNA,LAX,261.4
+2025,31834,32575,"Fayetteville, AR","Los Angeles, CA (Metropolitan Area)",15919,12954,XNA,LGB,554
+2025,31834,32575,"Fayetteville, AR","Los Angeles, CA (Metropolitan Area)",15919,13891,XNA,ONT,298.08
+2025,31834,32575,"Fayetteville, AR","Los Angeles, CA (Metropolitan Area)",15919,14908,XNA,SNA,338.19
+2025,31871,30852,"Greenville/Spartanburg, SC","Washington, DC (Metropolitan Area)",11996,10821,GSP,BWI,175.98
+2025,31871,30852,"Greenville/Spartanburg, SC","Washington, DC (Metropolitan Area)",11996,11278,GSP,DCA,215.53
+2025,31871,30852,"Greenville/Spartanburg, SC","Washington, DC (Metropolitan Area)",11996,12264,GSP,IAD,210.17
+2025,31871,31703,"Greenville/Spartanburg, SC","New York City, NY (Metropolitan Area)",11996,11618,GSP,EWR,210.95
+2025,31871,31703,"Greenville/Spartanburg, SC","New York City, NY (Metropolitan Area)",11996,12197,GSP,HPN,140.88
+2025,31871,31703,"Greenville/Spartanburg, SC","New York City, NY (Metropolitan Area)",11996,12391,GSP,ISP,221.66
+2025,31871,31703,"Greenville/Spartanburg, SC","New York City, NY (Metropolitan Area)",11996,12478,GSP,JFK,202.6
+2025,31871,31703,"Greenville/Spartanburg, SC","New York City, NY (Metropolitan Area)",11996,12953,GSP,LGA,185.56
+2025,31986,30466,"Grand Rapids, MI","Phoenix, AZ",11986,10466,GRR,AZA,127.18
+2025,31986,30466,"Grand Rapids, MI","Phoenix, AZ",11986,14107,GRR,PHX,315.16
+2025,31986,30852,"Grand Rapids, MI","Washington, DC (Metropolitan Area)",11986,10821,GRR,BWI,229.04
+2025,31986,30852,"Grand Rapids, MI","Washington, DC (Metropolitan Area)",11986,11278,GRR,DCA,247.29
+2025,31986,30852,"Grand Rapids, MI","Washington, DC (Metropolitan Area)",11986,12264,GRR,IAD,309.79
+2025,31986,31703,"Grand Rapids, MI","New York City, NY (Metropolitan Area)",11986,11618,GRR,EWR,222.39
+2025,31986,31703,"Grand Rapids, MI","New York City, NY (Metropolitan Area)",11986,12197,GRR,HPN,291.92
+2025,31986,31703,"Grand Rapids, MI","New York City, NY (Metropolitan Area)",11986,12391,GRR,ISP,212.26
+2025,31986,31703,"Grand Rapids, MI","New York City, NY (Metropolitan Area)",11986,12478,GRR,JFK,321.16
+2025,31986,31703,"Grand Rapids, MI","New York City, NY (Metropolitan Area)",11986,12953,GRR,LGA,259.77
+2025,31986,32575,"Grand Rapids, MI","Los Angeles, CA (Metropolitan Area)",11986,10800,GRR,BUR,318.95
+2025,31986,32575,"Grand Rapids, MI","Los Angeles, CA (Metropolitan Area)",11986,12892,GRR,LAX,283.45
+2025,31986,32575,"Grand Rapids, MI","Los Angeles, CA (Metropolitan Area)",11986,12954,GRR,LGB,269.55
+2025,31986,32575,"Grand Rapids, MI","Los Angeles, CA (Metropolitan Area)",11986,13891,GRR,ONT,306.73
+2025,31986,32575,"Grand Rapids, MI","Los Angeles, CA (Metropolitan Area)",11986,14908,GRR,SNA,379.26
+2025,31986,33195,"Grand Rapids, MI","Tampa, FL (Metropolitan Area)",11986,12882,GRR,LAL,67.99
+2025,31986,33195,"Grand Rapids, MI","Tampa, FL (Metropolitan Area)",11986,14112,GRR,PIE,109.71
+2025,31986,33195,"Grand Rapids, MI","Tampa, FL (Metropolitan Area)",11986,15304,GRR,TPA,245.62
+2025,31995,31703,"Greensboro/High Point, NC","New York City, NY (Metropolitan Area)",11995,11618,GSO,EWR,221.73
+2025,31995,31703,"Greensboro/High Point, NC","New York City, NY (Metropolitan Area)",11995,12197,GSO,HPN,201.8
+2025,31995,31703,"Greensboro/High Point, NC","New York City, NY (Metropolitan Area)",11995,12478,GSO,JFK,218.26
+2025,31995,31703,"Greensboro/High Point, NC","New York City, NY (Metropolitan Area)",11995,12953,GSO,LGA,189
+2025,32206,31453,"Harlingen/San Benito, TX","Houston, TX",12206,12191,HRL,HOU,137.32
+2025,32206,31453,"Harlingen/San Benito, TX","Houston, TX",12206,12266,HRL,IAH,155.3
+2025,32211,30466,"Las Vegas, NV","Phoenix, AZ",12889,10466,LAS,AZA,74.83
+2025,32211,30466,"Las Vegas, NV","Phoenix, AZ",12889,14107,LAS,PHX,163.5
+2025,32211,30852,"Las Vegas, NV","Washington, DC (Metropolitan Area)",12889,10821,LAS,BWI,261.9
+2025,32211,30852,"Las Vegas, NV","Washington, DC (Metropolitan Area)",12889,11278,LAS,DCA,285.58
+2025,32211,30852,"Las Vegas, NV","Washington, DC (Metropolitan Area)",12889,12264,LAS,IAD,295.04
+2025,32211,31703,"Las Vegas, NV","New York City, NY (Metropolitan Area)",12889,11618,LAS,EWR,318.5
+2025,32211,31703,"Las Vegas, NV","New York City, NY (Metropolitan Area)",12889,12197,LAS,HPN,347.01
+2025,32211,31703,"Las Vegas, NV","New York City, NY (Metropolitan Area)",12889,12391,LAS,ISP,307.14
+2025,32211,31703,"Las Vegas, NV","New York City, NY (Metropolitan Area)",12889,12478,LAS,JFK,329.28
+2025,32211,31703,"Las Vegas, NV","New York City, NY (Metropolitan Area)",12889,12953,LAS,LGA,269.29
+2025,32211,32457,"Las Vegas, NV","San Francisco, CA (Metropolitan Area)",12889,13796,LAS,OAK,144.65
+2025,32211,32457,"Las Vegas, NV","San Francisco, CA (Metropolitan Area)",12889,14771,LAS,SFO,162.54
+2025,32211,32457,"Las Vegas, NV","San Francisco, CA (Metropolitan Area)",12889,14831,LAS,SJC,147.57
+2025,32211,32467,"Las Vegas, NV","Miami, FL (Metropolitan Area)",12889,11697,LAS,FLL,243.05
+2025,32211,32467,"Las Vegas, NV","Miami, FL (Metropolitan Area)",12889,13303,LAS,MIA,297.07
+2025,32211,32575,"Las Vegas, NV","Los Angeles, CA (Metropolitan Area)",12889,10800,LAS,BUR,155.61
+2025,32211,32575,"Las Vegas, NV","Los Angeles, CA (Metropolitan Area)",12889,12892,LAS,LAX,120.33
+2025,32211,32575,"Las Vegas, NV","Los Angeles, CA (Metropolitan Area)",12889,12954,LAS,LGB,118.87
+2025,32211,32575,"Las Vegas, NV","Los Angeles, CA (Metropolitan Area)",12889,13891,LAS,ONT,143.34
+2025,32211,32575,"Las Vegas, NV","Los Angeles, CA (Metropolitan Area)",12889,14908,LAS,SNA,138.56
+2025,32211,33195,"Las Vegas, NV","Tampa, FL (Metropolitan Area)",12889,15304,LAS,TPA,256.76
+2025,32211,33667,"Las Vegas, NV","Norfolk, VA (Metropolitan Area)",12889,13931,LAS,ORF,288.89
+2025,32211,33667,"Las Vegas, NV","Norfolk, VA (Metropolitan Area)",12889,14098,LAS,PHF,464.75
+2025,32244,33195,"New Haven, CT","Tampa, FL (Metropolitan Area)",12244,12882,HVN,LAL,80.36
+2025,32244,33195,"New Haven, CT","Tampa, FL (Metropolitan Area)",12244,15304,HVN,TPA,104.96
+2025,32337,30466,"Indianapolis, IN","Phoenix, AZ",12339,14107,IND,PHX,284.76
+2025,32337,30852,"Indianapolis, IN","Washington, DC (Metropolitan Area)",12339,10821,IND,BWI,214.68
+2025,32337,30852,"Indianapolis, IN","Washington, DC (Metropolitan Area)",12339,11278,IND,DCA,212.31
+2025,32337,30852,"Indianapolis, IN","Washington, DC (Metropolitan Area)",12339,12264,IND,IAD,219.84
+2025,32337,31703,"Indianapolis, IN","New York City, NY (Metropolitan Area)",12339,11618,IND,EWR,206.62
+2025,32337,31703,"Indianapolis, IN","New York City, NY (Metropolitan Area)",12339,12197,IND,HPN,333.48
+2025,32337,31703,"Indianapolis, IN","New York City, NY (Metropolitan Area)",12339,12391,IND,ISP,247.35
+2025,32337,31703,"Indianapolis, IN","New York City, NY (Metropolitan Area)",12339,12478,IND,JFK,202.59
+2025,32337,31703,"Indianapolis, IN","New York City, NY (Metropolitan Area)",12339,12953,IND,LGA,220.54
+2025,32337,32457,"Indianapolis, IN","San Francisco, CA (Metropolitan Area)",12339,13796,IND,OAK,238.41
+2025,32337,32457,"Indianapolis, IN","San Francisco, CA (Metropolitan Area)",12339,14771,IND,SFO,309.46
+2025,32337,32457,"Indianapolis, IN","San Francisco, CA (Metropolitan Area)",12339,14831,IND,SJC,299.06
+2025,32337,32467,"Indianapolis, IN","Miami, FL (Metropolitan Area)",12339,11697,IND,FLL,165.98
+2025,32337,32467,"Indianapolis, IN","Miami, FL (Metropolitan Area)",12339,13303,IND,MIA,266.3
+2025,32337,32575,"Indianapolis, IN","Los Angeles, CA (Metropolitan Area)",12339,10800,IND,BUR,268.83
+2025,32337,32575,"Indianapolis, IN","Los Angeles, CA (Metropolitan Area)",12339,12892,IND,LAX,282.66
+2025,32337,32575,"Indianapolis, IN","Los Angeles, CA (Metropolitan Area)",12339,12954,IND,LGB,252.22
+2025,32337,32575,"Indianapolis, IN","Los Angeles, CA (Metropolitan Area)",12339,13891,IND,ONT,295.02
+2025,32337,32575,"Indianapolis, IN","Los Angeles, CA (Metropolitan Area)",12339,14908,IND,SNA,327.62
+2025,32337,33195,"Indianapolis, IN","Tampa, FL (Metropolitan Area)",12339,14112,IND,PIE,89.48
+2025,32337,33195,"Indianapolis, IN","Tampa, FL (Metropolitan Area)",12339,15304,IND,TPA,191.49
+2025,32448,30852,"Jackson/Vicksburg, MS","Washington, DC (Metropolitan Area)",12448,10821,JAN,BWI,196.61
+2025,32448,30852,"Jackson/Vicksburg, MS","Washington, DC (Metropolitan Area)",12448,11278,JAN,DCA,295.71
+2025,32448,30852,"Jackson/Vicksburg, MS","Washington, DC (Metropolitan Area)",12448,12264,JAN,IAD,340.62
+2025,32457,30436,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",13796,15376,OAK,TUS,196.57
+2025,32457,30436,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",14771,15376,SFO,TUS,248.24
+2025,32457,30436,"San Francisco, CA (Metropolitan Area)","Tucson, AZ",14831,15376,SJC,TUS,232.77
+2025,32457,30559,"San Francisco, CA (Metropolitan Area)","Seattle, WA",13796,14747,OAK,SEA,168.32
+2025,32457,30559,"San Francisco, CA (Metropolitan Area)","Seattle, WA",14771,14747,SFO,SEA,197.21
+2025,32457,30559,"San Francisco, CA (Metropolitan Area)","Seattle, WA",14831,14747,SJC,SEA,197.68
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13796,10821,OAK,BWI,310.19
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13796,11278,OAK,DCA,320.21
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13796,12264,OAK,IAD,315.84
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14771,10821,SFO,BWI,336.65
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14771,11278,SFO,DCA,371.13
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14771,12264,SFO,IAD,398.47
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14831,10821,SJC,BWI,283.11
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14831,11278,SJC,DCA,275.64
+2025,32457,30852,"San Francisco, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14831,12264,SJC,IAD,247.57
+2025,32457,31123,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",13796,15016,OAK,STL,268.32
+2025,32457,31123,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",14771,15016,SFO,STL,296.87
+2025,32457,31123,"San Francisco, CA (Metropolitan Area)","St. Louis, MO",14831,15016,SJC,STL,251.57
+2025,32457,31884,"San Francisco, CA (Metropolitan Area)","Spokane, WA",13796,11884,OAK,GEG,159.23
+2025,32457,31884,"San Francisco, CA (Metropolitan Area)","Spokane, WA",14771,11884,SFO,GEG,201.11
+2025,32457,31884,"San Francisco, CA (Metropolitan Area)","Spokane, WA",14831,11884,SJC,GEG,202.64
+2025,32457,33195,"San Francisco, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",13796,15304,OAK,TPA,300.45
+2025,32457,33195,"San Francisco, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",14771,15304,SFO,TPA,347.68
+2025,32457,33195,"San Francisco, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",14831,15304,SJC,TPA,291.55
+2025,32457,34689,"San Francisco, CA (Metropolitan Area)","Santa Barbara, CA",13796,14689,OAK,SBA,178.03
+2025,32457,34689,"San Francisco, CA (Metropolitan Area)","Santa Barbara, CA",14771,14689,SFO,SBA,225.39
+2025,32467,30198,"Miami, FL (Metropolitan Area)","Pittsburgh, PA",11697,14122,FLL,PIT,176.38
+2025,32467,30198,"Miami, FL (Metropolitan Area)","Pittsburgh, PA",13303,14122,MIA,PIT,234.72
+2025,32467,30466,"Miami, FL (Metropolitan Area)","Phoenix, AZ",11697,14107,FLL,PHX,238.28
+2025,32467,30466,"Miami, FL (Metropolitan Area)","Phoenix, AZ",13303,10466,MIA,AZA,282
+2025,32467,30466,"Miami, FL (Metropolitan Area)","Phoenix, AZ",13303,14107,MIA,PHX,313.87
+2025,32467,30559,"Miami, FL (Metropolitan Area)","Seattle, WA",11697,14747,FLL,SEA,309.09
+2025,32467,30559,"Miami, FL (Metropolitan Area)","Seattle, WA",13303,14747,MIA,SEA,299.07
+2025,32467,30693,"Miami, FL (Metropolitan Area)","Nashville, TN",11697,10693,FLL,BNA,198.28
+2025,32467,30693,"Miami, FL (Metropolitan Area)","Nashville, TN",13303,10693,MIA,BNA,241.38
+2025,32467,30852,"Miami, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",11697,10821,FLL,BWI,170.87
+2025,32467,30852,"Miami, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",11697,11278,FLL,DCA,168.56
+2025,32467,30852,"Miami, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",11697,12264,FLL,IAD,217.67
+2025,32467,30852,"Miami, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",13303,10821,MIA,BWI,178.61
+2025,32467,30852,"Miami, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",13303,11278,MIA,DCA,213.54
+2025,32467,30852,"Miami, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",13303,12264,MIA,IAD,204.32
+2025,32467,31123,"Miami, FL (Metropolitan Area)","St. Louis, MO",11697,15016,FLL,STL,237.73
+2025,32467,31123,"Miami, FL (Metropolitan Area)","St. Louis, MO",13303,15016,MIA,STL,258.34
+2025,32467,31454,"Miami, FL (Metropolitan Area)","Orlando, FL",11697,13204,FLL,MCO,104.07
+2025,32467,31454,"Miami, FL (Metropolitan Area)","Orlando, FL",13303,13204,MIA,MCO,155.45
+2025,32467,31650,"Miami, FL (Metropolitan Area)","Minneapolis/St. Paul, MN",11697,13487,FLL,MSP,230.29
+2025,32467,31650,"Miami, FL (Metropolitan Area)","Minneapolis/St. Paul, MN",13303,13487,MIA,MSP,221.75
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",11697,11618,FLL,EWR,198.65
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",11697,12197,FLL,HPN,216.45
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",11697,12391,FLL,ISP,158.49
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",11697,12478,FLL,JFK,199.01
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",11697,12953,FLL,LGA,198.02
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",11697,15070,FLL,SWF,128.26
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",13303,11618,MIA,EWR,225.15
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",13303,12197,MIA,HPN,253.98
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",13303,12391,MIA,ISP,227
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",13303,12478,MIA,JFK,200.64
+2025,32467,31703,"Miami, FL (Metropolitan Area)","New York City, NY (Metropolitan Area)",13303,12953,MIA,LGA,227.68
+2025,32467,32244,"Miami, FL (Metropolitan Area)","New Haven, CT",11697,12244,FLL,HVN,116.36
+2025,32467,32457,"Miami, FL (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11697,13796,FLL,OAK,256.71
+2025,32467,32457,"Miami, FL (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11697,14771,FLL,SFO,314.97
+2025,32467,32457,"Miami, FL (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",11697,14831,FLL,SJC,287.41
+2025,32467,32457,"Miami, FL (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13303,13796,MIA,OAK,262.5
+2025,32467,32457,"Miami, FL (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13303,14771,MIA,SFO,323.2
+2025,32467,32457,"Miami, FL (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13303,14831,MIA,SJC,292.41
+2025,32467,33192,"Miami, FL (Metropolitan Area)","Sacramento, CA",11697,14893,FLL,SMF,330.4
+2025,32467,33192,"Miami, FL (Metropolitan Area)","Sacramento, CA",13303,14893,MIA,SMF,311.33
+2025,32467,33195,"Miami, FL (Metropolitan Area)","Tampa, FL (Metropolitan Area)",11697,15304,FLL,TPA,117.94
+2025,32467,33195,"Miami, FL (Metropolitan Area)","Tampa, FL (Metropolitan Area)",13303,15304,MIA,TPA,261.6
+2025,32467,33214,"Miami, FL (Metropolitan Area)","San Antonio, TX",11697,14683,FLL,SAT,180.04
+2025,32467,33214,"Miami, FL (Metropolitan Area)","San Antonio, TX",13303,14683,MIA,SAT,286.42
+2025,32467,33316,"Miami, FL (Metropolitan Area)","Omaha, NE",11697,13871,FLL,OMA,281.15
+2025,32467,33316,"Miami, FL (Metropolitan Area)","Omaha, NE",13303,13871,MIA,OMA,268.92
+2025,32467,33342,"Miami, FL (Metropolitan Area)","Milwaukee, WI",11697,13342,FLL,MKE,202.91
+2025,32467,33342,"Miami, FL (Metropolitan Area)","Milwaukee, WI",13303,13342,MIA,MKE,293.32
+2025,32467,33495,"Miami, FL (Metropolitan Area)","New Orleans, LA",11697,13495,FLL,MSY,154.17
+2025,32467,33495,"Miami, FL (Metropolitan Area)","New Orleans, LA",13303,13495,MIA,MSY,206.81
+2025,32467,33570,"Miami, FL (Metropolitan Area)","San Diego, CA",11697,14679,FLL,SAN,278.26
+2025,32467,33570,"Miami, FL (Metropolitan Area)","San Diego, CA",13303,14679,MIA,SAN,314.59
+2025,32467,33667,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",11697,13931,FLL,ORF,154.46
+2025,32467,33667,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",11697,14098,FLL,PHF,258.84
+2025,32467,33667,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",13303,13931,MIA,ORF,258.59
+2025,32467,33667,"Miami, FL (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",13303,14098,MIA,PHF,208.83
+2025,32467,33728,"Miami, FL (Metropolitan Area)","Pensacola, FL",11697,14193,FLL,PNS,119.38
+2025,32467,33728,"Miami, FL (Metropolitan Area)","Pensacola, FL",13303,14193,MIA,PNS,299.12
+2025,32467,34057,"Miami, FL (Metropolitan Area)","Portland, OR",11697,14057,FLL,PDX,285.41
+2025,32467,34057,"Miami, FL (Metropolitan Area)","Portland, OR",13303,14057,MIA,PDX,287.08
+2025,32467,34100,"Miami, FL (Metropolitan Area)","Philadelphia, PA",11697,14100,FLL,PHL,184
+2025,32467,34100,"Miami, FL (Metropolitan Area)","Philadelphia, PA",13303,14100,MIA,PHL,228.26
+2025,32467,34492,"Miami, FL (Metropolitan Area)","Raleigh/Durham, NC",11697,14492,FLL,RDU,161.64
+2025,32467,34492,"Miami, FL (Metropolitan Area)","Raleigh/Durham, NC",13303,14492,MIA,RDU,164.54
+2025,32467,34524,"Miami, FL (Metropolitan Area)","Richmond, VA",11697,14524,FLL,RIC,145.08
+2025,32467,34524,"Miami, FL (Metropolitan Area)","Richmond, VA",13303,14524,MIA,RIC,236.01
+2025,32467,34576,"Miami, FL (Metropolitan Area)","Rochester, NY",11697,14576,FLL,ROC,165.07
+2025,32467,34576,"Miami, FL (Metropolitan Area)","Rochester, NY",13303,14576,MIA,ROC,244.01
+2025,32467,34614,"Miami, FL (Metropolitan Area)","Salt Lake City, UT",11697,14869,FLL,SLC,318.69
+2025,32467,34614,"Miami, FL (Metropolitan Area)","Salt Lake City, UT",13303,14869,MIA,SLC,290.32
+2025,32467,35249,"Miami, FL (Metropolitan Area)","Tallahassee, FL",11697,15249,FLL,TLH,144.27
+2025,32467,35249,"Miami, FL (Metropolitan Area)","Tallahassee, FL",13303,15249,MIA,TLH,266.59
+2025,32575,30198,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",10800,14122,BUR,PIT,311.66
+2025,32575,30198,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",12892,14122,LAX,PIT,245.97
+2025,32575,30198,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",12954,14122,LGB,PIT,228.31
+2025,32575,30198,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",13891,14122,ONT,PIT,308.73
+2025,32575,30198,"Los Angeles, CA (Metropolitan Area)","Pittsburgh, PA",14908,14122,SNA,PIT,359.61
+2025,32575,30436,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",10800,15376,BUR,TUS,245.9
+2025,32575,30436,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",12892,15376,LAX,TUS,202.51
+2025,32575,30436,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",12954,15376,LGB,TUS,188.31
+2025,32575,30436,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",13891,15376,ONT,TUS,216.25
+2025,32575,30436,"Los Angeles, CA (Metropolitan Area)","Tucson, AZ",14908,15376,SNA,TUS,204.15
+2025,32575,30466,"Los Angeles, CA (Metropolitan Area)","Phoenix, AZ",10800,14107,BUR,PHX,183.1
+2025,32575,30466,"Los Angeles, CA (Metropolitan Area)","Phoenix, AZ",12892,14107,LAX,PHX,157.14
+2025,32575,30466,"Los Angeles, CA (Metropolitan Area)","Phoenix, AZ",12954,14107,LGB,PHX,147.73
+2025,32575,30466,"Los Angeles, CA (Metropolitan Area)","Phoenix, AZ",13891,14107,ONT,PHX,195.29
+2025,32575,30466,"Los Angeles, CA (Metropolitan Area)","Phoenix, AZ",14908,14107,SNA,PHX,198.14
+2025,32575,30559,"Los Angeles, CA (Metropolitan Area)","Seattle, WA",10800,14747,BUR,SEA,206.25
+2025,32575,30559,"Los Angeles, CA (Metropolitan Area)","Seattle, WA",12892,14747,LAX,SEA,192.41
+2025,32575,30559,"Los Angeles, CA (Metropolitan Area)","Seattle, WA",12954,14747,LGB,SEA,205.14
+2025,32575,30559,"Los Angeles, CA (Metropolitan Area)","Seattle, WA",13891,14747,ONT,SEA,172.52
+2025,32575,30559,"Los Angeles, CA (Metropolitan Area)","Seattle, WA",14908,14747,SNA,SEA,211.06
+2025,32575,30693,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",10800,10693,BUR,BNA,269.36
+2025,32575,30693,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",12892,10693,LAX,BNA,306.41
+2025,32575,30693,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",12954,10693,LGB,BNA,308.74
+2025,32575,30693,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",13891,10693,ONT,BNA,289.81
+2025,32575,30693,"Los Angeles, CA (Metropolitan Area)","Nashville, TN",14908,10693,SNA,BNA,357.69
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10800,10821,BUR,BWI,296.05
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10800,11278,BUR,DCA,295.25
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",10800,12264,BUR,IAD,348.28
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",12892,10821,LAX,BWI,237.8
+2025,32575,33192,"Los Angeles, CA (Metropolitan Area)","Sacramento, CA",12954,14893,LGB,SMF,154.16
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",12892,11278,LAX,DCA,357.23
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",12892,12264,LAX,IAD,303.14
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",12954,10821,LGB,BWI,245.32
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",12954,11278,LGB,DCA,265.24
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",12954,12264,LGB,IAD,337.7
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13891,10821,ONT,BWI,279.77
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13891,11278,ONT,DCA,291.76
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",13891,12264,ONT,IAD,299.55
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14908,10821,SNA,BWI,358.62
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14908,11278,SNA,DCA,356.46
+2025,32575,30852,"Los Angeles, CA (Metropolitan Area)","Washington, DC (Metropolitan Area)",14908,12264,SNA,IAD,385.99
+2025,32575,31123,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",10800,15016,BUR,STL,305.33
+2025,32575,31123,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",12892,15016,LAX,STL,276.91
+2025,32575,31123,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",12954,15016,LGB,STL,262.84
+2025,32575,31123,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",13891,15016,ONT,STL,251.25
+2025,32575,31123,"Los Angeles, CA (Metropolitan Area)","St. Louis, MO",14908,15016,SNA,STL,329.71
+2025,32575,31454,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",10800,13204,BUR,MCO,306.01
+2025,32575,31454,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",12892,13204,LAX,MCO,273.14
+2025,32575,31454,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",12954,13204,LGB,MCO,237.6
+2025,32575,31454,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",13891,13204,ONT,MCO,275.11
+2025,32575,31454,"Los Angeles, CA (Metropolitan Area)","Orlando, FL",14908,13204,SNA,MCO,293.25
+2025,32575,31650,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",10800,13487,BUR,MSP,327.83
+2025,32575,31650,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",12892,13487,LAX,MSP,237.4
+2025,32575,31650,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",12954,13487,LGB,MSP,283.43
+2025,32575,31650,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",13891,13487,ONT,MSP,291.49
+2025,32575,31650,"Los Angeles, CA (Metropolitan Area)","Minneapolis/St. Paul, MN",14908,13487,SNA,MSP,425.28
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10800,11618,BUR,EWR,298.26
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10800,12197,BUR,HPN,290.54
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10800,12391,BUR,ISP,275.6
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10800,12478,BUR,JFK,260.05
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",10800,12953,BUR,LGA,264.23
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12892,11618,LAX,EWR,361.14
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12892,12197,LAX,HPN,342.12
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12892,12391,LAX,ISP,237.79
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12892,12478,LAX,JFK,498.51
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12892,12953,LAX,LGA,330.92
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12954,11618,LGB,EWR,651.14
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12954,12391,LGB,ISP,294.12
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12954,12478,LGB,JFK,507.49
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",12954,12953,LGB,LGA,275
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",13891,11618,ONT,EWR,308.64
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",13891,12197,ONT,HPN,314.39
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",13891,12391,ONT,ISP,229.43
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",13891,12478,ONT,JFK,235.61
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",13891,12953,ONT,LGA,275.04
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",14908,11618,SNA,EWR,406.1
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",14908,12197,SNA,HPN,367.89
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",14908,12391,SNA,ISP,330.75
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",14908,12478,SNA,JFK,556.28
+2025,32575,31703,"Los Angeles, CA (Metropolitan Area)","New York City, NY (Metropolitan Area)",14908,12953,SNA,LGA,416.2
+2025,32575,31884,"Los Angeles, CA (Metropolitan Area)","Spokane, WA",10800,11884,BUR,GEG,213.18
+2025,32575,31884,"Los Angeles, CA (Metropolitan Area)","Spokane, WA",12892,11884,LAX,GEG,199.23
+2025,32575,31884,"Los Angeles, CA (Metropolitan Area)","Spokane, WA",12954,11884,LGB,GEG,222.22
+2025,32575,31884,"Los Angeles, CA (Metropolitan Area)","Spokane, WA",13891,11884,ONT,GEG,223.09
+2025,32575,31884,"Los Angeles, CA (Metropolitan Area)","Spokane, WA",14908,11884,SNA,GEG,239.92
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10800,13796,BUR,OAK,161.97
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10800,14771,BUR,SFO,147.54
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",10800,14831,BUR,SJC,168.58
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12892,13796,LAX,OAK,168.84
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12892,14771,LAX,SFO,139.07
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12892,14831,LAX,SJC,147.23
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12954,13796,LGB,OAK,166.86
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12954,14771,LGB,SFO,208.63
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",12954,14831,LGB,SJC,142.35
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13891,13796,ONT,OAK,180.06
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13891,14771,ONT,SFO,133.76
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",13891,14831,ONT,SJC,179.71
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",14908,13796,SNA,OAK,178.32
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",14908,14771,SNA,SFO,156.05
+2025,32575,32457,"Los Angeles, CA (Metropolitan Area)","San Francisco, CA (Metropolitan Area)",14908,14831,SNA,SJC,221.92
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",10800,11697,BUR,FLL,294.32
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",10800,13303,BUR,MIA,275.15
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",12892,11697,LAX,FLL,321.43
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",12892,13303,LAX,MIA,379.95
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",12954,11697,LGB,FLL,254.11
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",12954,13303,LGB,MIA,265.31
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",13891,11697,ONT,FLL,327.2
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",13891,13303,ONT,MIA,288.83
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",14908,11697,SNA,FLL,389.96
+2025,32575,32467,"Los Angeles, CA (Metropolitan Area)","Miami, FL (Metropolitan Area)",14908,13303,SNA,MIA,385.16
+2025,32575,33044,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",10800,14730,BUR,SDF,312.69
+2025,32575,33044,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",12892,14730,LAX,SDF,250.08
+2025,32575,33044,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",12954,14730,LGB,SDF,256.32
+2025,32575,33044,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",13891,14730,ONT,SDF,316.87
+2025,32575,33044,"Los Angeles, CA (Metropolitan Area)","Louisville, KY",14908,14730,SNA,SDF,364.88
+2025,32575,33192,"Los Angeles, CA (Metropolitan Area)","Sacramento, CA",10800,14893,BUR,SMF,184.06
+2025,32575,33192,"Los Angeles, CA (Metropolitan Area)","Sacramento, CA",12892,14893,LAX,SMF,156.34
+2025,32575,33192,"Los Angeles, CA (Metropolitan Area)","Sacramento, CA",13891,14893,ONT,SMF,201.73
+2025,32575,33192,"Los Angeles, CA (Metropolitan Area)","Sacramento, CA",14908,14893,SNA,SMF,228.77
+2025,32575,33195,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",10800,15304,BUR,TPA,292.64
+2025,32575,33195,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",12892,15304,LAX,TPA,325.32
+2025,32575,33195,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",12954,15304,LGB,TPA,254.46
+2025,32575,33195,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",13891,15304,ONT,TPA,275.06
+2025,32575,33195,"Los Angeles, CA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",14908,15304,SNA,TPA,311.26
+2025,32575,33214,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",10800,14683,BUR,SAT,299.52
+2025,32575,33214,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",12892,14683,LAX,SAT,196.72
+2025,32575,33214,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",12954,14683,LGB,SAT,235.43
+2025,32575,33214,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",13891,14683,ONT,SAT,257.22
+2025,32575,33214,"Los Angeles, CA (Metropolitan Area)","San Antonio, TX",14908,14683,SNA,SAT,286.87
+2025,32575,33244,"Los Angeles, CA (Metropolitan Area)","Memphis, TN",10800,13244,BUR,MEM,288.16
+2025,32575,33244,"Los Angeles, CA (Metropolitan Area)","Memphis, TN",12892,13244,LAX,MEM,253.64
+2025,32575,33244,"Los Angeles, CA (Metropolitan Area)","Memphis, TN",12954,13244,LGB,MEM,215.24
+2025,32575,33244,"Los Angeles, CA (Metropolitan Area)","Memphis, TN",13891,13244,ONT,MEM,310.02
+2025,32575,33244,"Los Angeles, CA (Metropolitan Area)","Memphis, TN",14908,13244,SNA,MEM,377.4
+2025,32575,33264,"Los Angeles, CA (Metropolitan Area)","Medford, OR",10800,13264,BUR,MFR,105.94
+2025,32575,33264,"Los Angeles, CA (Metropolitan Area)","Medford, OR",12892,13264,LAX,MFR,200.86
+2025,32575,33264,"Los Angeles, CA (Metropolitan Area)","Medford, OR",12954,13264,LGB,MFR,468
+2025,32575,33264,"Los Angeles, CA (Metropolitan Area)","Medford, OR",13891,13264,ONT,MFR,260.41
+2025,32575,33264,"Los Angeles, CA (Metropolitan Area)","Medford, OR",14908,13264,SNA,MFR,155.78
+2025,32575,33316,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",10800,13871,BUR,OMA,271.18
+2025,32575,33316,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",12892,13871,LAX,OMA,256.4
+2025,32575,33316,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",12954,13871,LGB,OMA,223.49
+2025,32575,33316,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",13891,13871,ONT,OMA,266.38
+2025,32575,33316,"Los Angeles, CA (Metropolitan Area)","Omaha, NE",14908,13871,SNA,OMA,302.78
+2025,32575,33342,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",10800,13342,BUR,MKE,291.24
+2025,32575,33342,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",12892,13342,LAX,MKE,266.09
+2025,32575,33342,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",12954,13342,LGB,MKE,255.15
+2025,32575,33342,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",13891,13342,ONT,MKE,297.54
+2025,32575,33342,"Los Angeles, CA (Metropolitan Area)","Milwaukee, WI",14908,13342,SNA,MKE,317.03
+2025,32575,33495,"Los Angeles, CA (Metropolitan Area)","New Orleans, LA",10800,13495,BUR,MSY,287.3
+2025,32575,33495,"Los Angeles, CA (Metropolitan Area)","New Orleans, LA",12892,13495,LAX,MSY,253.97
+2025,32575,33495,"Los Angeles, CA (Metropolitan Area)","New Orleans, LA",12954,13495,LGB,MSY,253.26
+2025,32575,33495,"Los Angeles, CA (Metropolitan Area)","New Orleans, LA",13891,13495,ONT,MSY,262.72
+2025,32575,33495,"Los Angeles, CA (Metropolitan Area)","New Orleans, LA",14908,13495,SNA,MSY,330.38
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",10800,13931,BUR,ORF,319.03
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",10800,14098,BUR,PHF,473.33
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12892,13931,LAX,ORF,315.71
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12892,14098,LAX,PHF,423.8
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",12954,13931,LGB,ORF,274.23
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",13891,13931,ONT,ORF,348.55
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",13891,14098,ONT,PHF,407.77
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",14908,13931,SNA,ORF,435.51
+2025,32575,33667,"Los Angeles, CA (Metropolitan Area)","Norfolk, VA (Metropolitan Area)",14908,14098,SNA,PHF,467.22
+2025,32575,33851,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",10800,13851,BUR,OKC,281.24
+2025,32575,33851,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",12892,13851,LAX,OKC,285.2
+2025,32575,33851,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",12954,13851,LGB,OKC,231.85
+2025,32575,33851,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",13891,13851,ONT,OKC,242.7
+2025,32575,33851,"Los Angeles, CA (Metropolitan Area)","Oklahoma City, OK",14908,13851,SNA,OKC,271.33
+2025,32575,34027,"Los Angeles, CA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",10800,14027,BUR,PBI,322.46
+2025,32575,34027,"Los Angeles, CA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",12892,14027,LAX,PBI,362.5
+2025,32575,34027,"Los Angeles, CA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",12954,14027,LGB,PBI,240
+2025,32575,34027,"Los Angeles, CA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",13891,14027,ONT,PBI,361.2
+2025,32575,34027,"Los Angeles, CA (Metropolitan Area)","West Palm Beach/Palm Beach, FL",14908,14027,SNA,PBI,480.6
+2025,32575,34057,"Los Angeles, CA (Metropolitan Area)","Portland, OR",10800,14057,BUR,PDX,183.05
+2025,32575,34057,"Los Angeles, CA (Metropolitan Area)","Portland, OR",12892,14057,LAX,PDX,164.58
+2025,32575,34057,"Los Angeles, CA (Metropolitan Area)","Portland, OR",12954,14057,LGB,PDX,186.4
+2025,32575,34057,"Los Angeles, CA (Metropolitan Area)","Portland, OR",13891,14057,ONT,PDX,174.11
+2025,32575,34057,"Los Angeles, CA (Metropolitan Area)","Portland, OR",14908,14057,SNA,PDX,205.75
+2025,32575,34100,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",10800,14100,BUR,PHL,329.09
+2025,32575,34100,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",12892,14100,LAX,PHL,309.36
+2025,32575,34100,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",12954,14100,LGB,PHL,280.58
+2025,32575,34100,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",13891,14100,ONT,PHL,333.15
+2025,32575,34100,"Los Angeles, CA (Metropolitan Area)","Philadelphia, PA",14908,14100,SNA,PHL,361.85
+2025,32575,34252,"Los Angeles, CA (Metropolitan Area)","Pasco/Kennewick/Richland, WA",10800,14252,BUR,PSC,115.46
+2025,32575,34252,"Los Angeles, CA (Metropolitan Area)","Pasco/Kennewick/Richland, WA",12892,14252,LAX,PSC,196.93
+2025,32575,34252,"Los Angeles, CA (Metropolitan Area)","Pasco/Kennewick/Richland, WA",12954,14252,LGB,PSC,394.14
+2025,32575,34252,"Los Angeles, CA (Metropolitan Area)","Pasco/Kennewick/Richland, WA",13891,14252,ONT,PSC,195.31
+2025,32575,34252,"Los Angeles, CA (Metropolitan Area)","Pasco/Kennewick/Richland, WA",14908,14252,SNA,PSC,245.48
+2025,32575,34314,"Los Angeles, CA (Metropolitan Area)","Provo, UT",12892,14314,LAX,PVU,147
+2025,32575,34314,"Los Angeles, CA (Metropolitan Area)","Provo, UT",13891,14314,ONT,PVU,148.5
+2025,32575,34314,"Los Angeles, CA (Metropolitan Area)","Provo, UT",14908,14314,SNA,PVU,101.6
+2025,32575,34433,"Los Angeles, CA (Metropolitan Area)","Santa Rosa, CA",10800,15023,BUR,STS,125.16
+2025,32575,34433,"Los Angeles, CA (Metropolitan Area)","Santa Rosa, CA",12892,15023,LAX,STS,172.86
+2025,32575,34433,"Los Angeles, CA (Metropolitan Area)","Santa Rosa, CA",13891,15023,ONT,STS,219.09
+2025,32575,34433,"Los Angeles, CA (Metropolitan Area)","Santa Rosa, CA",14908,15023,SNA,STS,197.68
+2025,32575,34492,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",10800,14492,BUR,RDU,304.54
+2025,32575,34492,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",12892,14492,LAX,RDU,303.31
+2025,32575,34492,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",12954,14492,LGB,RDU,248.07
+2025,32575,34492,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",13891,14492,ONT,RDU,290.12
+2025,32575,34492,"Los Angeles, CA (Metropolitan Area)","Raleigh/Durham, NC",14908,14492,SNA,RDU,359.78
+2025,32575,34524,"Los Angeles, CA (Metropolitan Area)","Richmond, VA",10800,14524,BUR,RIC,348.72
+2025,32575,34524,"Los Angeles, CA (Metropolitan Area)","Richmond, VA",12892,14524,LAX,RIC,282.77
+2025,32575,34524,"Los Angeles, CA (Metropolitan Area)","Richmond, VA",12954,14524,LGB,RIC,250.61
+2025,32575,34524,"Los Angeles, CA (Metropolitan Area)","Richmond, VA",13891,14524,ONT,RIC,325.92
+2025,32575,34524,"Los Angeles, CA (Metropolitan Area)","Richmond, VA",14908,14524,SNA,RIC,403.11
+2025,32575,34570,"Los Angeles, CA (Metropolitan Area)","Reno, NV",10800,14570,BUR,RNO,168.9
+2025,32575,34570,"Los Angeles, CA (Metropolitan Area)","Reno, NV",12892,14570,LAX,RNO,147.23
+2025,32575,34570,"Los Angeles, CA (Metropolitan Area)","Reno, NV",12954,14570,LGB,RNO,161.33
+2025,32575,34570,"Los Angeles, CA (Metropolitan Area)","Reno, NV",13891,14570,ONT,RNO,199.89
+2025,32575,34570,"Los Angeles, CA (Metropolitan Area)","Reno, NV",14908,14570,SNA,RNO,219.26
+2025,32575,34614,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",10800,14869,BUR,SLC,226.24
+2025,32575,34614,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",12892,14869,LAX,SLC,179.45
+2025,32575,34614,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",12954,14869,LGB,SLC,184.53
+2025,32575,34614,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",13891,14869,ONT,SLC,246.85
+2025,32575,34614,"Los Angeles, CA (Metropolitan Area)","Salt Lake City, UT",14908,14869,SNA,SLC,325.13
+2025,32575,34653,"Los Angeles, CA (Metropolitan Area)","Tulsa, OK",10800,15370,BUR,TUL,296.84
+2025,32575,34653,"Los Angeles, CA (Metropolitan Area)","Tulsa, OK",12892,15370,LAX,TUL,217.08
+2025,32575,34653,"Los Angeles, CA (Metropolitan Area)","Tulsa, OK",12954,15370,LGB,TUL,201.34
+2025,32575,34653,"Los Angeles, CA (Metropolitan Area)","Tulsa, OK",13891,15370,ONT,TUL,267.52
+2025,32575,34653,"Los Angeles, CA (Metropolitan Area)","Tulsa, OK",14908,15370,SNA,TUL,318.52
+2025,32575,34685,"Los Angeles, CA (Metropolitan Area)","Savannah, GA",10800,14685,BUR,SAV,319.92
+2025,32575,34685,"Los Angeles, CA (Metropolitan Area)","Savannah, GA",12892,14685,LAX,SAV,393.12
+2025,32575,34685,"Los Angeles, CA (Metropolitan Area)","Savannah, GA",12954,14685,LGB,SAV,264.03
+2025,32575,34685,"Los Angeles, CA (Metropolitan Area)","Savannah, GA",13891,14685,ONT,SAV,337.57
+2025,32575,34685,"Los Angeles, CA (Metropolitan Area)","Savannah, GA",14908,14685,SNA,SAV,451.45
+2025,32600,31703,"Little Rock, AR","New York City, NY (Metropolitan Area)",12992,11618,LIT,EWR,277.43
+2025,32600,31703,"Little Rock, AR","New York City, NY (Metropolitan Area)",12992,12197,LIT,HPN,297.97
+2025,32600,31703,"Little Rock, AR","New York City, NY (Metropolitan Area)",12992,12478,LIT,JFK,279.96
+2025,32600,31703,"Little Rock, AR","New York City, NY (Metropolitan Area)",12992,12953,LIT,LGA,252.35
+2025,33044,30852,"Louisville, KY","Washington, DC (Metropolitan Area)",14730,10821,SDF,BWI,197.66
+2025,33044,30852,"Louisville, KY","Washington, DC (Metropolitan Area)",14730,11278,SDF,DCA,216.91
+2025,33044,30852,"Louisville, KY","Washington, DC (Metropolitan Area)",14730,12264,SDF,IAD,221.87
+2025,33044,31703,"Louisville, KY","New York City, NY (Metropolitan Area)",14730,11618,SDF,EWR,231.13
+2025,33044,31703,"Louisville, KY","New York City, NY (Metropolitan Area)",14730,12197,SDF,HPN,255.86
+2025,33044,31703,"Louisville, KY","New York City, NY (Metropolitan Area)",14730,12391,SDF,ISP,228.43
+2025,33044,31703,"Louisville, KY","New York City, NY (Metropolitan Area)",14730,12478,SDF,JFK,301.67
+2025,33044,31703,"Louisville, KY","New York City, NY (Metropolitan Area)",14730,12953,SDF,LGA,217.41
+2025,33044,32467,"Louisville, KY","Miami, FL (Metropolitan Area)",14730,11697,SDF,FLL,160.68
+2025,33044,32467,"Louisville, KY","Miami, FL (Metropolitan Area)",14730,13303,SDF,MIA,246.5
+2025,33044,33195,"Louisville, KY","Tampa, FL (Metropolitan Area)",14730,14112,SDF,PIE,78.17
+2025,33044,33195,"Louisville, KY","Tampa, FL (Metropolitan Area)",14730,15304,SDF,TPA,195.17
+2025,33105,30194,"Cincinnati, OH","Dallas/Fort Worth, TX",11193,11259,CVG,DAL,231.28
+2025,33105,30194,"Cincinnati, OH","Dallas/Fort Worth, TX",11193,11298,CVG,DFW,259.82
+2025,33105,30466,"Cincinnati, OH","Phoenix, AZ",11193,10466,CVG,AZA,95.76
+2025,33105,30466,"Cincinnati, OH","Phoenix, AZ",11193,14107,CVG,PHX,247.76
+2025,33105,30852,"Cincinnati, OH","Washington, DC (Metropolitan Area)",11193,10821,CVG,BWI,197.56
+2025,33105,30852,"Cincinnati, OH","Washington, DC (Metropolitan Area)",11193,11278,CVG,DCA,186.16
+2025,33105,30852,"Cincinnati, OH","Washington, DC (Metropolitan Area)",11193,12264,CVG,IAD,210.73
+2025,33105,31453,"Cincinnati, OH","Houston, TX",11193,12191,CVG,HOU,226.07
+2025,33105,31453,"Cincinnati, OH","Houston, TX",11193,12266,CVG,IAH,233.53
+2025,33105,31703,"Cincinnati, OH","New York City, NY (Metropolitan Area)",11193,11618,CVG,EWR,226.17
+2025,33105,31703,"Cincinnati, OH","New York City, NY (Metropolitan Area)",11193,12197,CVG,HPN,233.08
+2025,33105,31703,"Cincinnati, OH","New York City, NY (Metropolitan Area)",11193,12391,CVG,ISP,188.54
+2025,33105,31703,"Cincinnati, OH","New York City, NY (Metropolitan Area)",11193,12478,CVG,JFK,186.68
+2025,33105,31703,"Cincinnati, OH","New York City, NY (Metropolitan Area)",11193,12953,CVG,LGA,218.41
+2025,33105,32457,"Cincinnati, OH","San Francisco, CA (Metropolitan Area)",11193,13796,CVG,OAK,318.84
+2025,33105,32457,"Cincinnati, OH","San Francisco, CA (Metropolitan Area)",11193,14771,CVG,SFO,295.07
+2025,33105,32457,"Cincinnati, OH","San Francisco, CA (Metropolitan Area)",11193,14831,CVG,SJC,339.94
+2025,33105,32467,"Cincinnati, OH","Miami, FL (Metropolitan Area)",11193,11697,CVG,FLL,176.42
+2025,33105,32467,"Cincinnati, OH","Miami, FL (Metropolitan Area)",11193,13303,CVG,MIA,217.47
+2025,33105,32575,"Cincinnati, OH","Los Angeles, CA (Metropolitan Area)",11193,10800,CVG,BUR,311.75
+2025,33105,32575,"Cincinnati, OH","Los Angeles, CA (Metropolitan Area)",11193,12892,CVG,LAX,300.84
+2025,33105,32575,"Cincinnati, OH","Los Angeles, CA (Metropolitan Area)",11193,12954,CVG,LGB,286.16
+2025,33105,32575,"Cincinnati, OH","Los Angeles, CA (Metropolitan Area)",11193,13891,CVG,ONT,290.91
+2025,33105,32575,"Cincinnati, OH","Los Angeles, CA (Metropolitan Area)",11193,14908,CVG,SNA,356.19
+2025,33105,33195,"Cincinnati, OH","Tampa, FL (Metropolitan Area)",11193,14112,CVG,PIE,82.54
+2025,33105,33195,"Cincinnati, OH","Tampa, FL (Metropolitan Area)",11193,15304,CVG,TPA,161.49
+2025,33192,30852,"Sacramento, CA","Washington, DC (Metropolitan Area)",14893,10821,SMF,BWI,305.15
+2025,33192,30852,"Sacramento, CA","Washington, DC (Metropolitan Area)",14893,11278,SMF,DCA,291.45
+2025,33192,30852,"Sacramento, CA","Washington, DC (Metropolitan Area)",14893,12264,SMF,IAD,338.89
+2025,33195,30852,"Tampa, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",15304,10821,TPA,BWI,189.8
+2025,33195,30852,"Tampa, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",15304,11278,TPA,DCA,208.87
+2025,33195,30852,"Tampa, FL (Metropolitan Area)","Washington, DC (Metropolitan Area)",15304,12264,TPA,IAD,207.12
+2025,33198,30466,"Kansas City, MO","Phoenix, AZ",13198,14107,MCI,PHX,255.06
+2025,33198,30852,"Kansas City, MO","Washington, DC (Metropolitan Area)",13198,10821,MCI,BWI,266.06
+2025,33198,30852,"Kansas City, MO","Washington, DC (Metropolitan Area)",13198,11278,MCI,DCA,247.94
+2025,33198,30852,"Kansas City, MO","Washington, DC (Metropolitan Area)",13198,12264,MCI,IAD,305.19
+2025,33198,31703,"Kansas City, MO","New York City, NY (Metropolitan Area)",13198,11618,MCI,EWR,338.5
+2025,33198,31703,"Kansas City, MO","New York City, NY (Metropolitan Area)",13198,12197,MCI,HPN,315.41
+2025,33198,31703,"Kansas City, MO","New York City, NY (Metropolitan Area)",13198,12391,MCI,ISP,288.31
+2025,33198,31703,"Kansas City, MO","New York City, NY (Metropolitan Area)",13198,12478,MCI,JFK,331.23
+2025,33198,31703,"Kansas City, MO","New York City, NY (Metropolitan Area)",13198,12953,MCI,LGA,288.42
+2025,33198,32457,"Kansas City, MO","San Francisco, CA (Metropolitan Area)",13198,13796,MCI,OAK,301.84
+2025,33198,32457,"Kansas City, MO","San Francisco, CA (Metropolitan Area)",13198,14771,MCI,SFO,329.31
+2025,33198,32457,"Kansas City, MO","San Francisco, CA (Metropolitan Area)",13198,14831,MCI,SJC,290.16
+2025,33198,32467,"Kansas City, MO","Miami, FL (Metropolitan Area)",13198,11697,MCI,FLL,233.32
+2025,33198,32467,"Kansas City, MO","Miami, FL (Metropolitan Area)",13198,13303,MCI,MIA,262.54
+2025,33198,32575,"Kansas City, MO","Los Angeles, CA (Metropolitan Area)",13198,10800,MCI,BUR,265.33
+2025,33198,32575,"Kansas City, MO","Los Angeles, CA (Metropolitan Area)",13198,12892,MCI,LAX,239.39
+2025,33198,32575,"Kansas City, MO","Los Angeles, CA (Metropolitan Area)",13198,12954,MCI,LGB,282.57
+2025,33198,32575,"Kansas City, MO","Los Angeles, CA (Metropolitan Area)",13198,13891,MCI,ONT,286.42
+2025,33198,32575,"Kansas City, MO","Los Angeles, CA (Metropolitan Area)",13198,14908,MCI,SNA,314.23
+2025,33198,33195,"Kansas City, MO","Tampa, FL (Metropolitan Area)",13198,14112,MCI,PIE,84.56
+2025,33198,33195,"Kansas City, MO","Tampa, FL (Metropolitan Area)",13198,15304,MCI,TPA,235.43
+2025,33214,30852,"San Antonio, TX","Washington, DC (Metropolitan Area)",14683,10821,SAT,BWI,274.5
+2025,33214,30852,"San Antonio, TX","Washington, DC (Metropolitan Area)",14683,11278,SAT,DCA,236.24
+2025,33214,30852,"San Antonio, TX","Washington, DC (Metropolitan Area)",14683,12264,SAT,IAD,281.22
+2025,33214,32457,"San Antonio, TX","San Francisco, CA (Metropolitan Area)",14683,13796,SAT,OAK,243.36
+2025,33214,32457,"San Antonio, TX","San Francisco, CA (Metropolitan Area)",14683,14771,SAT,SFO,282.43
+2025,33214,32457,"San Antonio, TX","San Francisco, CA (Metropolitan Area)",14683,14831,SAT,SJC,269.17
+2025,33214,33195,"San Antonio, TX","Tampa, FL (Metropolitan Area)",14683,15304,SAT,TPA,243.37
+2025,33244,30466,"Memphis, TN","Phoenix, AZ",13244,14107,MEM,PHX,251.72
+2025,33244,30852,"Memphis, TN","Washington, DC (Metropolitan Area)",13244,10821,MEM,BWI,238.31
+2025,33244,30852,"Memphis, TN","Washington, DC (Metropolitan Area)",13244,11278,MEM,DCA,269.18
+2025,33244,30852,"Memphis, TN","Washington, DC (Metropolitan Area)",13244,12264,MEM,IAD,292.46
+2025,33244,31703,"Memphis, TN","New York City, NY (Metropolitan Area)",13244,11618,MEM,EWR,271.67
+2025,33244,31703,"Memphis, TN","New York City, NY (Metropolitan Area)",13244,12197,MEM,HPN,293.48
+2025,33244,31703,"Memphis, TN","New York City, NY (Metropolitan Area)",13244,12391,MEM,ISP,302.05
+2025,33244,31703,"Memphis, TN","New York City, NY (Metropolitan Area)",13244,12478,MEM,JFK,278.73
+2025,33244,31703,"Memphis, TN","New York City, NY (Metropolitan Area)",13244,12953,MEM,LGA,248.98
+2025,33244,32467,"Memphis, TN","Miami, FL (Metropolitan Area)",13244,11697,MEM,FLL,163.2
+2025,33244,32467,"Memphis, TN","Miami, FL (Metropolitan Area)",13244,13303,MEM,MIA,252.26
+2025,33316,30466,"Omaha, NE","Phoenix, AZ",13871,10466,OMA,AZA,86.78
+2025,33316,30466,"Omaha, NE","Phoenix, AZ",13871,14107,OMA,PHX,229.71
+2025,33316,30852,"Omaha, NE","Washington, DC (Metropolitan Area)",13871,10821,OMA,BWI,296.88
+2025,33316,30852,"Omaha, NE","Washington, DC (Metropolitan Area)",13871,11278,OMA,DCA,284.71
+2025,33316,30852,"Omaha, NE","Washington, DC (Metropolitan Area)",13871,12264,OMA,IAD,338.08
+2025,33316,32457,"Omaha, NE","San Francisco, CA (Metropolitan Area)",13871,13796,OMA,OAK,243.48
+2025,33316,32457,"Omaha, NE","San Francisco, CA (Metropolitan Area)",13871,14771,OMA,SFO,299.81
+2025,33316,32457,"Omaha, NE","San Francisco, CA (Metropolitan Area)",13871,14831,OMA,SJC,282.24
+2025,33342,30466,"Milwaukee, WI","Phoenix, AZ",13342,14107,MKE,PHX,258.97
+2025,33342,30852,"Milwaukee, WI","Washington, DC (Metropolitan Area)",13342,10821,MKE,BWI,216.93
+2025,33342,30852,"Milwaukee, WI","Washington, DC (Metropolitan Area)",13342,11278,MKE,DCA,218.6
+2025,33342,30852,"Milwaukee, WI","Washington, DC (Metropolitan Area)",13342,12264,MKE,IAD,268.36
+2025,33342,31703,"Milwaukee, WI","New York City, NY (Metropolitan Area)",13342,11618,MKE,EWR,281.51
+2025,33342,31703,"Milwaukee, WI","New York City, NY (Metropolitan Area)",13342,12197,MKE,HPN,236.65
+2025,33342,31703,"Milwaukee, WI","New York City, NY (Metropolitan Area)",13342,12391,MKE,ISP,231.25
+2025,33342,31703,"Milwaukee, WI","New York City, NY (Metropolitan Area)",13342,12478,MKE,JFK,274.34
+2025,33342,31703,"Milwaukee, WI","New York City, NY (Metropolitan Area)",13342,12953,MKE,LGA,316.14
+2025,33342,33195,"Milwaukee, WI","Tampa, FL (Metropolitan Area)",13342,15304,MKE,TPA,232.91
+2025,33485,30852,"Madison, WI","Washington, DC (Metropolitan Area)",13485,10821,MSN,BWI,276.93
+2025,33485,30852,"Madison, WI","Washington, DC (Metropolitan Area)",13485,11278,MSN,DCA,287
+2025,33485,30852,"Madison, WI","Washington, DC (Metropolitan Area)",13485,12264,MSN,IAD,384.35
+2025,33485,31703,"Madison, WI","New York City, NY (Metropolitan Area)",13485,11618,MSN,EWR,288.91
+2025,33485,31703,"Madison, WI","New York City, NY (Metropolitan Area)",13485,12197,MSN,HPN,331.61
+2025,33485,31703,"Madison, WI","New York City, NY (Metropolitan Area)",13485,12478,MSN,JFK,368.76
+2025,33485,31703,"Madison, WI","New York City, NY (Metropolitan Area)",13485,12953,MSN,LGA,371.92
+2025,33495,30466,"New Orleans, LA","Phoenix, AZ",13495,14107,MSY,PHX,286.97
+2025,33495,30852,"New Orleans, LA","Washington, DC (Metropolitan Area)",13495,10821,MSY,BWI,202.44
+2025,33495,30852,"New Orleans, LA","Washington, DC (Metropolitan Area)",13495,11278,MSY,DCA,227.8
+2025,33495,30852,"New Orleans, LA","Washington, DC (Metropolitan Area)",13495,12264,MSY,IAD,253.33
+2025,33495,31703,"New Orleans, LA","New York City, NY (Metropolitan Area)",13495,11618,MSY,EWR,228.16
+2025,33495,31703,"New Orleans, LA","New York City, NY (Metropolitan Area)",13495,12197,MSY,HPN,279.94
+2025,33495,31703,"New Orleans, LA","New York City, NY (Metropolitan Area)",13495,12391,MSY,ISP,220.02
+2025,33495,31703,"New Orleans, LA","New York City, NY (Metropolitan Area)",13495,12478,MSY,JFK,221.77
+2025,33495,31703,"New Orleans, LA","New York City, NY (Metropolitan Area)",13495,12953,MSY,LGA,229.58
+2025,33495,32457,"New Orleans, LA","San Francisco, CA (Metropolitan Area)",13495,13796,MSY,OAK,246.96
+2025,33495,32457,"New Orleans, LA","San Francisco, CA (Metropolitan Area)",13495,14771,MSY,SFO,344.22
+2025,33495,32457,"New Orleans, LA","San Francisco, CA (Metropolitan Area)",13495,14831,MSY,SJC,269.9
+2025,33495,33195,"New Orleans, LA","Tampa, FL (Metropolitan Area)",13495,15304,MSY,TPA,185.02
+2025,33570,30852,"San Diego, CA","Washington, DC (Metropolitan Area)",14679,10821,SAN,BWI,304.76
+2025,33570,30852,"San Diego, CA","Washington, DC (Metropolitan Area)",14679,11278,SAN,DCA,285.9
+2025,33570,30852,"San Diego, CA","Washington, DC (Metropolitan Area)",14679,12264,SAN,IAD,318.36
+2025,33570,32457,"San Diego, CA","San Francisco, CA (Metropolitan Area)",14679,13796,SAN,OAK,159.76
+2025,33570,32457,"San Diego, CA","San Francisco, CA (Metropolitan Area)",14679,14771,SAN,SFO,141.53
+2025,33570,32457,"San Diego, CA","San Francisco, CA (Metropolitan Area)",14679,14831,SAN,SJC,152.75
+2025,33570,33195,"San Diego, CA","Tampa, FL (Metropolitan Area)",14679,15304,SAN,TPA,254.95
+2025,33667,31454,"Norfolk, VA (Metropolitan Area)","Orlando, FL",13931,13204,ORF,MCO,184.72
+2025,33667,31454,"Norfolk, VA (Metropolitan Area)","Orlando, FL",14098,13204,PHF,MCO,217.3
+2025,33667,33195,"Norfolk, VA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",13931,14112,ORF,PIE,62.2
+2025,33667,33195,"Norfolk, VA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",13931,15304,ORF,TPA,154.2
+2025,33667,33195,"Norfolk, VA (Metropolitan Area)","Tampa, FL (Metropolitan Area)",14098,15304,PHF,TPA,361.99
+2025,33667,33570,"Norfolk, VA (Metropolitan Area)","San Diego, CA",13931,14679,ORF,SAN,283.19
+2025,33667,33570,"Norfolk, VA (Metropolitan Area)","San Diego, CA",14098,14679,PHF,SAN,384.81
+2025,33728,30852,"Pensacola, FL","Washington, DC (Metropolitan Area)",14193,10821,PNS,BWI,243.18
+2025,33728,30852,"Pensacola, FL","Washington, DC (Metropolitan Area)",14193,11278,PNS,DCA,286.5
+2025,33728,30852,"Pensacola, FL","Washington, DC (Metropolitan Area)",14193,12264,PNS,IAD,324.81
+2025,33851,30466,"Oklahoma City, OK","Phoenix, AZ",13851,14107,OKC,PHX,250.86
+2025,33851,30852,"Oklahoma City, OK","Washington, DC (Metropolitan Area)",13851,10821,OKC,BWI,284.4
+2025,33851,30852,"Oklahoma City, OK","Washington, DC (Metropolitan Area)",13851,11278,OKC,DCA,271.57
+2025,33851,30852,"Oklahoma City, OK","Washington, DC (Metropolitan Area)",13851,12264,OKC,IAD,309.25
+2025,34004,30466,"Everett, WA","Phoenix, AZ",14004,14107,PAE,PHX,196.25
+2025,34004,32575,"Everett, WA","Los Angeles, CA (Metropolitan Area)",14004,10800,PAE,BUR,240.68
+2025,34004,32575,"Everett, WA","Los Angeles, CA (Metropolitan Area)",14004,12892,PAE,LAX,210.57
+2025,34004,32575,"Everett, WA","Los Angeles, CA (Metropolitan Area)",14004,13891,PAE,ONT,149
+2025,34004,32575,"Everett, WA","Los Angeles, CA (Metropolitan Area)",14004,14908,PAE,SNA,231.58
+2025,34057,30852,"Portland, OR","Washington, DC (Metropolitan Area)",14057,10821,PDX,BWI,303.03
+2025,34057,30852,"Portland, OR","Washington, DC (Metropolitan Area)",14057,11278,PDX,DCA,361.67
+2025,34057,30852,"Portland, OR","Washington, DC (Metropolitan Area)",14057,12264,PDX,IAD,349.2
+2025,34057,32457,"Portland, OR","San Francisco, CA (Metropolitan Area)",14057,13796,PDX,OAK,156.15
+2025,34057,32457,"Portland, OR","San Francisco, CA (Metropolitan Area)",14057,14771,PDX,SFO,188.44
+2025,34057,32457,"Portland, OR","San Francisco, CA (Metropolitan Area)",14057,14831,PDX,SJC,194.84
+2025,34057,33195,"Portland, OR","Tampa, FL (Metropolitan Area)",14057,15304,PDX,TPA,283.92
+2025,34100,30466,"Philadelphia, PA","Phoenix, AZ",14100,14107,PHL,PHX,322.07
+2025,34100,32457,"Philadelphia, PA","San Francisco, CA (Metropolitan Area)",14100,13796,PHL,OAK,252.86
+2025,34100,32457,"Philadelphia, PA","San Francisco, CA (Metropolitan Area)",14100,14771,PHL,SFO,343.75
+2025,34100,32457,"Philadelphia, PA","San Francisco, CA (Metropolitan Area)",14100,14831,PHL,SJC,261.44
+2025,34100,33195,"Philadelphia, PA","Tampa, FL (Metropolitan Area)",14100,15304,PHL,TPA,185.02
+2025,34262,32457,"Palm Springs, CA","San Francisco, CA (Metropolitan Area)",14262,13796,PSP,OAK,198.82
+2025,34262,32457,"Palm Springs, CA","San Francisco, CA (Metropolitan Area)",14262,14771,PSP,SFO,212.84
+2025,34262,32457,"Palm Springs, CA","San Francisco, CA (Metropolitan Area)",14262,14831,PSP,SJC,191.72
+2025,34321,30852,"Portland, ME","Washington, DC (Metropolitan Area)",14321,10821,PWM,BWI,232.05
+2025,34321,30852,"Portland, ME","Washington, DC (Metropolitan Area)",14321,11278,PWM,DCA,236.36
+2025,34321,30852,"Portland, ME","Washington, DC (Metropolitan Area)",14321,12264,PWM,IAD,233.79
+2025,34489,32457,"Bend/Redmond, OR","San Francisco, CA (Metropolitan Area)",14489,13796,RDM,OAK,225
+2025,34489,32457,"Bend/Redmond, OR","San Francisco, CA (Metropolitan Area)",14489,14771,RDM,SFO,214.25
+2025,34489,32457,"Bend/Redmond, OR","San Francisco, CA (Metropolitan Area)",14489,14831,RDM,SJC,247.34
+2025,34489,32575,"Bend/Redmond, OR","Los Angeles, CA (Metropolitan Area)",14489,10800,RDM,BUR,105.19
+2025,34489,32575,"Bend/Redmond, OR","Los Angeles, CA (Metropolitan Area)",14489,12892,RDM,LAX,214.2
+2025,34489,32575,"Bend/Redmond, OR","Los Angeles, CA (Metropolitan Area)",14489,12954,RDM,LGB,440.5
+2025,34489,32575,"Bend/Redmond, OR","Los Angeles, CA (Metropolitan Area)",14489,13891,RDM,ONT,237.8
+2025,34489,32575,"Bend/Redmond, OR","Los Angeles, CA (Metropolitan Area)",14489,14908,RDM,SNA,260.92
+2025,34492,30852,"Raleigh/Durham, NC","Washington, DC (Metropolitan Area)",14492,10821,RDU,BWI,187.32
+2025,34492,30852,"Raleigh/Durham, NC","Washington, DC (Metropolitan Area)",14492,11278,RDU,DCA,193.36
+2025,34492,30852,"Raleigh/Durham, NC","Washington, DC (Metropolitan Area)",14492,12264,RDU,IAD,210.58
+2025,34492,32457,"Raleigh/Durham, NC","San Francisco, CA (Metropolitan Area)",14492,13796,RDU,OAK,264.16
+2025,34492,32457,"Raleigh/Durham, NC","San Francisco, CA (Metropolitan Area)",14492,14771,RDU,SFO,338.95
+2025,34492,32457,"Raleigh/Durham, NC","San Francisco, CA (Metropolitan Area)",14492,14831,RDU,SJC,316.93
+2025,34492,33195,"Raleigh/Durham, NC","Tampa, FL (Metropolitan Area)",14492,15304,RDU,TPA,164.63
+2025,34524,33195,"Richmond, VA","Tampa, FL (Metropolitan Area)",14524,14112,RIC,PIE,79.72
+2025,34524,33195,"Richmond, VA","Tampa, FL (Metropolitan Area)",14524,15304,RIC,TPA,161.47
+2025,34570,32457,"Reno, NV","San Francisco, CA (Metropolitan Area)",14570,13796,RNO,OAK,166.8
+2025,34570,32457,"Reno, NV","San Francisco, CA (Metropolitan Area)",14570,14771,RNO,SFO,235.34
+2025,34570,32457,"Reno, NV","San Francisco, CA (Metropolitan Area)",14570,14831,RNO,SJC,173.81
+2025,34576,30852,"Rochester, NY","Washington, DC (Metropolitan Area)",14576,10821,ROC,BWI,226.64
+2025,34576,30852,"Rochester, NY","Washington, DC (Metropolitan Area)",14576,11278,ROC,DCA,190.39
+2025,34576,30852,"Rochester, NY","Washington, DC (Metropolitan Area)",14576,12264,ROC,IAD,196.5
+2025,34576,33195,"Rochester, NY","Tampa, FL (Metropolitan Area)",14576,12882,ROC,LAL,84.52
+2025,34576,33195,"Rochester, NY","Tampa, FL (Metropolitan Area)",14576,15304,ROC,TPA,227.28
+2025,34614,30852,"Salt Lake City, UT","Washington, DC (Metropolitan Area)",14869,10821,SLC,BWI,307.64
+2025,34614,30852,"Salt Lake City, UT","Washington, DC (Metropolitan Area)",14869,11278,SLC,DCA,378.42
+2025,34614,30852,"Salt Lake City, UT","Washington, DC (Metropolitan Area)",14869,12264,SLC,IAD,327.02
+2025,34614,32457,"Salt Lake City, UT","San Francisco, CA (Metropolitan Area)",14869,13796,SLC,OAK,174.39
+2025,34614,32457,"Salt Lake City, UT","San Francisco, CA (Metropolitan Area)",14869,14771,SLC,SFO,194.2
+2025,34614,32457,"Salt Lake City, UT","San Francisco, CA (Metropolitan Area)",14869,14831,SLC,SJC,231.66
+2025,34614,33195,"Salt Lake City, UT","Tampa, FL (Metropolitan Area)",14869,15304,SLC,TPA,302.29
+2025,34685,30852,"Savannah, GA","Washington, DC (Metropolitan Area)",14685,10821,SAV,BWI,208.43
+2025,34685,30852,"Savannah, GA","Washington, DC (Metropolitan Area)",14685,11278,SAV,DCA,231.54
+2025,34685,30852,"Savannah, GA","Washington, DC (Metropolitan Area)",14685,12264,SAV,IAD,238.24
+2025,34986,30852,"Sarasota/Bradenton, FL","Washington, DC (Metropolitan Area)",14986,10821,SRQ,BWI,237.97
+2025,34986,30852,"Sarasota/Bradenton, FL","Washington, DC (Metropolitan Area)",14986,11278,SRQ,DCA,247.84
+2025,34986,30852,"Sarasota/Bradenton, FL","Washington, DC (Metropolitan Area)",14986,12264,SRQ,IAD,148.21
+2025,35096,33195,"Syracuse, NY","Tampa, FL (Metropolitan Area)",15096,14112,SYR,PIE,113.72
+2025,35096,33195,"Syracuse, NY","Tampa, FL (Metropolitan Area)",15096,15304,SYR,TPA,187.37
+2025,35412,30852,"Knoxville, TN","Washington, DC (Metropolitan Area)",15412,10821,TYS,BWI,273.54
+2025,35412,30852,"Knoxville, TN","Washington, DC (Metropolitan Area)",15412,11278,TYS,DCA,226.61
+2025,35412,30852,"Knoxville, TN","Washington, DC (Metropolitan Area)",15412,12264,TYS,IAD,231.66
+2025,35412,31703,"Knoxville, TN","New York City, NY (Metropolitan Area)",15412,11618,TYS,EWR,166.75
+2025,35412,31703,"Knoxville, TN","New York City, NY (Metropolitan Area)",15412,12197,TYS,HPN,290.25
+2025,35412,31703,"Knoxville, TN","New York City, NY (Metropolitan Area)",15412,12478,TYS,JFK,299.01
+2025,35412,31703,"Knoxville, TN","New York City, NY (Metropolitan Area)",15412,12953,TYS,LGA,234.4
+2025,35412,32467,"Knoxville, TN","Miami, FL (Metropolitan Area)",15412,11697,TYS,FLL,129.94
+2025,35412,32467,"Knoxville, TN","Miami, FL (Metropolitan Area)",15412,13303,TYS,MIA,298.21
