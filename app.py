@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
+import math
 
 # Set page config
 st.set_page_config(page_title="Reverse Travel Planner", layout="wide")
 
-# region Mapping
+# Constants
 COUNTRY_TO_REGION = {
     # Europe
     "Switzerland": "Europe", "Iceland": "Europe", "Norway": "Europe", "Denmark": "Europe",
@@ -46,7 +47,7 @@ COUNTRY_TO_REGION = {
     "Algeria": "Africa", "Tunisia": "Africa", "Madagascar": "Africa", "Tanzania": "Africa",
     "Egypt": "Africa", "Libya": "Africa", "Cameroon": "Africa", "Zimbabwe": "Africa",
 
-    # North America (Including Central America & Caribbean for simplicity as per instructions)
+    # North America
     "Bahamas": "North America", "Barbados": "North America", "United States": "North America",
     "Canada": "North America", "Puerto Rico": "North America", "Jamaica": "North America",
     "Trinidad And Tobago": "North America", "Costa Rica": "North America", "Cuba": "North America",
@@ -54,7 +55,7 @@ COUNTRY_TO_REGION = {
     "Dominican Republic": "North America", "Mexico": "North America",
 }
 
-FLIGHT_COSTS = {
+FLIGHT_COSTS_INTL = {
     "Europe": 850,
     "Asia": 1200,
     "South America": 700,
@@ -63,113 +64,171 @@ FLIGHT_COSTS = {
     "North America": 400
 }
 
+TIER_MULTIPLIERS = {
+    "Bare Essential": {"flight": 1.0, "daily": 0.5},
+    "Economy": {"flight": 1.0, "daily": 1.0},
+    "Mid Tier": {"flight": 1.5, "daily": 2.0},
+    "Luxury": {"flight": 3.5, "daily": 4.0},
+}
+
 @st.cache_data
-def load_and_process_data():
-    # 1. US Data Processing
+def load_data():
     try:
         flights_df = pd.read_csv("Consumer_Airfare_Report__Table_1a_-_All_U.S._Airport_Pair_Markets.csv")
-        # Ensure column names are stripped of whitespace if necessary, but usually standard CSVs are fine.
-        # Assuming column names 'city2' and 'fare'. If not, we might need to adjust.
-        # Inspecting standard DOT CSVs usually have specific headers. 
-        # But per user instructions, we just group by city2.
-        
-        # We need to trust the column names exist. If they are slightly different (e.g. uppercase), pandas handles it if we are lucky or we inspect.
-        # Given I haven't inspected the header of flight CSV, I'll attempt a standard key access and handle potential errors or do a clean.
-        # Let's clean headers to be safe.
+        # Clean column names
         flights_df.columns = flights_df.columns.str.strip()
         
-        # Check if 'city2' and 'fare' exist. If user said "Group by city2 ... and calculate mean fare", those columns must exist with similar names.
-        # Often it is 'city2' and 'fare_lg' or 'fare_low' or just 'fare'. 
-        # I'll check for 'fare' column variations if 'fare' doesn't exist.
-        fare_col = 'fare'
-        if 'fare' not in flights_df.columns:
-            # Table 1a usually has 'fare' or 'average_fare'
-            # Let's guess 'fare' is present based on user prompt implying it. 
-            pass 
-
-        us_grouped = flights_df.groupby('city2')['fare'].mean().reset_index()
-        us_grouped.rename(columns={'city2': 'Destination', 'fare': 'Flight_Cost'}, inplace=True)
-        us_grouped['Region'] = 'North America'
-        us_grouped['Daily_Cost'] = 176.0
-        
-    except Exception as e:
-        st.error(f"Error processing US Flight Data: {e}")
-        return pd.DataFrame()
-
-    # 2. International Data Processing
-    try:
         col_df = pd.read_csv("Cost_of_Living_Index_by_Country_2024.csv")
         col_df.columns = col_df.columns.str.strip()
         
-        # Mapping
-        col_df['Region'] = col_df['Country'].map(COUNTRY_TO_REGION)
-        # Fill NaN regions if any (maybe 'Other' or drop) - Instructions imply we map them.
-        # We'll drop countries that didn't match our extensive map to avoid errors, or set to 'Other' and skip cost.
-        col_df = col_df.dropna(subset=['Region']) 
-
-        col_df['Flight_Cost'] = col_df['Region'].map(FLIGHT_COSTS)
-        col_df['Daily_Cost'] = col_df['Cost of Living Index'] * 2.5
-        
-        intl_data = col_df[['Country', 'Region', 'Flight_Cost', 'Daily_Cost']].rename(columns={'Country': 'Destination'})
-        
+        return flights_df, col_df
     except Exception as e:
-        st.error(f"Error processing International Data: {e}")
-        return pd.DataFrame()
-
-    # 3. Merge
-    combined_df = pd.concat([us_grouped, intl_data], ignore_index=True)
-    return combined_df
+        st.error(f"Error loading data: {e}")
+        return pd.DataFrame(), pd.DataFrame()
 
 # Load Data
-df = load_and_process_data()
+flights_raw, col_raw = load_data()
 
-if df.empty:
-    st.warning("No data loaded. Check CSV files.")
+if flights_raw.empty or col_raw.empty:
+    st.warning("Data not loaded. Please ensure CSV files are present.")
     st.stop()
 
 # Title
 st.title("Reverse Travel Planner ✈️")
 
-# Sidebar
+# --- Sidebar Inputs ---
 st.sidebar.header("Trip Parameters")
-total_budget = st.sidebar.number_input("Total Budget ($)", min_value=100, value=3000, step=100)
+
+# Origin City
+all_origins = sorted(flights_raw['city1'].unique().tolist())
+# Default to NYC if available
+default_origin_index = 0
+if "New York City, NY (Metropolitan Area)" in all_origins:
+    default_origin_index = all_origins.index("New York City, NY (Metropolitan Area)")
+origin_city = st.sidebar.selectbox("Origin City", options=all_origins, index=default_origin_index)
+
+# Travelers
+num_travelers = st.sidebar.number_input("Number of Travelers", min_value=1, max_value=10, value=1)
+
+# Travel Style
+travel_style = st.sidebar.selectbox("Travel Style", options=list(TIER_MULTIPLIERS.keys()), index=1)
+tier_mults = TIER_MULTIPLIERS[travel_style]
+
+# Budget & Duration
+total_budget = st.sidebar.number_input("Total Group Budget ($)", min_value=100, value=3000, step=100)
 duration = st.sidebar.slider("Trip Duration (Days)", min_value=3, max_value=14, value=7)
-all_regions = sorted(df['Region'].unique().tolist())
-selected_regions = st.sidebar.multiselect("Filter by Region", options=all_regions, default=all_regions)
 
-# Main Calculation
-if not selected_regions:
-    st.info("Please select at least one region.")
+
+# --- Data Processing ---
+
+# 1. Process US Data (Filtering by Origin)
+# Filter for flights FROM the selected origin
+us_filtered = flights_raw[flights_raw['city1'] == origin_city].copy()
+
+# Group by city2 (Destination) and take mean fare
+# Note: 'fare' is the column name based on previous inspection
+if 'fare' in us_filtered.columns:
+    us_data = us_filtered.groupby('city2')['fare'].mean().reset_index()
+    us_data.rename(columns={'city2': 'Destination', 'fare': 'Base_Flight_Cost'}, inplace=True)
+    us_data['Region'] = 'North America'
+    us_data['Base_Daily_Cost'] = 176.0 # Static US daily cost
 else:
-    # Filter by Region
-    filtered_df = df[df['Region'].isin(selected_regions)].copy()
-    
-    # Calculate Trip Cost
-    filtered_df['Trip_Cost'] = filtered_df['Flight_Cost'] + (filtered_df['Daily_Cost'] * duration)
-    
-    # Filter by Budget
-    affordable_df = filtered_df[filtered_df['Trip_Cost'] <= total_budget].copy()
-    
-    # Sort
-    affordable_df.sort_values(by='Trip_Cost', ascending=True, inplace=True)
-    
-    # Display Metrics
-    st.metric(label="Affordable Destinations Found", value=len(affordable_df))
-    
-    if not affordable_df.empty:
-        # Format Currency
-        display_df = affordable_df.copy()
-        display_df['Flight_Cost'] = display_df['Flight_Cost'].apply(lambda x: f"${x:,.2f}")
-        display_df['Daily_Cost'] = display_df['Daily_Cost'].apply(lambda x: f"${x:,.2f}")
-        display_df['Trip_Cost'] = display_df['Trip_Cost'].apply(lambda x: f"${x:,.2f}")
-        
-        # Reorder columns
-        display_df = display_df[['Destination', 'Region', 'Flight_Cost', 'Daily_Cost', 'Trip_Cost']]
-        
-        # Custom CSS for table to look nicer? Or just cards. 
-        # User asked for "Dataframe or list of cards". DataFrame is cleaner for sorting.
-        st.dataframe(display_df, use_container_width=True, hide_index=True)
-        
-    else:
-        st.warning(f"No destinations found for ${total_budget} budget over {duration} days in the selected regions.")
+    st.error("Column 'fare' not found in flights CSV.")
+    us_data = pd.DataFrame()
 
+# 2. Process International Data
+intl_data = col_raw.copy()
+intl_data['Region'] = intl_data['Country'].map(COUNTRY_TO_REGION)
+intl_data = intl_data.dropna(subset=['Region']) # Drop unmapped
+
+# Set Base Flight Cost from static map
+intl_data['Base_Flight_Cost'] = intl_data['Region'].map(FLIGHT_COSTS_INTL)
+# Set Base Daily Cost from Index
+intl_data['Base_Daily_Cost'] = intl_data['Cost of Living Index'] * 2.5
+intl_data = intl_data[['Country', 'Region', 'Base_Flight_Cost', 'Base_Daily_Cost']].rename(columns={'Country': 'Destination'})
+
+# 3. Merge
+if not us_data.empty:
+    combined_df = pd.concat([us_data, intl_data], ignore_index=True)
+else:
+    combined_df = intl_data
+
+# --- Math & Logic ---
+
+# Apply Multipliers and Calculating Totals
+# Total Flight Cost = Base Flight * Flight Multiplier * Num Travelers
+combined_df['Total_Flight_Cost'] = combined_df['Base_Flight_Cost'] * tier_mults['flight'] * num_travelers
+
+# Daily Components
+# Food/Activity = (Base Daily * 0.5) * Num Travelers * Daily Multiplier
+# Hotel = (Base Daily * 0.5) * Daily Multiplier * ceil(Num Travelers / 2)
+daily_food_cost_group = (combined_df['Base_Daily_Cost'] * 0.5) * num_travelers * tier_mults['daily']
+daily_hotel_cost_group = (combined_df['Base_Daily_Cost'] * 0.5) * tier_mults['daily'] * math.ceil(num_travelers / 2)
+
+combined_df['Total_Daily_Cost'] = daily_food_cost_group + daily_hotel_cost_group
+
+# Total Trip Cost
+combined_df['Trip_Cost'] = combined_df['Total_Flight_Cost'] + (combined_df['Total_Daily_Cost'] * duration)
+
+# Calculate Per Person Cost for Display
+combined_df['Per_Person_Cost'] = combined_df['Trip_Cost'] / num_travelers
+
+# Filtering
+affordable_df = combined_df[combined_df['Trip_Cost'] <= total_budget].copy()
+affordable_df.sort_values(by='Trip_Cost', ascending=True, inplace=True)
+
+# --- Display ---
+
+st.divider()
+
+if not affordable_df.empty:
+    st.success(f"Found {len(affordable_df)} destinations you can afford with a budget of ${total_budget:,}.")
+    
+    # Grid Layout
+    # Iterate through rows and create columns
+    # We'll use st.columns(3) in a loop
+    
+    cols = st.columns(3)
+    
+    for index, row in affordable_df.iterrows():
+        # Cycle through columns 0, 1, 2
+        col = cols[index % 3]
+        
+        with col:
+            # Card Container
+            with st.container(border=True):
+                st.subheader(f"{row['Destination']}")
+                st.caption(f"{row['Region']}")
+                
+                # Big Bold Total Cost
+                st.markdown(f"<h3 style='text-align: center; color: #4CAF50;'>${row['Trip_Cost']:,.0f}</h3>", unsafe_allow_html=True)
+                
+                # Per Person (Small)
+                st.markdown(f"<p style='text-align: center; font-size: 0.9em; color: gray;'>Per Person: ${row['Per_Person_Cost']:,.0f}</p>", unsafe_allow_html=True)
+                
+                st.divider()
+                
+                # Breakdown
+                # "Flight: $X | Hotel/Day: $Y"
+                # Using Total Flight Cost and Total Daily Cost
+                flight_disp = f"${row['Total_Flight_Cost']:,.0f}"
+                # For "Hotel/Day", looking at user prompt: "Breakdown: 'Flight: $X | Hotel/Day: $Y'"
+                # The prompt explicitly asked for "Hotel/Day". 
+                # Calculating separate Hotel Daily just for display? The user logic had 'Hotel Portion'.
+                # Let's calculate that specific Hotel Portion Daily total again for display.
+                # Hotel Daily Total = (Base * 0.5) * DailyMult * ceil(Travelers/2)
+                # Basically it is `daily_hotel_cost_group` for this row.
+                # Since we did vectorized calc above, we need to re-derive or store it. 
+                # Let's just use Total Daily Cost which captures everything (Hotel + Food).
+                # But to follow specific instruction "Hotel/Day", I'll isolate it.
+                
+                hotel_daily_val = (row['Base_Daily_Cost'] * 0.5) * tier_mults['daily'] * math.ceil(num_travelers / 2)
+                
+                st.markdown(f"**Flight:** {flight_disp}")
+                st.markdown(f"**Hotel/Day:** ${hotel_daily_val:,.0f}")
+                # Optional: Show Total Daily including food
+                st.caption(f"(Total Daily: ${row['Total_Daily_Cost']:,.0f})")
+
+else:
+    st.error(f"No destinations found for ${total_budget:,} from {origin_city}.")
+    st.info("Try increasing your budget, changing your travel style, or picking a different origin.")
