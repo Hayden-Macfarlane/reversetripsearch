@@ -570,7 +570,7 @@ if not result_df.empty:
             iata_code = row.get('IATA', '')
             search_query = quote(row['Search_Term'])
             
-            flight_url = f"http://googleusercontent.com/google.com/travel/flights?q=Flights+to+{iata_code if iata_code else search_query}+on+{travel_date}"
+            flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code if iata_code else search_query}+on+{travel_date}"
             hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
             
             card_html = f"""
