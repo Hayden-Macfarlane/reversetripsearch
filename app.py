@@ -198,6 +198,14 @@ def calculate_transport_cost(destination_name):
     
     return 30.0
 
+def get_country_name(iso_code):
+    """Helper to get full country name from ISO code for search routing"""
+    try:
+        country = pycountry.countries.get(alpha_2=iso_code)
+        return country.name if country else iso_code
+    except Exception:
+        return iso_code
+
 def create_country_name_to_iso_map():
     """Create mapping from country name to ISO code using pycountry"""
     name_to_iso = {}
@@ -271,6 +279,10 @@ def load_real_data():
         merged_df['Avg_Flight_Cost'].fillna(800, inplace=True)  # Default for 'Other'
         
         # Step 6: Final formatting
+        # Create Full Country Name for Search
+        merged_df['Full_Country'] = merged_df['iso_country'].apply(get_country_name)
+        merged_df['Search_Term'] = merged_df['municipality'].fillna('Unknown').astype(str) + ", " + merged_df['Full_Country'].astype(str)
+        
         # Create Destination as "City, CountryCode"
         merged_df['Destination'] = merged_df['municipality'].fillna('Unknown').astype(str) + ', ' + merged_df['iso_country'].fillna('??').astype(str)
         
@@ -279,7 +291,7 @@ def load_real_data():
         
         # Select and rename final columns
         final_df = merged_df[[
-            'Destination', 'Region', 'Avg_Flight_Cost', 'Est_Daily_Cost', 'iata_code'
+            'Destination', 'Region', 'Avg_Flight_Cost', 'Est_Daily_Cost', 'iata_code', 'Search_Term'
         ]].rename(columns={'iata_code': 'IATA'})
         
         # Remove duplicates (some cities have multiple airports)
@@ -554,12 +566,12 @@ if not result_df.empty:
             
             safety_display = "🛡️" * row['Safety_Score']
             
-            # V5: Use IATA code for better booking links
+            # V5.1: Use Specific Search Term with Full Country Name
             iata_code = row.get('IATA', '')
-            dest_encoded = quote(row['Destination'])
+            search_query = quote(row['Search_Term'])
             
-            flight_url = f"http://googleusercontent.com/google.com/travel/flights?q=Flights+to+{iata_code if iata_code else dest_encoded}+on+{travel_date}"
-            hotel_url = f"https://www.booking.com/searchresults.html?ss={dest_encoded}&checkin={travel_date}"
+            flight_url = f"http://googleusercontent.com/google.com/travel/flights?q=Flights+to+{iata_code if iata_code else search_query}+on+{travel_date}"
+            hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
             
             card_html = f"""
             <div class='travel-card'>
