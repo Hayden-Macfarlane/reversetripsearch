@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#00D4BD"  # Vibrant Teal (Brand Color)
+backgroundColor = "#0E1117" # Deep Midnight (Main BG)
+secondaryBackgroundColor = "#1E212B" # Slightly lighter midnight (Sidebar)
+textColor = "#FAFAFA" # Crisp White
+font = "sans serif"
