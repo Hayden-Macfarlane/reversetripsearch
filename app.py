@@ -330,6 +330,10 @@ def load_real_data():
         airports_url = "https://davidmegginson.github.io/ourairports-data/airports.csv"
         airports_df = pd.read_csv(airports_url)
         
+        # V5.7: Manually blacklist cities with no real commercial service
+        blacklist_iata = ['BRX']
+        airports_df = airports_df[~airports_df['iata_code'].isin(blacklist_iata)]
+        
         # V5.2: Strict filtering for major hubs
         mask = (
             (airports_df['type'] == 'large_airport') | 
@@ -576,9 +580,11 @@ if not result_df.empty:
     for idx, (index, row) in enumerate(result_df.iterrows()):
         with cols[idx % 3]:
             activities_html = "".join([f"<span class='activity-badge'>{ACTIVITY_EMOJIS.get(act, '🎯')} {act}</span>" for act in row['Activities']])
-            iata_code = row.get('IATA', '')
+            iata_code = row['IATA']
             search_query = quote(row['Search_Term'])
-            flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code if iata_code else search_query}+on+{travel_date}"
+            
+            # V5.7: Use direct IATA for 100% flight routing precision
+            flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}"
             hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
             
             st.markdown(f"""
