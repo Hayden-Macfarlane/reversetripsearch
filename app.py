@@ -153,6 +153,37 @@ st.markdown("""
         margin-top: 5px;
     }
     
+    /* V5.14: Premium Clickable Card Buttons */
+    div.stButton > button {
+        height: 160px !important;
+        width: 100% !important;
+        background-color: #262730 !important;
+        border: 1px solid #444 !important;
+        border-radius: 12px !important;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3) !important;
+        white-space: pre-wrap !important; /* Forces newlines to work */
+        font-size: 22px !important;
+        color: #FFFFFF !important;
+        transition: all 0.2s ease-in-out !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 20px !important;
+        line-height: 1.4 !important;
+    }
+    
+    div.stButton > button:hover {
+        transform: scale(1.02) !important;
+        border-color: #00D4BD !important;
+        box-shadow: 0 8px 12px rgba(0,212,189,0.15) !important;
+        background-color: #2d2f3a !important;
+    }
+
+    div.stButton > button:active {
+        transform: scale(0.98) !important;
+    }
+
+    
     .breakdown {
         color: #ccc;
         font-size: 0.85em;
@@ -223,6 +254,18 @@ ISO_TO_REGION = {
     'TT': 'North America', 'CR': 'North America', 'CU': 'North America',
     'PA': 'North America', 'SV': 'North America', 'GT': 'North America',
     'DO': 'North America', 'MX': 'North America',
+}
+
+# V5.9: Global Tourist Popularity Score (1-100)
+# Based on UN Tourism / World Bank data for 2023/2024
+COUNTRY_POPULARITY = {
+    'France': 100, 'Spain': 98, 'United States': 95, 'Italy': 92, 'Turkey': 88,
+    'Mexico': 85, 'United Kingdom': 82, 'Germany': 80, 'Greece': 78, 'Austria': 75,
+    'Japan': 74, 'Thailand': 72, 'United Arab Emirates': 70, 'Saudi Arabia': 68,
+    'Netherlands': 65, 'China': 64, 'Poland': 62, 'Croatia': 60, 'Portugal': 58,
+    'Canada': 56, 'Singapore': 54, 'Vietnam': 52, 'Indonesia': 50, 'Switzerland': 48,
+    'South Korea': 46, 'Egypt': 44, 'India': 42, 'Australia': 40, 'Brazil': 38,
+    'Argentina': 36, 'Iceland': 35, 'Ireland': 34, 'New Zealand': 32, 'Norway': 30,
 }
 
 REGION_FLIGHT_COSTS = {
@@ -323,6 +366,19 @@ def create_country_name_to_iso_map():
     name_to_iso['Trinidad And Tobago'] = 'TT'
     return name_to_iso
 
+def make_bold(text):
+    """V5.14: Convert standard text to mathematical bold unicode equivalents for button labels"""
+    normal = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$"
+    bold = "𝐀𝐁𝐂𝐃𝐄𝐅𝐆𝐇𝐈𝐉𝐊𝐋𝐌𝐍𝐎𝐏𝐐𝐑𝐒𝐓𝐔𝐕𝐖𝐗𝐘𝐙𝐚𝐛𝐜𝐝𝐞𝐟𝐠𝐡𝐢𝐣𝐤𝐥𝐦𝐧𝐨𝐩𝐪𝐫𝐬𝐭𝐮𝐯𝐰𝐱𝐲𝐳𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗💲"
+    trans = str.maketrans(normal, bold)
+    return str(text).translate(trans)
+
+def get_flag_emoji(country_code):
+    """V5.14: Helper to convert ISO country code to Emoji flag"""
+    if not country_code or len(country_code) != 2:
+        return "🌐"
+    return "".join(chr(127397 + ord(c)) for c in country_code.upper())
+
 @st.cache_data
 def load_real_data():
     """Load and merge real airport data with cost of living indices"""
@@ -341,7 +397,8 @@ def load_real_data():
         ) & (airports_df['scheduled_service'] == 'yes') & (airports_df['iata_code'].notna())
         
         airports_df = airports_df[mask].copy()
-        airports_df = airports_df[['ident', 'name', 'municipality', 'iso_country', 'iata_code']]
+        # Keep 'type' for deduplication priority (V5.10)
+        airports_df = airports_df[['ident', 'name', 'municipality', 'iso_country', 'iata_code', 'type']]
         
         col_df = pd.read_csv("Cost_of_Living_Index_by_Country_2024.csv")
         col_df.columns = col_df.columns.str.strip()
@@ -373,10 +430,12 @@ def load_real_data():
         merged_df = merged_df.dropna(subset=['Destination'])
         
         final_df = merged_df[[
-            'Destination', 'Region', 'Avg_Flight_Cost', 'Est_Daily_Cost', 'iata_code', 'Search_Term'
+            'Destination', 'Region', 'Avg_Flight_Cost', 'Est_Daily_Cost', 'iata_code', 'Search_Term', 'Full_Country', 'type', 'iso_country'
         ]].rename(columns={'iata_code': 'IATA'})
         
-        final_df = final_df.drop_duplicates(subset=['Destination'], keep='first')
+        # Sort by type (Large > Medium) to ensure we keep the biggest hub for each city (V5.10)
+        final_df = final_df.sort_values(by='type', ascending=True)
+        final_df = final_df.drop_duplicates(subset=['Destination'], keep='first').drop(columns=['type'])
         return final_df
     except Exception as e:
         st.error(f"Error loading real airport data: {e}")
@@ -433,7 +492,18 @@ st.markdown("""
 # --- Sidebar Navigation ---
 st.sidebar.header("What is your goal?")
 mode_options = ["Find Destinations 🌍", "Maximize Days 📅", "Price a Trip 💰"]
-selected_mode = st.sidebar.pills("Navigation", mode_options, label_visibility="collapsed")
+selected_mode = st.sidebar.pills("Navigation", mode_options, label_visibility="collapsed", default=mode_options[0])
+
+# Initialize drill-down state (V5.8)
+if 'selected_country' not in st.session_state:
+    st.session_state.selected_country = None
+
+# Reset country selection if mode changes
+if 'last_mode' not in st.session_state:
+    st.session_state.last_mode = selected_mode
+if st.session_state.last_mode != selected_mode:
+    st.session_state.selected_country = None
+    st.session_state.last_mode = selected_mode
 
 # Shared airport list for both Origin and Destination (Synchronized)
 all_usable_airports = sorted([str(d) for d in destinations_df['Destination'].unique() if pd.notna(d)])
@@ -570,40 +640,118 @@ if metric_display and not result_df.empty:
 
 if not result_df.empty:
     if selected_mode == "Find Destinations 🌍":
-        st.success(f"✅ Found **{len(result_df)}** destinations matching your criteria")
-        result_df = result_df.sort_values(by='Trip_Cost')
-    
-    st.markdown("### Your Destinations" if selected_mode == "Find Destinations 🌍" else "### Trip Breakdown")
-    travel_date = (datetime.now() + timedelta(days=60)).strftime("%Y-%m-%d")
-    cols = st.columns(3)
-    
-    for idx, (index, row) in enumerate(result_df.iterrows()):
-        with cols[idx % 3]:
-            activities_html = "".join([f"<span class='activity-badge'>{ACTIVITY_EMOJIS.get(act, '🎯')} {act}</span>" for act in row['Activities']])
-            iata_code = row['IATA']
-            search_query = quote(row['Search_Term'])
+        # Hierarchical Navigation Logic (V5.8)
+        if st.session_state.selected_country is None:
+            st.success(f"✅ Found **{len(result_df)}** destinations across **{result_df['Full_Country'].nunique()}** countries")
             
-            # V5.7: Use direct IATA for 100% flight routing precision
-            flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}"
-            hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
+            st.markdown("### Select a Country to Explore")
             
-            st.markdown(f"""
-            <div class='travel-card'>
-                <div class='card-header'>{row['Destination']}</div>
-                <div class='card-metadata'>{row['Region']} • {row['Weather']} • {"🛡️" * row['Safety_Score']}</div>
-                <div style='margin: 12px 0;'>{activities_html}</div>
-                <div class='price-container'>
-                    <div class='price-big'>${row['Trip_Cost']:,.0f}</div>
-                    <div class='price-small'>Approx. ${row['Trip_Cost'] / num_travelers:,.0f} per person</div>
+            # Group by Country for Parent View
+            country_groups = result_df.groupby('Full_Country').agg({
+                'Trip_Cost': 'min',
+                'Destination': 'count',
+                'iso_country': 'first'
+            }).reset_index().rename(columns={'Trip_Cost': 'Min_Price', 'Destination': 'City_Count'})
+            
+            # V5.9: Sort by Popularity
+            country_groups['Popularity'] = country_groups['Full_Country'].map(COUNTRY_POPULARITY).fillna(10)
+            country_groups = country_groups.sort_values(by=['Popularity', 'Min_Price'], ascending=[False, True])
+            
+            cols = st.columns(3)
+            for idx, (index, c_row) in enumerate(country_groups.iterrows()):
+                with cols[idx % 3]:
+                    country_name = c_row['Full_Country']
+                    iso_code = c_row['iso_country']
+                    flag = get_flag_emoji(iso_code)
+                    
+                    # V5.14: Unicode-Bold Card Label Construction
+                    bold_country = make_bold(country_name)
+                    formatted_price = f"${c_row['Min_Price']:,.0f}"
+                    bold_price = make_bold(formatted_price)
+                    
+                    # Construction: Flag + Bold Name \n\n {cities} Cities | From {bold_price}
+                    btn_label = f"{flag} {bold_country}\n\n{int(c_row['City_Count'])} Cities  |  From {bold_price}"
+                    
+                    if st.button(btn_label, key=f"nav_{country_name}"):
+                        st.session_state.selected_country = country_name
+                        st.rerun()
+                    
+
+
+        else:
+            # Child View (City Level)
+            if st.button("⬅️ Back to All Countries"):
+                st.session_state.selected_country = None
+                st.rerun()
+                
+            st.markdown(f"### Exploring {st.session_state.selected_country}")
+            result_df = result_df[result_df['Full_Country'] == st.session_state.selected_country].sort_values(by='Trip_Cost')
+            
+            travel_date = (datetime.now() + timedelta(days=60)).strftime("%Y-%m-%d")
+            cols = st.columns(3)
+            
+            for idx, (index, row) in enumerate(result_df.iterrows()):
+                with cols[idx % 3]:
+                    activities_html = "".join([f"<span class='activity-badge'>{ACTIVITY_EMOJIS.get(act, '🎯')} {act}</span>" for act in row['Activities']])
+                    iata_code = row['IATA']
+                    search_query = quote(row['Search_Term'])
+                    
+                    # V5.7: Use direct IATA for 100% flight routing precision
+                    flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}"
+                    hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
+                    
+                    st.markdown(f"""
+                    <div class='travel-card'>
+                        <div class='card-header'>{row['Destination']}</div>
+                        <div class='card-metadata'>{row['Region']} • {row['Weather']} • {"🛡️" * row['Safety_Score']}</div>
+                        <div style='margin: 12px 0;'>{activities_html}</div>
+                        <div class='price-container'>
+                            <div class='price-big'>${row['Trip_Cost']:,.0f}</div>
+                            <div class='price-small'>Approx. ${row['Trip_Cost'] / num_travelers:,.0f} per person</div>
+                        </div>
+                        <div class='breakdown'>
+                            <p style='margin: 5px 0;'><strong>✈️ Flight:</strong> ${row['Total_Flight_Group']:,.0f}</p>
+                            <p style='margin: 5px 0;'><strong>🏨 Hotel:</strong> ${row['Daily_Hotel_Group']:,.0f}/day</p>
+                            <p style='margin: 5px 0;'><strong>🍽️ Daily spend:</strong> ${row['Daily_Food_Group'] + row['Daily_Transport_Group']:,.0f}</p>
+                        </div>
+                        <a href='{flight_url}' target='_blank' class='booking-button'>✈️ Book Flight</a>
+                        <a href='{hotel_url}' target='_blank' class='booking-button'>🏨 Book Hotel</a>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+    else:
+        # Price a Trip or Maximize Days (Existing Logic)
+        st.markdown("### Trip Breakdown")
+        travel_date = (datetime.now() + timedelta(days=60)).strftime("%Y-%m-%d")
+        cols = st.columns(3)
+        
+        for idx, (index, row) in enumerate(result_df.iterrows()):
+            with cols[idx % 3]:
+                activities_html = "".join([f"<span class='activity-badge'>{ACTIVITY_EMOJIS.get(act, '🎯')} {act}</span>" for act in row['Activities']])
+                iata_code = row['IATA']
+                search_query = quote(row['Search_Term'])
+                
+                # V5.7: Use direct IATA for 100% flight routing precision
+                flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}"
+                hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
+                
+                st.markdown(f"""
+                <div class='travel-card'>
+                    <div class='card-header'>{row['Destination']}</div>
+                    <div class='card-metadata'>{row['Region']} • {row['Weather']} • {"🛡️" * row['Safety_Score']}</div>
+                    <div style='margin: 12px 0;'>{activities_html}</div>
+                    <div class='price-container'>
+                        <div class='price-big'>${row['Trip_Cost']:,.0f}</div>
+                        <div class='price-small'>Approx. ${row['Trip_Cost'] / num_travelers:,.0f} per person</div>
+                    </div>
+                    <div class='breakdown'>
+                        <p style='margin: 5px 0;'><strong>✈️ Flight:</strong> ${row['Total_Flight_Group']:,.0f}</p>
+                        <p style='margin: 5px 0;'><strong>🏨 Hotel:</strong> ${row['Daily_Hotel_Group']:,.0f}/day</p>
+                        <p style='margin: 5px 0;'><strong>🍽️ Daily spend:</strong> ${row['Daily_Food_Group'] + row['Daily_Transport_Group']:,.0f}</p>
+                    </div>
+                    <a href='{flight_url}' target='_blank' class='booking-button'>✈️ Book Flight</a>
+                    <a href='{hotel_url}' target='_blank' class='booking-button'>🏨 Book Hotel</a>
                 </div>
-                <div class='breakdown'>
-                    <p style='margin: 5px 0;'><strong>✈️ Flight:</strong> ${row['Total_Flight_Group']:,.0f}</p>
-                    <p style='margin: 5px 0;'><strong>🏨 Hotel:</strong> ${row['Daily_Hotel_Group']:,.0f}/day</p>
-                    <p style='margin: 5px 0;'><strong>🍽️ Daily spend:</strong> ${row['Daily_Food_Group'] + row['Daily_Transport_Group']:,.0f}</p>
-                </div>
-                <a href='{flight_url}' target='_blank' class='booking-button'>✈️ Book Flight</a>
-                <a href='{hotel_url}' target='_blank' class='booking-button'>🏨 Book Hotel</a>
-            </div>
-            """, unsafe_allow_html=True)
+                """, unsafe_allow_html=True)
 else:
     st.warning("😔 No destinations found matching your criteria.")
