@@ -236,11 +236,14 @@ def load_real_data():
         airports_url = "https://davidmegginson.github.io/ourairports-data/airports.csv"
         airports_df = pd.read_csv(airports_url)
         
-        # Filter for large and medium airports with valid IATA codes
-        airports_df = airports_df[
-            (airports_df['type'].isin(['large_airport', 'medium_airport'])) &
-            (airports_df['iata_code'].notna())
-        ].copy()
+        # V5.2: Strict filtering for major hubs (~1,500 airports)
+        # Type: Large OR (Medium AND International) AND Scheduled Service AND valid IATA
+        mask = (
+            (airports_df['type'] == 'large_airport') | 
+            ((airports_df['type'] == 'medium_airport') & airports_df['name'].str.contains('International', na=False))
+        ) & (airports_df['scheduled_service'] == 'yes') & (airports_df['iata_code'].notna())
+        
+        airports_df = airports_df[mask].copy()
         
         # Keep only needed columns
         airports_df = airports_df[['ident', 'name', 'municipality', 'iso_country', 'iata_code']]
@@ -370,10 +373,21 @@ else:
 # Essential Trip Details
 st.sidebar.subheader("Essential Trip Details")
 
-# For V5, we'll use a simplified origin selection (major US airports)
-major_us_airports = destinations_df[destinations_df['Destination'].str.contains(', US', na=False)]['Destination'].unique().tolist()
-usable_origins = sorted([str(d) for d in major_us_airports if pd.notna(d)])
-origin_city = st.sidebar.selectbox("✈️ Origin City", options=usable_origins[:50])  # Limit to 50 for UX
+# Shared airport list for both Origin and Destination (V5.2 synchronized)
+all_usable_airports = sorted([str(d) for d in destinations_df['Destination'].unique() if pd.notna(d)])
+
+# Smart Defaults (New York for origin, London for destination)
+try:
+    default_origin_idx = next(i for i, x in enumerate(all_usable_airports) if "New York" in x)
+except StopIteration:
+    default_origin_idx = 0
+
+try:
+    default_dest_idx = next(i for i, x in enumerate(all_usable_airports) if "London" in x)
+except StopIteration:
+    default_dest_idx = 0
+
+origin_city = st.sidebar.selectbox("✈️ Origin City", options=all_usable_airports, index=default_origin_idx)
 
 num_travelers = st.sidebar.number_input("👥 Number of Travelers", min_value=1, max_value=10, value=1)
 
@@ -404,17 +418,15 @@ if selected_mode == "Find Destinations 🌍":
     
 elif selected_mode == "Maximize Days 📅":
     total_budget = st.sidebar.number_input("💰 Total Group Budget ($)", min_value=100, value=3000, step=100)
-    all_dests = sorted([str(d) for d in destinations_df['Destination'].unique() if pd.notna(d)])
-    target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_dests)
+    target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_usable_airports, index=default_dest_idx)
     selected_regions = []
     selected_weather = []
     selected_activities = []
     safety_thresh = 1
 
-else:  # Price a Trip
+else:  # Price a Trip 💰
     duration = st.sidebar.slider("📅 Trip Duration (Days)", min_value=3, max_value=30, value=7)
-    all_dests = sorted(destinations_df['Destination'].unique())
-    target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_dests)
+    target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_usable_airports, index=default_dest_idx)
     selected_regions = []
     selected_weather = []
     selected_activities = []
