@@ -183,6 +183,29 @@ st.markdown("""
         transform: scale(0.98) !important;
     }
 
+    /* V5.17: Premium Back Button (Teal Theme) */
+    /* Target the specific container for the back button */
+    .back-btn-wrapper div.stButton > button {
+        background-color: transparent !important;
+        border: 2px solid #00D4BD !important;
+        color: #00D4BD !important;
+        border-radius: 8px !important;
+        width: auto !important;
+        padding: 5px 15px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        transition: all 0.2s ease-in-out !important;
+        height: auto !important;
+        box-shadow: none !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .back-btn-wrapper div.stButton > button:hover {
+        background-color: #00D4BD !important;
+        color: #FFFFFF !important;
+        transform: translateY(-2px) !important;
+    }
+
     
     .breakdown {
         color: #ccc;
@@ -397,46 +420,81 @@ def load_real_data():
         ) & (airports_df['scheduled_service'] == 'yes') & (airports_df['iata_code'].notna())
         
         airports_df = airports_df[mask].copy()
-        # Keep 'type' for deduplication priority (V5.10)
-        airports_df = airports_df[['ident', 'name', 'municipality', 'iso_country', 'iata_code', 'type']]
         
+        # 1. V5.22: Atomic IATA Uniqueness & Safeguards
+        # Fix known data anomalies immediately
+        def fix_iata(row):
+            iata = str(row['iata_code']).strip().upper()
+            city = str(row['municipality']).lower()
+            # Absolute Paris Safeguard
+            if 'paris' in city and row['iso_country'] == 'FR' and iata == 'LGB':
+                return 'CDG' # Correct a known anomaly if found
+            return iata
+
+        airports_df['iata_code'] = airports_df.apply(fix_iata, axis=1)
+        
+        # Ensure LGB is strictly US
+        mask_lgb = (airports_df['iata_code'] == 'LGB') & (airports_df['iso_country'] != 'US')
+        airports_df = airports_df[~mask_lgb].copy()
+
+        # Deduplicate IATA early - Large hubs first
+        airports_df = airports_df.sort_values(by='type', ascending=True)
+        airports_df = airports_df.drop_duplicates(subset=['iata_code'], keep='first').reset_index(drop=True)
+        
+        # 2. Metadata Extraction
+        airports_df['Clean_City'] = airports_df['municipality'].fillna('Unknown').str.split('(').str[0].str.strip()
+        
+        # 3. COL Merge (By Country)
         col_df = pd.read_csv("Cost_of_Living_Index_by_Country_2024.csv")
         col_df.columns = col_df.columns.str.strip()
-        
         name_to_iso = create_country_name_to_iso_map()
         col_df['iso_country'] = col_df['Country'].map(name_to_iso)
+        col_df = col_df.drop_duplicates(subset=['iso_country'], keep='first')
         
-        merged_df = airports_df.merge(
-            col_df[['iso_country', 'Cost of Living Index']],
-            on='iso_country',
-            how='left'
-        )
+        merged_df = airports_df.merge(col_df[['iso_country', 'Cost of Living Index']], on='iso_country', how='left')
         
+        # 4. Hub Significance Score (V5.20/V5.22)
+        def score_hub(row):
+            score = 0
+            if row['type'] == 'large_airport': score += 100
+            elif row['type'] == 'medium_airport': score += 50
+            name_str = str(row['name']).lower()
+            if 'international' in name_str: score += 30
+            if 'global' in name_str: score += 20
+            # Metropolitan matching
+            city_match = str(row['Clean_City']).lower()
+            if city_match in name_str: score += 40
+            # Special Global Tier Hubs (CDG, LHR, HND, JFK)
+            if any(hub in str(row['iata_code']) for hub in ['CDG', 'LHR', 'HND', 'JFK']): score += 500
+            return score
+
+        merged_df['Hub_Score'] = merged_df.apply(score_hub, axis=1)
+        
+        # 5. Final Deduplication (One primary hub per metropolis per nation)
+        merged_df = merged_df.sort_values(by=['Clean_City', 'iso_country', 'Hub_Score'], ascending=[True, True, False])
+        merged_df = merged_df.drop_duplicates(subset=['Clean_City', 'iso_country'], keep='first').reset_index(drop=True)
+
+        # 6. ATOMIC TAGGING (Do all metadata in one step for absolute alignment)
+        def generate_metadata(row):
+            country = get_country_name(row['iso_country'])
+            dest = f"{row['Clean_City']}, {row['iso_country']}"
+            search = f"{row['Clean_City']}, {country}"
+            return pd.Series([country, dest, search])
+
+        merged_df[['Full_Country', 'Destination', 'Search_Term']] = merged_df.apply(generate_metadata, axis=1)
+        
+        # Costs
         global_avg = col_df['Cost of Living Index'].mean()
         merged_df['Cost of Living Index'].fillna(global_avg, inplace=True)
-        
         merged_df['Est_Daily_Cost'] = merged_df['Cost of Living Index'] * 2.5
-        merged_df['Region'] = merged_df['iso_country'].map(ISO_TO_REGION)
-        merged_df['Region'].fillna('Other', inplace=True)
-        
-        merged_df['Avg_Flight_Cost'] = merged_df['Region'].map(REGION_FLIGHT_COSTS)
-        merged_df['Avg_Flight_Cost'].fillna(800, inplace=True)
-        
-        # Final formatting
-        merged_df['Full_Country'] = merged_df['iso_country'].apply(get_country_name)
-        merged_df['Search_Term'] = merged_df['municipality'].fillna('Unknown').astype(str) + ", " + merged_df['Full_Country'].astype(str)
-        merged_df['Destination'] = merged_df['municipality'].fillna('Unknown').astype(str) + ', ' + merged_df['iso_country'].fillna('??').astype(str)
+        merged_df['Region'] = merged_df['iso_country'].map(ISO_TO_REGION).fillna('Other')
+        merged_df['Avg_Flight_Cost'] = merged_df['Region'].map(REGION_FLIGHT_COSTS).fillna(800)
         
         merged_df = merged_df.dropna(subset=['Destination'])
         
-        final_df = merged_df[[
-            'Destination', 'Region', 'Avg_Flight_Cost', 'Est_Daily_Cost', 'iata_code', 'Search_Term', 'Full_Country', 'type', 'iso_country'
+        return merged_df[[
+            'Destination', 'Region', 'Avg_Flight_Cost', 'Est_Daily_Cost', 'iata_code', 'Search_Term', 'Full_Country', 'iso_country'
         ]].rename(columns={'iata_code': 'IATA'})
-        
-        # Sort by type (Large > Medium) to ensure we keep the biggest hub for each city (V5.10)
-        final_df = final_df.sort_values(by='type', ascending=True)
-        final_df = final_df.drop_duplicates(subset=['Destination'], keep='first').drop(columns=['type'])
-        return final_df
     except Exception as e:
         st.error(f"Error loading real airport data: {e}")
         return pd.DataFrame()
@@ -642,9 +700,20 @@ if not result_df.empty:
     if selected_mode == "Find Destinations 🌍":
         # Hierarchical Navigation Logic (V5.8)
         if st.session_state.selected_country is None:
+            # Transition Logic
             st.success(f"✅ Found **{len(result_df)}** destinations across **{result_df['Full_Country'].nunique()}** countries")
             
-            st.markdown("### Select a Country to Explore")
+            # V5.16: Sort Controls
+            col_header, col_sort = st.columns([2, 1])
+            with col_header:
+                st.markdown("### Select a Country to Explore")
+            with col_sort:
+                sort_option = st.selectbox(
+                    "Sort By",
+                    options=["Popularity (High to Low)", "Popularity (Low to High)", "Price (Low to High)", "Price (High to Low)", "Name (A-Z)"],
+                    index=0,
+                    label_visibility="collapsed"
+                )
             
             # Group by Country for Parent View
             country_groups = result_df.groupby('Full_Country').agg({
@@ -653,9 +722,19 @@ if not result_df.empty:
                 'iso_country': 'first'
             }).reset_index().rename(columns={'Trip_Cost': 'Min_Price', 'Destination': 'City_Count'})
             
-            # V5.9: Sort by Popularity
+            # V5.9 / V5.16: Sorting Logic
             country_groups['Popularity'] = country_groups['Full_Country'].map(COUNTRY_POPULARITY).fillna(10)
-            country_groups = country_groups.sort_values(by=['Popularity', 'Min_Price'], ascending=[False, True])
+            
+            if sort_option == "Popularity (High to Low)":
+                country_groups = country_groups.sort_values(by=['Popularity', 'Min_Price'], ascending=[False, True])
+            elif sort_option == "Popularity (Low to High)":
+                country_groups = country_groups.sort_values(by=['Popularity', 'Min_Price'], ascending=[True, True])
+            elif sort_option == "Price (Low to High)":
+                country_groups = country_groups.sort_values(by='Min_Price', ascending=True)
+            elif sort_option == "Price (High to Low)":
+                country_groups = country_groups.sort_values(by='Min_Price', ascending=False)
+            elif sort_option == "Name (A-Z)":
+                country_groups = country_groups.sort_values(by='Full_Country', ascending=True)
             
             cols = st.columns(3)
             for idx, (index, c_row) in enumerate(country_groups.iterrows()):
@@ -680,9 +759,11 @@ if not result_df.empty:
 
         else:
             # Child View (City Level)
-            if st.button("⬅️ Back to All Countries"):
+            st.markdown("<div class='back-btn-wrapper'>", unsafe_allow_html=True)
+            if st.button("⬅️ Back to All Countries", key="back_btn"):
                 st.session_state.selected_country = None
                 st.rerun()
+            st.markdown("</div>", unsafe_allow_html=True)
                 
             st.markdown(f"### Exploring {st.session_state.selected_country}")
             result_df = result_df[result_df['Full_Country'] == st.session_state.selected_country].sort_values(by='Trip_Cost')
@@ -696,9 +777,12 @@ if not result_df.empty:
                     iata_code = row['IATA']
                     search_query = quote(row['Search_Term'])
                     
-                    # V5.7: Use direct IATA for 100% flight routing precision
-                    flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}"
-                    hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
+                    # V5.23: Luxury-to-Business Flight Alignment
+                    flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
+                    hotel_suffix = "+5+star+hotel" if "Luxury" in accom_tier_name else ""
+                    
+                    flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                    hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}+{hotel_suffix}&checkin={travel_date}"
                     
                     st.markdown(f"""
                     <div class='travel-card'>
@@ -731,9 +815,12 @@ if not result_df.empty:
                 iata_code = row['IATA']
                 search_query = quote(row['Search_Term'])
                 
-                # V5.7: Use direct IATA for 100% flight routing precision
-                flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}"
-                hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}&checkin={travel_date}"
+                # V5.23: Luxury-to-Business Flight Alignment
+                flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
+                hotel_suffix = "+5+star+hotel" if "Luxury" in accom_tier_name else ""
+                
+                flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}+{hotel_suffix}&checkin={travel_date}"
                 
                 st.markdown(f"""
                 <div class='travel-card'>
