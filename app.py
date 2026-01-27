@@ -294,9 +294,9 @@ REGION_FLIGHT_COSTS = {
 }
 
 ACCOM_TIERS = {
-    "Bare Essential (Hostel/Camping)": 0.5,
-    "Economy (2-3 Star Hotel / Basic Airbnb)": 1.0,
-    "Luxury (4-5 Star / Resort)": 4.0
+    "Bare Essential (1 Star/Camping)": 0.5,
+    "Economy (2-4 Star Hotel)": 1.0,
+    "Luxury (5 Star Only)": 4.0
 }
 
 ACTIVITY_TIERS = {
@@ -406,6 +406,20 @@ def calculate_haversine(lat1, lon1, lat2, lon2):
          math.sin(dlon / 2)**2)
     c = 2 * math.asin(math.sqrt(a))
     return R * c
+
+def get_booking_url(search_term, level, checkin_date):
+    """V10.0: Precision Hotel Routing using Booking.com filters (nflt)"""
+    base_url = f"https://www.booking.com/searchresults.html?ss={quote(search_term)}&checkin={checkin_date}"
+    
+    if "Luxury" in level:
+        # V10.2: 5-star only
+        return f"{base_url}&nflt=class%3D5"
+    elif "Economy" in level:
+        # V10.2: 4-star, 3-star, 2-star
+        return f"{base_url}&nflt=class%3D4%3Bclass%3D3%3Bclass%3D2"
+    else:
+        # V10.0: Bare Essentials: 2-star, 1-star
+        return f"{base_url}&nflt=class%3D2%3Bclass%3D1"
 
 @st.cache_data
 def load_real_data(v="V9.0"):
@@ -716,9 +730,8 @@ if not result_df.empty:
                     search_query = quote(row['Search_Term'])
                     
                     flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
-                    hotel_suffix = "+5+star+hotel" if "Luxury" in accom_tier_name else ""
                     flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
-                    hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}+{hotel_suffix}&checkin={travel_date}"
+                    hotel_url = get_booking_url(row['Search_Term'], accom_tier_name, travel_date)
                     
                     # Weather V6.2: Dual C/F Metric
                     temp_c = row[month_col]
@@ -760,9 +773,8 @@ if not result_df.empty:
                 search_query = quote(row['Search_Term'])
                 
                 flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
-                hotel_suffix = "+5+star+hotel" if "Luxury" in accom_tier_name else ""
                 flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
-                hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}+{hotel_suffix}&checkin={travel_date}"
+                hotel_url = get_booking_url(row['Search_Term'], accom_tier_name, travel_date)
                 
                 # Weather V6.2: Dual C/F Metric
                 temp_c = row[month_col]
