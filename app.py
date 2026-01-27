@@ -191,11 +191,13 @@ st.markdown("""
         color: #00D4BD !important;
         border-radius: 8px !important;
         width: auto !important;
-        padding: 5px 15px !important;
+        padding: 4px 12px !important;
         font-size: 16px !important;
         font-weight: 600 !important;
         transition: all 0.2s ease-in-out !important;
-        height: auto !important;
+        height: 36px !important; /* V6.1: Explicit compact height */
+        line-height: 1 !important; /* V6.1: Tighten text alignment */
+        min-height: 0 !important;
         box-shadow: none !important;
         margin-bottom: 20px !important;
     }
@@ -279,17 +281,8 @@ ISO_TO_REGION = {
     'DO': 'North America', 'MX': 'North America',
 }
 
-# V5.9: Global Tourist Popularity Score (1-100)
-# Based on UN Tourism / World Bank data for 2023/2024
-COUNTRY_POPULARITY = {
-    'France': 100, 'Spain': 98, 'United States': 95, 'Italy': 92, 'Turkey': 88,
-    'Mexico': 85, 'United Kingdom': 82, 'Germany': 80, 'Greece': 78, 'Austria': 75,
-    'Japan': 74, 'Thailand': 72, 'United Arab Emirates': 70, 'Saudi Arabia': 68,
-    'Netherlands': 65, 'China': 64, 'Poland': 62, 'Croatia': 60, 'Portugal': 58,
-    'Canada': 56, 'Singapore': 54, 'Vietnam': 52, 'Indonesia': 50, 'Switzerland': 48,
-    'South Korea': 46, 'Egypt': 44, 'India': 42, 'Australia': 40, 'Brazil': 38,
-    'Argentina': 36, 'Iceland': 35, 'Ireland': 34, 'New Zealand': 32, 'Norway': 30,
-}
+# V5.9: Global Tourist Popularity Score (1-100) - DEPRECATED in V8.0 (Build-time shift)
+# Use 'Popularity_Score' column from master_travel_data.csv instead.
 
 REGION_FLIGHT_COSTS = {
     "Europe": 850,
@@ -402,124 +395,37 @@ def get_flag_emoji(country_code):
         return "🌐"
     return "".join(chr(127397 + ord(c)) for c in country_code.upper())
 
+def calculate_haversine(lat1, lon1, lat2, lon2):
+    """V7.1: Great-circle distance between two points in km"""
+    if any(pd.isna([lat1, lon1, lat2, lon2])): return 0
+    R = 6371  # Earth radius in km
+    dlat = math.radians(lat2 - lat1)
+    dlon = math.radians(lon2 - lon1)
+    a = (math.sin(dlat / 2)**2 + 
+         math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * 
+         math.sin(dlon / 2)**2)
+    c = 2 * math.asin(math.sqrt(a))
+    return R * c
+
 @st.cache_data
-def load_real_data():
-    """Load and merge real airport data with cost of living indices"""
+def load_real_data(v="V9.0"):
+    """Load pre-processed master travel dataset (V6.0 Build-Time Shift)"""
     try:
-        airports_url = "https://davidmegginson.github.io/ourairports-data/airports.csv"
-        airports_df = pd.read_csv(airports_url)
-        
-        # V5.7: Manually blacklist cities with no real commercial service
-        blacklist_iata = ['BRX']
-        airports_df = airports_df[~airports_df['iata_code'].isin(blacklist_iata)]
-        
-        # V5.2: Strict filtering for major hubs
-        mask = (
-            (airports_df['type'] == 'large_airport') | 
-            ((airports_df['type'] == 'medium_airport') & airports_df['name'].str.contains('International', na=False))
-        ) & (airports_df['scheduled_service'] == 'yes') & (airports_df['iata_code'].notna())
-        
-        airports_df = airports_df[mask].copy()
-        
-        # 1. V5.22: Atomic IATA Uniqueness & Safeguards
-        # Fix known data anomalies immediately
-        def fix_iata(row):
-            iata = str(row['iata_code']).strip().upper()
-            city = str(row['municipality']).lower()
-            # Absolute Paris Safeguard
-            if 'paris' in city and row['iso_country'] == 'FR' and iata == 'LGB':
-                return 'CDG' # Correct a known anomaly if found
-            return iata
-
-        airports_df['iata_code'] = airports_df.apply(fix_iata, axis=1)
-        
-        # Ensure LGB is strictly US
-        mask_lgb = (airports_df['iata_code'] == 'LGB') & (airports_df['iso_country'] != 'US')
-        airports_df = airports_df[~mask_lgb].copy()
-
-        # Deduplicate IATA early - Large hubs first
-        airports_df = airports_df.sort_values(by='type', ascending=True)
-        airports_df = airports_df.drop_duplicates(subset=['iata_code'], keep='first').reset_index(drop=True)
-        
-        # 2. Metadata Extraction
-        airports_df['Clean_City'] = airports_df['municipality'].fillna('Unknown').str.split('(').str[0].str.strip()
-        
-        # 3. COL Merge (By Country)
-        col_df = pd.read_csv("Cost_of_Living_Index_by_Country_2024.csv")
-        col_df.columns = col_df.columns.str.strip()
-        name_to_iso = create_country_name_to_iso_map()
-        col_df['iso_country'] = col_df['Country'].map(name_to_iso)
-        col_df = col_df.drop_duplicates(subset=['iso_country'], keep='first')
-        
-        merged_df = airports_df.merge(col_df[['iso_country', 'Cost of Living Index']], on='iso_country', how='left')
-        
-        # 4. Hub Significance Score (V5.20/V5.22)
-        def score_hub(row):
-            score = 0
-            if row['type'] == 'large_airport': score += 100
-            elif row['type'] == 'medium_airport': score += 50
-            name_str = str(row['name']).lower()
-            if 'international' in name_str: score += 30
-            if 'global' in name_str: score += 20
-            # Metropolitan matching
-            city_match = str(row['Clean_City']).lower()
-            if city_match in name_str: score += 40
-            # Special Global Tier Hubs (CDG, LHR, HND, JFK)
-            if any(hub in str(row['iata_code']) for hub in ['CDG', 'LHR', 'HND', 'JFK']): score += 500
-            return score
-
-        merged_df['Hub_Score'] = merged_df.apply(score_hub, axis=1)
-        
-        # 5. Final Deduplication (One primary hub per metropolis per nation)
-        merged_df = merged_df.sort_values(by=['Clean_City', 'iso_country', 'Hub_Score'], ascending=[True, True, False])
-        merged_df = merged_df.drop_duplicates(subset=['Clean_City', 'iso_country'], keep='first').reset_index(drop=True)
-
-        # 6. ATOMIC TAGGING (Do all metadata in one step for absolute alignment)
-        def generate_metadata(row):
-            country = get_country_name(row['iso_country'])
-            dest = f"{row['Clean_City']}, {row['iso_country']}"
-            search = f"{row['Clean_City']}, {country}"
-            return pd.Series([country, dest, search])
-
-        merged_df[['Full_Country', 'Destination', 'Search_Term']] = merged_df.apply(generate_metadata, axis=1)
-        
-        # Costs
-        global_avg = col_df['Cost of Living Index'].mean()
-        merged_df['Cost of Living Index'].fillna(global_avg, inplace=True)
-        merged_df['Est_Daily_Cost'] = merged_df['Cost of Living Index'] * 2.5
-        merged_df['Region'] = merged_df['iso_country'].map(ISO_TO_REGION).fillna('Other')
-        merged_df['Avg_Flight_Cost'] = merged_df['Region'].map(REGION_FLIGHT_COSTS).fillna(800)
-        
-        merged_df = merged_df.dropna(subset=['Destination'])
-        
-        return merged_df[[
-            'Destination', 'Region', 'Avg_Flight_Cost', 'Est_Daily_Cost', 'iata_code', 'Search_Term', 'Full_Country', 'iso_country'
-        ]].rename(columns={'iata_code': 'IATA'})
+        df = pd.read_csv("master_travel_data.csv")
+        return df
     except Exception as e:
-        st.error(f"Error loading real airport data: {e}")
+        st.error(f"Error loading master dataset: {e}")
         return pd.DataFrame()
 
 def enrich_data(df):
-    """Add mock enrichment data (activities, weather, safety, transport)"""
+    """Add lightweight mock enrichment (activities, transport)"""
     def get_activities(name):
         name_str = str(name) if pd.notna(name) else "Unknown"
         random.seed(hash(name_str) % 10000)
         k = random.randint(2, 4)
         return random.sample(MOCK_ACTIVITIES_LIST, min(k, len(MOCK_ACTIVITIES_LIST)))
 
-    def get_weather(name):
-        name_str = str(name) if pd.notna(name) else "Unknown"
-        random.seed(hash(name_str + "w") % 10000)
-        return random.choice(MOCK_WEATHER)
-
-    def get_safety(name):
-        name_str = str(name) if pd.notna(name) else "Unknown"
-        random.seed(hash(name_str + "s") % 10000)
-        return random.randint(1, 5)
-
     df['Activities'] = df['Destination'].apply(get_activities)
-    df['Weather'] = df['Destination'].apply(get_weather)
-    df['Safety_Score'] = df['Destination'].apply(get_safety)
     df['Transport_Cost_Daily'] = df['Destination'].apply(calculate_transport_cost)
     return df
 
@@ -528,14 +434,12 @@ with st.spinner("🚀 Booting WanderWise Data Engine..."):
     destinations_df = load_real_data()
 
 if destinations_df.empty:
-    st.error("Failed to load WanderWise data.")
+    st.error("Failed to load WanderWise data. Did you run data_prep.py?")
     st.stop()
 
 destinations_df = enrich_data(destinations_df)
-destinations_df.rename(columns={'Avg_Flight_Cost': 'Base_Flight_Cost', 'Est_Daily_Cost': 'Base_Daily_Cost'}, inplace=True)
 
-# Title
-# Title Redesign (Centered & Massive Hero)
+# Title Redesign
 st.markdown("""
     <div style='text-align: center; padding-bottom: 20px;'>
         <h1 style='font-size: 80px; margin-bottom: 0; background: linear-gradient(to right, #00D4BD, #2E86DE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;'>
@@ -552,33 +456,31 @@ st.sidebar.header("What is your goal?")
 mode_options = ["Find Destinations 🌍", "Maximize Days 📅", "Price a Trip 💰"]
 selected_mode = st.sidebar.pills("Navigation", mode_options, label_visibility="collapsed", default=mode_options[0])
 
-# Initialize drill-down state (V5.8)
+# Initialize drill-down and sorting state
 if 'selected_country' not in st.session_state:
     st.session_state.selected_country = None
 
-# Reset country selection if mode changes
+if 'sort_selection' not in st.session_state:
+    st.session_state.sort_selection = "Popularity (High to Low)"
+
 if 'last_mode' not in st.session_state:
     st.session_state.last_mode = selected_mode
 if st.session_state.last_mode != selected_mode:
     st.session_state.selected_country = None
     st.session_state.last_mode = selected_mode
 
-# Shared airport list for both Origin and Destination (Synchronized)
 all_usable_airports = sorted([str(d) for d in destinations_df['Destination'].unique() if pd.notna(d)])
 
-# Smart Defaults (New York for origin, London for destination)
 try:
     default_origin_idx = next(i for i, x in enumerate(all_usable_airports) if "New York" in x)
 except StopIteration:
     default_origin_idx = 0
 
-# Fix Default Logic (London, GB) - Priority fix for V5.4
 try:
     default_dest_idx = next((i for i, x in enumerate(all_usable_airports) if x.startswith("London, GB") or x == "London, United Kingdom"), 0)
 except StopIteration:
     default_dest_idx = 0
 
-# Dynamic Explainer
 if selected_mode == "Find Destinations 🌍":
     st.sidebar.info("ℹ️ Goal: You have a fixed budget and want to see all the places you can afford.")
 elif selected_mode == "Maximize Days 📅":
@@ -586,9 +488,7 @@ elif selected_mode == "Maximize Days 📅":
 else:
     st.sidebar.info("ℹ️ Goal: You have a dream destination and duration, and want the total price tag.")
 
-# Essential Trip Details
 st.sidebar.subheader("Essential Trip Details")
-
 origin_city = st.sidebar.selectbox("✈️ Origin City", options=all_usable_airports, index=default_origin_idx)
 num_travelers = st.sidebar.number_input("👥 Number of Travelers", min_value=1, max_value=10, value=1)
 
@@ -603,21 +503,18 @@ if selected_mode == "Find Destinations 🌍":
     
     st.sidebar.subheader("🔍 Filters")
     selected_regions = st.sidebar.multiselect("🌎 Regions", options=sorted(destinations_df['Region'].unique()), default=[])
-    selected_weather = st.sidebar.multiselect("🌤️ Weather", options=MOCK_WEATHER, default=[])
     selected_activities = st.sidebar.multiselect("🎯 Activities", options=MOCK_ACTIVITIES_LIST, default=[])
-    safety_thresh = st.sidebar.slider("🛡️ Min Safety", 1, 5, 1)
     
 elif selected_mode == "Maximize Days 📅":
     total_budget = st.sidebar.number_input("💰 Total Group Budget ($)", min_value=100, value=3000, step=100)
     target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_usable_airports, index=default_dest_idx)
-    selected_regions, selected_weather, selected_activities, safety_thresh = [], [], [], 1
+    selected_regions, selected_activities = [], []
 
 else:  # Price a Trip 💰
     duration = st.sidebar.slider("📅 Trip Duration (Days)", min_value=3, max_value=30, value=7)
     target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_usable_airports, index=default_dest_idx)
-    selected_regions, selected_weather, selected_activities, safety_thresh = [], [], [], 1
+    selected_regions, selected_activities = [], []
 
-# Sidebar Spacing
 st.sidebar.markdown("<br>", unsafe_allow_html=True)
 
 # Travel Style Expander
@@ -634,12 +531,37 @@ with st.sidebar.expander("💸 Customize Spending & Style", expanded=False):
     act_tier_name = st.selectbox("Choose spending style", options=list(ACTIVITY_TIERS.keys()), index=1, label_visibility="collapsed")
     act_mult = ACTIVITY_TIERS[act_tier_name]
 
-# --- Cost Calculations ---
-destinations_df['Daily_Food_Group'] = (destinations_df['Base_Daily_Cost'] * 0.5) * num_travelers * act_mult
-destinations_df['Daily_Hotel_Group'] = (destinations_df['Base_Daily_Cost'] * 0.5) * accom_mult * math.ceil(num_travelers / 2)
+# --- Cost Logic (V7.1 Distance-Aware) ---
+origin_row = destinations_df[destinations_df['Destination'] == origin_city]
+if not origin_row.empty:
+    o_lat = origin_row['latitude_deg'].values[0]
+    o_lon = origin_row['longitude_deg'].values[0]
+    origin_iata = origin_row['IATA'].values[0]
+else:
+    o_lat, o_lon, origin_iata = 0, 0, "AUS" # Default AUS if lookup fails
+
+# Map selected tier to pre-calculated Base Daily Cost
+if "Luxury" in accom_tier_name:
+    daily_base = destinations_df['Daily_Cost_Luxury']
+else:
+    daily_base = destinations_df['Daily_Cost_Budget']
+
+# Haversine Distance & Variable Flight Pricing
+destinations_df['Distance_KM'] = destinations_df.apply(
+    lambda r: calculate_haversine(o_lat, o_lon, r['latitude_deg'], r['longitude_deg']), axis=1
+)
+
+# Variable flight cost: $150 base + $0.08 per km
+# Ensures longer flights are more expensive while keeping local flights cheap
+destinations_df['Calculated_Flight_Base'] = 150 + (destinations_df['Distance_KM'] * 0.08)
+
+# Apply multipliers
+destinations_df['Daily_Hotel_Group'] = (daily_base * 0.4) * accom_mult * math.ceil(num_travelers / 2)
+destinations_df['Daily_Food_Group'] = (daily_base * 0.4) * num_travelers * act_mult
 destinations_df['Daily_Transport_Group'] = destinations_df['Transport_Cost_Daily'] * num_travelers
+
 destinations_df['Total_Daily_Group'] = destinations_df['Daily_Food_Group'] + destinations_df['Daily_Hotel_Group'] + destinations_df['Daily_Transport_Group']
-destinations_df['Total_Flight_Group'] = destinations_df['Base_Flight_Cost'] * flight_mult * num_travelers
+destinations_df['Total_Flight_Group'] = destinations_df['Calculated_Flight_Base'] * flight_mult * num_travelers
 
 st.markdown("---")
 
@@ -676,11 +598,8 @@ else:  # Price a Trip
     else:
         st.error("Destination not found.")
 
-# Apply filters
 if not result_df.empty:
-    result_df = result_df[result_df['Safety_Score'] >= safety_thresh]
     if selected_regions: result_df = result_df[result_df['Region'].isin(selected_regions)]
-    if selected_weather: result_df = result_df[result_df['Weather'].isin(selected_weather)]
     if selected_activities:
         def has_activity(activity_list): return not set(selected_activities).isdisjoint(activity_list)
         result_df = result_df[result_df['Activities'].apply(has_activity)]
@@ -697,13 +616,14 @@ if metric_display and not result_df.empty:
     """, unsafe_allow_html=True)
 
 if not result_df.empty:
+    # Get current Month for weather lookup
+    travel_dt = datetime.now() + timedelta(days=60)
+    month_col = travel_dt.strftime("%b") # e.g., "Mar"
+
     if selected_mode == "Find Destinations 🌍":
-        # Hierarchical Navigation Logic (V5.8)
         if st.session_state.selected_country is None:
-            # Transition Logic
             st.success(f"✅ Found **{len(result_df)}** destinations across **{result_df['Full_Country'].nunique()}** countries")
             
-            # V5.16: Sort Controls
             col_header, col_sort = st.columns([2, 1])
             with col_header:
                 st.markdown("### Select a Country to Explore")
@@ -711,24 +631,20 @@ if not result_df.empty:
                 sort_option = st.selectbox(
                     "Sort By",
                     options=["Popularity (High to Low)", "Popularity (Low to High)", "Price (Low to High)", "Price (High to Low)", "Name (A-Z)"],
-                    index=0,
-                    label_visibility="collapsed"
+                    key="sort_selection", label_visibility="collapsed"
                 )
             
-            # Group by Country for Parent View
             country_groups = result_df.groupby('Full_Country').agg({
                 'Trip_Cost': 'min',
                 'Destination': 'count',
-                'iso_country': 'first'
+                'iso_country': 'first',
+                'Popularity_Score': 'max' # Inherit the strongest city score for the country level breakdown
             }).reset_index().rename(columns={'Trip_Cost': 'Min_Price', 'Destination': 'City_Count'})
             
-            # V5.9 / V5.16: Sorting Logic
-            country_groups['Popularity'] = country_groups['Full_Country'].map(COUNTRY_POPULARITY).fillna(10)
-            
             if sort_option == "Popularity (High to Low)":
-                country_groups = country_groups.sort_values(by=['Popularity', 'Min_Price'], ascending=[False, True])
+                country_groups = country_groups.sort_values(by=['Popularity_Score', 'Min_Price'], ascending=[False, True])
             elif sort_option == "Popularity (Low to High)":
-                country_groups = country_groups.sort_values(by=['Popularity', 'Min_Price'], ascending=[True, True])
+                country_groups = country_groups.sort_values(by=['Popularity_Score', 'Min_Price'], ascending=[True, True])
             elif sort_option == "Price (Low to High)":
                 country_groups = country_groups.sort_values(by='Min_Price', ascending=True)
             elif sort_option == "Price (High to Low)":
@@ -742,20 +658,15 @@ if not result_df.empty:
                     country_name = c_row['Full_Country']
                     iso_code = c_row['iso_country']
                     flag = get_flag_emoji(iso_code)
-                    
-                    # V5.14: Unicode-Bold Card Label Construction
                     bold_country = make_bold(country_name)
                     formatted_price = f"${c_row['Min_Price']:,.0f}"
                     bold_price = make_bold(formatted_price)
-                    
-                    # Construction: Flag + Bold Name \n\n {cities} Cities | From {bold_price}
                     btn_label = f"{flag} {bold_country}\n\n{int(c_row['City_Count'])} Cities  |  From {bold_price}"
-                    
                     if st.button(btn_label, key=f"nav_{country_name}"):
                         st.session_state.selected_country = country_name
+                        # V7.2.2: Ensure the city view inherits the country view sort immediately
+                        st.session_state.sort_selection_city = st.session_state.sort_selection
                         st.rerun()
-                    
-
 
         else:
             # Child View (City Level)
@@ -765,10 +676,37 @@ if not result_df.empty:
                 st.rerun()
             st.markdown("</div>", unsafe_allow_html=True)
                 
-            st.markdown(f"### Exploring {st.session_state.selected_country}")
-            result_df = result_df[result_df['Full_Country'] == st.session_state.selected_country].sort_values(by='Trip_Cost')
+            col_city_header, col_city_sort = st.columns([2, 1])
+            with col_city_header:
+                st.markdown(f"### Exploring {st.session_state.selected_country}")
+            with col_city_sort:
+                sort_option = st.selectbox(
+                    "Sort By",
+                    options=["Popularity (High to Low)", "Popularity (Low to High)", "Price (Low to High)", "Price (High to Low)", "Name (A-Z)"],
+                    key="sort_selection_city", label_visibility="collapsed"
+                )
+                # Sync city sort back to master state if it changes
+                if st.session_state.sort_selection_city != st.session_state.sort_selection:
+                    st.session_state.sort_selection = st.session_state.sort_selection_city
+                    st.rerun()
             
-            travel_date = (datetime.now() + timedelta(days=60)).strftime("%Y-%m-%d")
+            # Apply Hierarchical Sorting
+            result_df = result_df[result_df['Full_Country'] == st.session_state.selected_country].copy()
+            
+            # Key V7.2.2 Fix: Use the city-specific key for the actual sorting logic here
+            city_sort = st.session_state.sort_selection_city
+            if city_sort == "Popularity (High to Low)":
+                result_df = result_df.sort_values(by=['Popularity_Score', 'Trip_Cost'], ascending=[False, True])
+            elif city_sort == "Popularity (Low to High)":
+                result_df = result_df.sort_values(by=['Popularity_Score', 'Trip_Cost'], ascending=[True, True])
+            elif city_sort == "Price (Low to High)":
+                result_df = result_df.sort_values(by='Trip_Cost', ascending=True)
+            elif city_sort == "Price (High to Low)":
+                result_df = result_df.sort_values(by='Trip_Cost', ascending=False)
+            elif city_sort == "Name (A-Z)":
+                result_df = result_df.sort_values(by='Destination', ascending=True)
+            
+            travel_date = travel_dt.strftime("%Y-%m-%d")
             cols = st.columns(3)
             
             for idx, (index, row) in enumerate(result_df.iterrows()):
@@ -777,17 +715,23 @@ if not result_df.empty:
                     iata_code = row['IATA']
                     search_query = quote(row['Search_Term'])
                     
-                    # V5.23: Luxury-to-Business Flight Alignment
                     flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
                     hotel_suffix = "+5+star+hotel" if "Luxury" in accom_tier_name else ""
-                    
-                    flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                    flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
                     hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}+{hotel_suffix}&checkin={travel_date}"
+                    
+                    # Weather V6.2: Dual C/F Metric
+                    temp_c = row[month_col]
+                    if pd.notna(temp_c):
+                        temp_f = (temp_c * 9/5) + 32
+                        weather_label = f"{temp_c:.1f}°C ({temp_f:.0f}°F)"
+                    else:
+                        weather_label = "Season-dependent"
                     
                     st.markdown(f"""
                     <div class='travel-card'>
                         <div class='card-header'>{row['Destination']}</div>
-                        <div class='card-metadata'>{row['Region']} • {row['Weather']} • {"🛡️" * row['Safety_Score']}</div>
+                        <div class='card-metadata'>{row['Region']} • {weather_label}</div>
                         <div style='margin: 12px 0;'>{activities_html}</div>
                         <div class='price-container'>
                             <div class='price-big'>${row['Trip_Cost']:,.0f}</div>
@@ -804,9 +748,9 @@ if not result_df.empty:
                     """, unsafe_allow_html=True)
 
     else:
-        # Price a Trip or Maximize Days (Existing Logic)
+        # Price a Trip or Maximize Days
         st.markdown("### Trip Breakdown")
-        travel_date = (datetime.now() + timedelta(days=60)).strftime("%Y-%m-%d")
+        travel_date = travel_dt.strftime("%Y-%m-%d")
         cols = st.columns(3)
         
         for idx, (index, row) in enumerate(result_df.iterrows()):
@@ -815,17 +759,23 @@ if not result_df.empty:
                 iata_code = row['IATA']
                 search_query = quote(row['Search_Term'])
                 
-                # V5.23: Luxury-to-Business Flight Alignment
                 flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
                 hotel_suffix = "+5+star+hotel" if "Luxury" in accom_tier_name else ""
-                
-                flight_url = f"https://www.google.com/travel/flights?q=Flights+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
                 hotel_url = f"https://www.booking.com/searchresults.html?ss={search_query}+{hotel_suffix}&checkin={travel_date}"
+                
+                # Weather V6.2: Dual C/F Metric
+                temp_c = row[month_col]
+                if pd.notna(temp_c):
+                    temp_f = (temp_c * 9/5) + 32
+                    weather_label = f"{temp_c:.1f}°C ({temp_f:.0f}°F)"
+                else:
+                    weather_label = "Season-dependent"
                 
                 st.markdown(f"""
                 <div class='travel-card'>
                     <div class='card-header'>{row['Destination']}</div>
-                    <div class='card-metadata'>{row['Region']} • {row['Weather']} • {"🛡️" * row['Safety_Score']}</div>
+                    <div class='card-metadata'>{row['Region']} • {weather_label}</div>
                     <div style='margin: 12px 0;'>{activities_html}</div>
                     <div class='price-container'>
                         <div class='price-big'>${row['Trip_Cost']:,.0f}</div>
