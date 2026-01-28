@@ -804,3 +804,26 @@ if not result_df.empty:
                 """, unsafe_allow_html=True)
 else:
     st.warning("😔 No destinations found matching your criteria.")
+
+# --- SEO & About Section ---
+st.divider()  # Adds a visual line separator
+
+with st.expander("ℹ️ About WanderWise & How it Works", expanded=True):
+    st.markdown("""
+    ### **The Intelligent Reverse Trip Planner**
+    
+    **WanderWise** is a **reverse flight search engine** designed for budget travelers who want to maximize their experiences. Instead of asking *"Where do you want to go?"*, we ask *"What is your budget?"* and show you every possibility.
+    
+    #### **How We Find Cheap Vacation Destinations**
+    Our algorithm combines real-time data to find the best value trips:
+    * **Flight Costs:** We estimate average round-trip airfare from your origin city.
+    * **Cost of Living:** We use global economic indexes to calculate daily expenses (food, hotel, transport) for each country.
+    * **Your Budget:** We do the math to see exactly how many days you can afford to stay in 200+ countries.
+    ßß
+    #### **Why Use a Reverse Flight Search?**
+    * **Find Hidden Gems:** Discover affordable countries like **Vietnam**, **Portugal**, or **Colombia** that fit your budget perfectly.
+    * **Maximize Your Trip:** See exactly how many days your money will last in different parts of the world.
+    * **Budget Travel Planning:** Compare expensive destinations vs. affordable alternatives side-by-side.
+    
+    *Built with ❤️ for travelers who want to see the world without breaking the bank.*
+    """)
