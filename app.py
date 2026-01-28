@@ -676,7 +676,7 @@ if not result_df.empty:
                     formatted_price = f"${c_row['Min_Price']:,.0f}"
                     bold_price = make_bold(formatted_price)
                     btn_label = f"{flag} {bold_country}\n\n{int(c_row['City_Count'])} Cities  |  From {bold_price}"
-                    if st.button(btn_label, key=f"nav_{country_name}"):
+                    if st.button(btn_label, key=f"nav_{country_name}", use_container_width=True):
                         st.session_state.selected_country = country_name
                         # V7.2.2: Ensure the city view inherits the country view sort immediately
                         st.session_state.sort_selection_city = st.session_state.sort_selection
