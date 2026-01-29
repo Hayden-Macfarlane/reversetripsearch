@@ -9,6 +9,19 @@ import pycountry
 # Set page config
 st.set_page_config(page_title="WanderWise", layout="wide")
 
+# --- INJECT TRAVELPAYOUTS VERIFICATION SCRIPT ---
+# This puts the script into the <head> of your site
+components.html("""
+<script>
+    (function () {
+        var script = document.createElement("script");
+        script.async = 1;
+        script.src = 'https://tp-em.com/NDkzNjg1.js?t=493685';
+        window.parent.document.head.appendChild(script);
+    })();
+</script>
+""", height=0)
+
 # Custom CSS for WanderWise (V5.4)
 st.markdown("""
 <style>
