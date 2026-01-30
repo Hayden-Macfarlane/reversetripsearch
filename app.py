@@ -743,10 +743,28 @@ if not result_df.empty:
                     iata_code = row['IATA']
                     search_query = quote(row['Search_Term'])
                     
-                    flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
-                    flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                    #MANUAL ATTENTION REQUIRED - Flight suffix only works for Business Class
+                    #flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
+                    #flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                    ##TODO: Affiliate link generation can be abstracted into a function - START
+                    try:
+                        if isinstance(travel_date, str):
+                            from datetime import datetime
+                            # Converts '2024-10-25' -> '2510'
+                            av_date = datetime.strptime(travel_date, '%Y-%m-%d').strftime('%d%m')
+                        else:
+                            # Handles if it's already a python date object
+                            av_date = travel_date.strftime('%d%m')
+                    except Exception:
+                        # Fallback safety
+                        av_date = str(travel_date).replace("-", "")[-4:]
+
+                    # 2. Create the Aviasales Deep Link
+                    # Structure: Origin + Date(DDMM) + Destination + NumTravelers + Marker
+                    flight_url = f"https://www.aviasales.com/search/{origin_iata}{av_date}{iata_code}{num_travelers}?marker=699995"
                     hotel_url = get_booking_url(row['Search_Term'], accom_tier_name, travel_date)
-                    
+                    ##Affiliate link generation can be abstracted into a function - END
+
                     # Weather V6.2: Dual C/F Metric
                     temp_c = row[month_col]
                     if pd.notna(temp_c):
@@ -786,10 +804,29 @@ if not result_df.empty:
                 iata_code = row['IATA']
                 search_query = quote(row['Search_Term'])
                 
-                flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
-                flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                #MANUAL ATTENTION REQUIRED - Flight suffix only works for Business Class
+                #flight_suffix = "+Business+Class" if "Luxury" in flight_class_name else ""
+                #flight_url = f"https://www.google.com/travel/flights?q=Flights+from+{origin_iata}+to+{iata_code}+on+{travel_date}{flight_suffix}"
+                # 1. Format the date to DDMM (Required for Aviasales)
+                ##TODO:Affiliate link generation can be abstracted into a function - START
+                try:
+                    if isinstance(travel_date, str):
+                        from datetime import datetime
+                        # Converts '2024-10-25' -> '2510'
+                        av_date = datetime.strptime(travel_date, '%Y-%m-%d').strftime('%d%m')
+                    else:
+                        # Handles if it's already a python date object
+                        av_date = travel_date.strftime('%d%m')
+                except Exception:
+                    # Fallback safety
+                    av_date = str(travel_date).replace("-", "")[-4:]
+
+                # 2. Create the Aviasales Deep Link
+                # Structure: Origin + Date(DDMM) + Destination + NumTravelers + Marker
+                flight_url = f"https://www.aviasales.com/search/{origin_iata}{av_date}{iata_code}{num_travelers}?marker=699995"
                 hotel_url = get_booking_url(row['Search_Term'], accom_tier_name, travel_date)
-                
+                ##Affiliate link generation can be abstracted into a function - END
+
                 # Weather V6.2: Dual C/F Metric
                 temp_c = row[month_col]
                 if pd.notna(temp_c):
