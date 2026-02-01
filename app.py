@@ -340,6 +340,25 @@ ACTIVITY_EMOJIS = {
     'Adventure': '🏔️'
 }
 
+# V11.0: Country Name Cleanup Map
+COUNTRY_CLEANUP_MAP = {
+    "Korea, Republic of": "South Korea",
+    "Korea, Democratic People's Republic of": "North Korea",
+    "Russian Federation": "Russia",
+    "Iran, Islamic Republic of": "Iran",
+    "Tanzania, United Republic of": "Tanzania",
+    "Venezuela, Bolivarian Republic of": "Venezuela",
+    "Bolivia, Plurinational State of": "Bolivia",
+    "Moldova, Republic of": "Moldova",
+    "Syrian Arab Republic": "Syria",
+    "Taiwan, Province of China": "Taiwan",
+    "Lao People's Democratic Republic": "Laos",
+    "Congo, The Democratic Republic of the": "DR Congo",
+    "United States of America": "United States",
+    "United Kingdom of Great Britain and Northern Ireland": "United Kingdom",
+    "Palestine, State of": "Palestine"
+}
+
 def calculate_transport_cost(destination_name):
     """Calculate daily transportation cost based on destination type"""
     dest_str = str(destination_name) if pd.notna(destination_name) else "Unknown"
@@ -440,6 +459,23 @@ def load_real_data(v="V9.0"):
     """Load pre-processed master travel dataset (V6.0 Build-Time Shift)"""
     try:
         df = pd.read_csv("master_travel_data.csv")
+        
+        # 1. Clean Country Names
+        if 'Full_Country' in df.columns:
+            df['Full_Country'] = df['Full_Country'].replace(COUNTRY_CLEANUP_MAP)
+            
+        # 2. Deduplicate City Cards
+        # Strategy: Keep the entry with Lowest Base Flight Cost, then Highest Popularity Score
+        # This ensures we pick main airports (e.g., CDG over LBG for Paris) which fixes broken links
+        if 'Base_Flight_Cost' in df.columns and 'Popularity_Score' in df.columns:
+            df = df.sort_values(
+                by=['Destination', 'Base_Flight_Cost', 'Popularity_Score'], 
+                ascending=[True, True, False]
+            )
+        
+        # Drop duplicates on 'Destination' keeping the first (Best Match)
+        df = df.drop_duplicates(subset=['Destination'], keep='first')
+        
         return df
     except Exception as e:
         st.error(f"Error loading master dataset: {e}")
@@ -631,6 +667,12 @@ if not result_df.empty:
     if selected_activities:
         def has_activity(activity_list): return not set(selected_activities).isdisjoint(activity_list)
         result_df = result_df[result_df['Activities'].apply(has_activity)]
+
+    # 3. Filter out Origin City from Destinations
+    # Ensure case-insensitive comparison
+    if origin_city:
+        origin_clean = str(origin_city).strip().lower()
+        result_df = result_df[~result_df['Destination'].astype(str).str.lower().eq(origin_clean)]
 
 # --- Display Results ---
 if metric_display and not result_df.empty:
