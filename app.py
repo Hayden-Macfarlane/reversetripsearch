@@ -878,3 +878,9 @@ with st.expander("ℹ️ About WanderWise & How it Works", expanded=True):
     
     *Built with ❤️ for travelers who want to see the world without breaking the bank.*
     """)
+    st.divider() # Adds a nice visual separation line
+    st.markdown("### 📚 Want expert travel tips?")
+    st.markdown(
+        "Check out the **[WanderWise Travel Blog](https://blog.reversetripsearch.com)** "
+        "for in-depth guides on how to find cheap flights, budget hacks, and hidden gem destinations."
+    )
