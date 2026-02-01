@@ -6,6 +6,7 @@ import random
 from datetime import datetime, timedelta
 from urllib.parse import quote
 import pycountry
+import textwrap
 
 # Set page config
 st.set_page_config(page_title="WanderWise", layout="wide")
@@ -114,6 +115,10 @@ st.markdown("""
         border: 1px solid #333;
         margin-bottom: 20px;
         transition: transform 0.2s;
+        min-height: 520px; /* V11.0: Consistent Card Height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     .travel-card:hover {
         transform: translateY(-5px);
@@ -154,7 +159,7 @@ st.markdown("""
     }
 
     .price-big {
-        color: #00D4BD; /* Brand Teal */
+        color: #00E676; /* V11.0: Vibrant Green for Price */
         font-size: 2.8em;
         font-weight: 800;
         margin: 0;
@@ -423,10 +428,32 @@ def make_bold(text):
     return str(text).translate(trans)
 
 def get_flag_emoji(country_code):
-    """V5.14: Helper to convert ISO country code to Emoji flag"""
+    """V11.0: Helper to convert ISO country code to SVG Flag URL"""
     if not country_code or len(country_code) != 2:
-        return "🌐"
-    return "".join(chr(127397 + ord(c)) for c in country_code.upper())
+        return ""
+    # Returns an HTML img tag for the flag
+    return f"<img src='https://flagcdn.com/48x36/{country_code.lower()}.png' style='border-radius: 4px; vertical-align: middle; margin-right: 8px;' width='32'>"
+
+# V11.0: Country Desirability Scores (1-10) for Best Value Calculation
+COUNTRY_DESIRABILITY = {
+    # High Demand / Iconic
+    "France": 10, "Italy": 10, "Japan": 10, "Spain": 9, "Greece": 9, 
+    "United States": 8, "United Kingdom": 8, "Thailand": 9, "Indonesia": 9,
+    "Portugal": 9, "Vietnam": 8, "Mexico": 8, "Australia": 8, "Canada": 8,
+    
+    # Rising Popularity
+    "Turkey": 7, "Croatia": 8, "Iceland": 8, "Switzerland": 8,
+    "Morocco": 7, "Egypt": 7, "Peru": 7, "Brazil": 7, "South Africa": 7,
+    "Argentina": 7, "Colombia": 7, "Costa Rica": 7, "Philippines": 7,
+    
+    # Standard Tourist
+    "Germany": 7, "Netherlands": 7, "Sweden": 6, "Norway": 6, "Finland": 6,
+    "Denmark": 6, "Austria": 6, "Belgium": 6, "Ireland": 6, "Czech Republic": 6,
+    "Hungary": 6, "Poland": 6, "India": 6, "China": 6, "South Korea": 7,
+    "Malaysia": 7, "Singapore": 7, "Maldives": 8, "New Zealand": 8,
+    
+    # Default fallback will be 5
+}
 
 def calculate_haversine(lat1, lon1, lat2, lon2):
     """V7.1: Great-circle distance between two points in km"""
@@ -491,6 +518,18 @@ def enrich_data(df):
 
     df['Activities'] = df['Destination'].apply(get_activities)
     df['Transport_Cost_Daily'] = df['Destination'].apply(calculate_transport_cost)
+    
+    # V11.0: Calculate Best Value Score
+    # Formula: (Perceived Value Score * 1000) / Total Daily Cost (Proxy for Trip Cost)
+    # We use Total_Daily_Group as a proxy before duration is set, re-calc later with flight
+    def get_desirability(country_name):
+        return COUNTRY_DESIRABILITY.get(country_name, 5) # Default 5
+        
+    if 'Full_Country' in df.columns:
+        df['Perceived_Value'] = df['Full_Country'].apply(get_desirability)
+    else:
+        df['Perceived_Value'] = 5
+        
     return df
 
 # Load Real Data
@@ -506,34 +545,33 @@ destinations_df = enrich_data(destinations_df)
 # Title Redesign
 st.markdown("""
     <div style='text-align: center; padding-bottom: 20px;'>
-        <h1 style='font-size: 80px; margin-bottom: 0; background: linear-gradient(to right, #00D4BD, #2E86DE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block;'>
-            WanderWise
+        <h1 style='font-size: 72px; margin-bottom: 10px; background: linear-gradient(to right, #00D4BD, #2E86DE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; line-height: 1.1;'>
+            Discover where your budget can take you.
         </h1>
-        <h3 style='font-size: 24px; color: #E0E0E0; font-weight: 300; margin-top: -10px;'>
-            Intelligent Travel Computation
+        <h3 style='font-size: 24px; color: #E0E0E0; font-weight: 300; margin-top: 5px;'>
+            Tell us your budget. We'll show you the world.
         </h3>
     </div>
 """, unsafe_allow_html=True)
 
-# --- Sidebar Navigation ---
-st.sidebar.header("What is your goal?")
-mode_options = ["Find Destinations 🌍", "Maximize Days 📅", "Price a Trip 💰"]
-selected_mode = st.sidebar.pills("Navigation", mode_options, label_visibility="collapsed", default=mode_options[0])
-
-# Initialize drill-down and sorting state
+# --- Session State Initialization ---
 if 'selected_country' not in st.session_state:
     st.session_state.selected_country = None
 
 if 'sort_selection' not in st.session_state:
-    st.session_state.sort_selection = "Popularity (High to Low)"
+    st.session_state.sort_selection = "Best Value ⭐"
 
-if 'last_mode' not in st.session_state:
-    st.session_state.last_mode = selected_mode
-if st.session_state.last_mode != selected_mode:
-    st.session_state.selected_country = None
-    st.session_state.last_mode = selected_mode
+# --- Sidebar Navigation ---
+st.sidebar.header("✈️ Trip Settings")
 
-all_usable_airports = sorted([str(d) for d in destinations_df['Destination'].unique() if pd.notna(d)])
+# V11.1: Sort Origin Cities by Popularity (High to Low) for better UX
+# We create a mapping of destination to popularity
+dest_popularity = destinations_df.set_index('Destination')['Popularity_Score'].to_dict()
+all_usable_airports = sorted(
+    [str(d) for d in destinations_df['Destination'].unique() if pd.notna(d)],
+    key=lambda x: dest_popularity.get(x, 0),
+    reverse=True
+)
 
 try:
     default_origin_idx = next(i for i, x in enumerate(all_usable_airports) if "New York" in x)
@@ -545,44 +583,48 @@ try:
 except StopIteration:
     default_dest_idx = 0
 
-if selected_mode == "Find Destinations 🌍":
-    st.sidebar.info("ℹ️ Goal: You have a fixed budget and want to see all the places you can afford.")
-elif selected_mode == "Maximize Days 📅":
-    st.sidebar.info("ℹ️ Goal: You know where you want to go, and want to see how long you can stay.")
-else:
-    st.sidebar.info("ℹ️ Goal: You have a dream destination and duration, and want the total price tag.")
-
-st.sidebar.subheader("Essential Trip Details")
+# --- Primary Inputs (Always Visible) ---
 origin_city = st.sidebar.selectbox("✈️ Origin City", options=all_usable_airports, index=default_origin_idx)
+
+# Simplified Budget Input (Integer Only)
+total_budget = st.sidebar.number_input(
+    "💰 Total Group Budget ($)",
+    min_value=500,
+    max_value=50000,
+    value=3000,
+    step=100,
+    format="%d"
+)
+
 num_travelers = st.sidebar.number_input("👥 Number of Travelers", min_value=1, max_value=10, value=1)
+duration = st.sidebar.slider("📅 Trip Duration (Days)", min_value=3, max_value=30, value=7)
 
-# Dynamic Inputs
-target_dest = None
-duration = 7
-total_budget = 3000.0
+st.sidebar.divider()
 
-if selected_mode == "Find Destinations 🌍":
-    total_budget = st.sidebar.number_input("💰 Total Group Budget ($)", min_value=100, value=3000, step=100)
-    duration = st.sidebar.slider("📅 Trip Duration (Days)", min_value=3, max_value=30, value=7)
+# --- Advanced Filters & Style ---
+with st.sidebar.expander("🛠️ Advanced Filters & Style", expanded=False):
+    st.markdown("**🎯 Trip Goal**")
+    mode_options = ["Find Destinations 🌍", "Maximize Days 📅", "Price a Trip 💰"]
+    selected_mode = st.radio("Goal", mode_options, label_visibility="collapsed")
     
-    st.sidebar.subheader("🔍 Filters")
-    selected_regions = st.sidebar.multiselect("🌎 Regions", options=sorted(destinations_df['Region'].unique()), default=[])
-    selected_activities = st.sidebar.multiselect("🎯 Activities", options=MOCK_ACTIVITIES_LIST, default=[])
+    # Initialize variables that depend on mode to defaults
+    target_dest = None
+    selected_regions = []
+    selected_activities = []
     
-elif selected_mode == "Maximize Days 📅":
-    total_budget = st.sidebar.number_input("💰 Total Group Budget ($)", min_value=100, value=3000, step=100)
-    target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_usable_airports, index=default_dest_idx)
-    selected_regions, selected_activities = [], []
+    if selected_mode == "Find Destinations 🌍":
+        st.markdown("**🔍 Filters**")
+        selected_regions = st.multiselect("🌎 Regions", options=sorted(destinations_df['Region'].unique()), default=[], placeholder="Select a Region (Optional)")
+        selected_activities = st.multiselect("🎯 Activities", options=MOCK_ACTIVITIES_LIST, default=[], placeholder="Select Activities (Optional)")
+        
+    elif selected_mode == "Maximize Days 📅":
+        target_dest = st.selectbox("🎯 Select Destination", options=all_usable_airports, index=default_dest_idx)
+    else: # Price a Trip
+        target_dest = st.selectbox("🎯 Select Destination", options=all_usable_airports, index=default_dest_idx)
 
-else:  # Price a Trip 💰
-    duration = st.sidebar.slider("📅 Trip Duration (Days)", min_value=3, max_value=30, value=7)
-    target_dest = st.sidebar.selectbox("🎯 Select Your Destination", options=all_usable_airports, index=default_dest_idx)
-    selected_regions, selected_activities = [], []
-
-st.sidebar.markdown("<br>", unsafe_allow_html=True)
-
-# Travel Style Expander
-with st.sidebar.expander("💸 Customize Spending & Style", expanded=False):
+    st.markdown("---")
+    st.markdown("**💸 Travel Style**")
+    
     st.markdown("**✈️ Flight Class**")
     flight_class_name = st.selectbox("Choose flight class", options=list(FLIGHT_CLASS_TIERS.keys()), index=1, label_visibility="collapsed")
     flight_mult = FLIGHT_CLASS_TIERS[flight_class_name]
@@ -594,6 +636,13 @@ with st.sidebar.expander("💸 Customize Spending & Style", expanded=False):
     st.markdown("**🍽️ Food & Activities**")
     act_tier_name = st.selectbox("Choose spending style", options=list(ACTIVITY_TIERS.keys()), index=1, label_visibility="collapsed")
     act_mult = ACTIVITY_TIERS[act_tier_name]
+
+# State Management for Mode
+if 'last_mode' not in st.session_state:
+    st.session_state.last_mode = selected_mode
+if st.session_state.last_mode != selected_mode:
+    st.session_state.selected_country = None
+    st.session_state.last_mode = selected_mode
 
 # --- Cost Logic (V7.1 Distance-Aware) ---
 origin_row = destinations_df[destinations_df['Destination'] == origin_city]
@@ -692,7 +741,7 @@ if not result_df.empty:
 
     if selected_mode == "Find Destinations 🌍":
         if st.session_state.selected_country is None:
-            st.success(f"✅ Found **{len(result_df)}** destinations across **{result_df['Full_Country'].nunique()}** countries")
+            st.markdown(f"<div style='text-align: center; color: #4CAF50; font-weight: bold; margin-bottom: 20px; font-size: 1.2em;'>🎉 We found {len(result_df)} trips you can afford!</div>", unsafe_allow_html=True)
             
             col_header, col_sort = st.columns([2, 1])
             with col_header:
@@ -700,18 +749,27 @@ if not result_df.empty:
             with col_sort:
                 sort_option = st.selectbox(
                     "Sort By",
-                    options=["Popularity (High to Low)", "Popularity (Low to High)", "Price (Low to High)", "Price (High to Low)", "Name (A-Z)"],
+                    options=["Best Value ⭐", "Popularity (High to Low)", "Price (Low to High)", "Price (High to Low)", "Name (A-Z)"],
                     key="sort_selection", label_visibility="collapsed"
                 )
+            
+            # --- V11.0: Calculate Best Value Score based on FINAL Trip Cost ---
+            result_df['Calculated_Value_Score'] = (result_df['Perceived_Value'] * 1000) / result_df['Trip_Cost']
+            
+            # Rank for Badges (Global Rank within results)
+            result_df['Value_Rank'] = result_df['Calculated_Value_Score'].rank(ascending=False)
             
             country_groups = result_df.groupby('Full_Country').agg({
                 'Trip_Cost': 'min',
                 'Destination': 'count',
                 'iso_country': 'first',
-                'Popularity_Score': 'max' # Inherit the strongest city score for the country level breakdown
+                'Popularity_Score': 'max',
+                'Calculated_Value_Score': 'max' # Take best city score
             }).reset_index().rename(columns={'Trip_Cost': 'Min_Price', 'Destination': 'City_Count'})
             
-            if sort_option == "Popularity (High to Low)":
+            if sort_option == "Best Value ⭐":
+                country_groups = country_groups.sort_values(by='Calculated_Value_Score', ascending=False)
+            elif sort_option == "Popularity (High to Low)":
                 country_groups = country_groups.sort_values(by=['Popularity_Score', 'Min_Price'], ascending=[False, True])
             elif sort_option == "Popularity (Low to High)":
                 country_groups = country_groups.sort_values(by=['Popularity_Score', 'Min_Price'], ascending=[True, True])
@@ -722,21 +780,32 @@ if not result_df.empty:
             elif sort_option == "Name (A-Z)":
                 country_groups = country_groups.sort_values(by='Full_Country', ascending=True)
             
+            # Pagination
+            if 'country_limit' not in st.session_state:
+                st.session_state.country_limit = 20
+                
+            visible_countries = country_groups.head(st.session_state.country_limit)
+            
             cols = st.columns(3)
-            for idx, (index, c_row) in enumerate(country_groups.iterrows()):
+            for idx, (index, c_row) in enumerate(visible_countries.iterrows()):
                 with cols[idx % 3]:
                     country_name = c_row['Full_Country']
                     iso_code = c_row['iso_country']
-                    flag = get_flag_emoji(iso_code)
-                    bold_country = make_bold(country_name)
                     formatted_price = f"${c_row['Min_Price']:,.0f}"
-                    bold_price = make_bold(formatted_price)
-                    btn_label = f"{flag} {bold_country}\n\n{int(c_row['City_Count'])} Cities  |  From {bold_price}"
+                    
+                    # For Country Button: Use Emoji Flag
+                    emoji_flag = "".join(chr(127397 + ord(c)) for c in iso_code.upper()) if iso_code and len(iso_code)==2 else "🌐"
+                    
+                    btn_label = f"{emoji_flag} {country_name}\n\n{int(c_row['City_Count'])} Cities  |  From {formatted_price}"
                     if st.button(btn_label, key=f"nav_{country_name}", use_container_width=True):
                         st.session_state.selected_country = country_name
-                        # V7.2.2: Ensure the city view inherits the country view sort immediately
                         st.session_state.sort_selection_city = st.session_state.sort_selection
                         st.rerun()
+            
+            if len(country_groups) > st.session_state.country_limit:
+                if st.button("Load More Countries", use_container_width=True):
+                    st.session_state.country_limit += 20
+                    st.rerun()
 
         else:
             # Child View (City Level)
@@ -752,7 +821,7 @@ if not result_df.empty:
             with col_city_sort:
                 sort_option = st.selectbox(
                     "Sort By",
-                    options=["Popularity (High to Low)", "Popularity (Low to High)", "Price (Low to High)", "Price (High to Low)", "Name (A-Z)"],
+                    options=["Best Value ⭐", "Popularity (High to Low)", "Popularity (Low to High)", "Price (Low to High)", "Price (High to Low)", "Name (A-Z)"],
                     key="sort_selection_city", label_visibility="collapsed"
                 )
                 # Sync city sort back to master state if it changes
@@ -763,9 +832,14 @@ if not result_df.empty:
             # Apply Hierarchical Sorting
             result_df = result_df[result_df['Full_Country'] == st.session_state.selected_country].copy()
             
+            # Recalculate Value Score for this filtered set (optional, but consistent)
+            result_df['Calculated_Value_Score'] = (result_df['Perceived_Value'] * 1000) / result_df['Trip_Cost']
+            
             # Key V7.2.2 Fix: Use the city-specific key for the actual sorting logic here
             city_sort = st.session_state.sort_selection_city
-            if city_sort == "Popularity (High to Low)":
+            if city_sort == "Best Value ⭐":
+                result_df = result_df.sort_values(by='Calculated_Value_Score', ascending=False)
+            elif city_sort == "Popularity (High to Low)":
                 result_df = result_df.sort_values(by=['Popularity_Score', 'Trip_Cost'], ascending=[False, True])
             elif city_sort == "Popularity (Low to High)":
                 result_df = result_df.sort_values(by=['Popularity_Score', 'Trip_Cost'], ascending=[True, True])
@@ -815,24 +889,17 @@ if not result_df.empty:
                     else:
                         weather_label = "Season-dependent"
                     
-                    st.markdown(f"""
-                    <div class='travel-card'>
-                        <div class='card-header'>{row['Destination']}</div>
-                        <div class='card-metadata'>{row['Region']} • {weather_label}</div>
-                        <div style='margin: 12px 0;'>{activities_html}</div>
-                        <div class='price-container'>
-                            <div class='price-big'>${row['Trip_Cost']:,.0f}</div>
-                            <div class='price-small'>Approx. ${row['Trip_Cost'] / num_travelers:,.0f} per person</div>
-                        </div>
-                        <div class='breakdown'>
-                            <p style='margin: 5px 0;'><strong>✈️ Flight:</strong> ${row['Total_Flight_Group']:,.0f}</p>
-                            <p style='margin: 5px 0;'><strong>🏨 Hotel:</strong> ${row['Daily_Hotel_Group']:,.0f}/day</p>
-                            <p style='margin: 5px 0;'><strong>🍽️ Daily spend:</strong> ${row['Daily_Food_Group'] + row['Daily_Transport_Group']:,.0f}</p>
-                        </div>
-                        <a href='{flight_url}' target='_blank' class='booking-button'>✈️ Book Flight</a>
-                        <a href='{hotel_url}' target='_blank' class='booking-button'>🏨 Book Hotel</a>
-                    </div>
-                    """, unsafe_allow_html=True)
+                    # Badge Logic
+                    badge_html = ""
+                    if row.get('Value_Rank', 999) <= 10:
+                        badge_html = "<div style='position: absolute; top: -10px; right: -10px; background: #FFD700; color: #000; padding: 5px 10px; border-radius: 20px; font-weight: bold; font-size: 0.8em; box-shadow: 0 2px 5px rgba(0,0,0,0.3);'>⭐ Best Value</div>"
+
+                    # SVG Flag for Card
+                    flag_svg = get_flag_emoji(row['iso_country'])
+
+                    # Build card HTML as single line to avoid markdown interpretation
+                    card_html = f'<div style="background-color: #262730; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #333; margin-bottom: 20px; min-height: 520px; display: flex; flex-direction: column; justify-content: space-between; position: relative;">{badge_html}<div style="color: #fff; font-size: 1.4em; font-weight: bold; margin-bottom: 8px;">{flag_svg} {row["Destination"]}</div><div style="color: #aaa; font-size: 0.85em; margin-bottom: 12px;">{row["Region"]} • {weather_label}</div><div style="margin: 12px 0;">{activities_html}</div><div style="text-align: center; margin: 20px 0; padding: 10px; background: rgba(0, 212, 189, 0.1); border-radius: 10px;"><div style="color: #00E676; font-size: 2.8em; font-weight: 800; margin: 0; line-height: 1;">${row["Trip_Cost"]:,.0f}</div><div style="color: #aaa; font-size: 0.9em; margin-top: 5px;">Approx. ${row["Trip_Cost"] / num_travelers:,.0f} per person</div></div><div style="color: #ccc; font-size: 0.85em; border-top: 1px solid #444; padding-top: 12px; margin-top: 10px;"><p style="margin: 5px 0;"><strong>✈️ Flight:</strong> ${row["Total_Flight_Group"]:,.0f}</p><p style="margin: 5px 0;"><strong>🏨 Hotel:</strong> ${row["Daily_Hotel_Group"]:,.0f}/day</p><p style="margin: 5px 0;"><strong>🍽️ Daily spend:</strong> ${row["Daily_Food_Group"] + row["Daily_Transport_Group"]:,.0f}</p></div><a href="{flight_url}" target="_blank" style="display: inline-block; width: 100%; padding: 12px; margin-top: 10px; background: linear-gradient(135deg, #00D4BD 0%, #2E86DE 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center;">✈️ Book Flight</a><a href="{hotel_url}" target="_blank" style="display: inline-block; width: 100%; padding: 12px; margin-top: 10px; background: linear-gradient(135deg, #00D4BD 0%, #2E86DE 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center;">🏨 Book Hotel</a></div>'
+                    st.markdown(card_html, unsafe_allow_html=True)
 
     else:
         # Price a Trip or Maximize Days
@@ -877,24 +944,12 @@ if not result_df.empty:
                 else:
                     weather_label = "Season-dependent"
                 
-                st.markdown(f"""
-                <div class='travel-card'>
-                    <div class='card-header'>{row['Destination']}</div>
-                    <div class='card-metadata'>{row['Region']} • {weather_label}</div>
-                    <div style='margin: 12px 0;'>{activities_html}</div>
-                    <div class='price-container'>
-                        <div class='price-big'>${row['Trip_Cost']:,.0f}</div>
-                        <div class='price-small'>Approx. ${row['Trip_Cost'] / num_travelers:,.0f} per person</div>
-                    </div>
-                    <div class='breakdown'>
-                        <p style='margin: 5px 0;'><strong>✈️ Flight:</strong> ${row['Total_Flight_Group']:,.0f}</p>
-                        <p style='margin: 5px 0;'><strong>🏨 Hotel:</strong> ${row['Daily_Hotel_Group']:,.0f}/day</p>
-                        <p style='margin: 5px 0;'><strong>🍽️ Daily spend:</strong> ${row['Daily_Food_Group'] + row['Daily_Transport_Group']:,.0f}</p>
-                    </div>
-                    <a href='{flight_url}' target='_blank' class='booking-button'>✈️ Book Flight</a>
-                    <a href='{hotel_url}' target='_blank' class='booking-button'>🏨 Book Hotel</a>
-                </div>
-                """, unsafe_allow_html=True)
+                # SVG Flag for Card
+                flag_svg = get_flag_emoji(row['iso_country'])
+
+                # Build card HTML as single line to avoid markdown interpretation
+                card_html = f'<div style="background-color: #262730; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.4); border: 1px solid #333; margin-bottom: 20px; min-height: 520px; display: flex; flex-direction: column; justify-content: space-between;"><div style="color: #fff; font-size: 1.4em; font-weight: bold; margin-bottom: 8px;">{flag_svg} {row["Destination"]}</div><div style="color: #aaa; font-size: 0.85em; margin-bottom: 12px;">{row["Region"]} • {weather_label}</div><div style="margin: 12px 0;">{activities_html}</div><div style="text-align: center; margin: 20px 0; padding: 10px; background: rgba(0, 212, 189, 0.1); border-radius: 10px;"><div style="color: #00E676; font-size: 2.8em; font-weight: 800; margin: 0; line-height: 1;">${row["Trip_Cost"]:,.0f}</div><div style="color: #aaa; font-size: 0.9em; margin-top: 5px;">Approx. ${row["Trip_Cost"] / num_travelers:,.0f} per person</div></div><div style="color: #ccc; font-size: 0.85em; border-top: 1px solid #444; padding-top: 12px; margin-top: 10px;"><p style="margin: 5px 0;"><strong>✈️ Flight:</strong> ${row["Total_Flight_Group"]:,.0f}</p><p style="margin: 5px 0;"><strong>🏨 Hotel:</strong> ${row["Daily_Hotel_Group"]:,.0f}/day</p><p style="margin: 5px 0;"><strong>🍽️ Daily spend:</strong> ${row["Daily_Food_Group"] + row["Daily_Transport_Group"]:,.0f}</p></div><a href="{flight_url}" target="_blank" style="display: inline-block; width: 100%; padding: 12px; margin-top: 10px; background: linear-gradient(135deg, #00D4BD 0%, #2E86DE 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center;">✈️ Book Flight</a><a href="{hotel_url}" target="_blank" style="display: inline-block; width: 100%; padding: 12px; margin-top: 10px; background: linear-gradient(135deg, #00D4BD 0%, #2E86DE 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: bold; text-align: center;">🏨 Book Hotel</a></div>'
+                st.markdown(card_html, unsafe_allow_html=True)
 else:
     st.warning("😔 No destinations found matching your criteria.")
 
